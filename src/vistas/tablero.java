@@ -32,7 +32,7 @@ public class tablero extends javax.swing.JFrame {
     Random random = new Random();
     Timer timer = new Timer();
     
-     int dato,jugador1=0,jugador2=0,jugador3=0,jugador4=0,jugador5=0,jugador6=0;
+     int dato,jugador1=1,jugador2=1,jugador3=1,jugador4=1,jugador5=1,jugador6=1;
       
     public tablero() {
         initComponents();
@@ -66,22 +66,22 @@ public class tablero extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ficha_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/figura-04.jpg"))); // NOI18N
-        getContentPane().add(ficha_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 415, -1, -1));
+        getContentPane().add(ficha_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 340, -1, -1));
 
         ficha_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/figura-04.jpg"))); // NOI18N
-        getContentPane().add(ficha_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 415, -1, -1));
+        getContentPane().add(ficha_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, -1, -1));
 
         ficha_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/figura-04.jpg"))); // NOI18N
-        getContentPane().add(ficha_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 552, -1, -1));
+        getContentPane().add(ficha_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, -1, -1));
 
         ficha_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/figura-04.jpg"))); // NOI18N
-        getContentPane().add(ficha_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 389, -1, -1));
+        getContentPane().add(ficha_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 310, -1, -1));
 
         ficha_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/figura-04.jpg"))); // NOI18N
-        getContentPane().add(ficha_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 415, -1, -1));
+        getContentPane().add(ficha_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 620, -1, -1));
 
         ficha_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/figura-04.jpg"))); // NOI18N
-        getContentPane().add(ficha_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 645, -1, -1));
+        getContentPane().add(ficha_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 410, -1, -1));
 
         tablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/tablero.jpg"))); // NOI18N
         getContentPane().add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, -1, -1));

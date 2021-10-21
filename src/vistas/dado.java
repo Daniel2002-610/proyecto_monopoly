@@ -7,6 +7,7 @@ package vistas;
 
 
 import clases_base.valores;
+import clases_tarjetas.PUENTE_DE_LOS_BESOS;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.awt.Image;
@@ -20,15 +21,16 @@ import javax.swing.JOptionPane;
  */
 public class dado extends javax.swing.JFrame {
   Timer timer = new Timer();
+  PUENTE_DE_LOS_BESOS puente = new PUENTE_DE_LOS_BESOS();
 
   valores valor = new valores();
     public dado() {
         initComponents();
        
-        
+        /*
         ImageIcon x = new ImageIcon(getClass().getResource("/recursos/2.gif"));
-      ImageIcon icon = new ImageIcon(x.getImage().getScaledInstance(jLabel1.getWidth(),jLabel1.getHeight(),Image.SCALE_DEFAULT));
-      jLabel1.setIcon(icon);
+      ImageIcon icon = new ImageIcon(x.getImage().getScaledInstance(txt.getWidth(),txt.getHeight(),Image.SCALE_DEFAULT));
+      txt.setIcon(icon);
       
         TimerTask task = new TimerTask(){
      public void run(){
@@ -42,6 +44,7 @@ public class dado extends javax.swing.JFrame {
      
      };
          timer.scheduleAtFixedRate(task, 2100, 1000);
+        */
     }
 
     /**
@@ -53,25 +56,46 @@ public class dado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        txt = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(220, 200));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("Z:\\Universidad\\S4\\Programación II\\Proyecto final\\2.gif")); // NOI18N
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(148, 148, 148)
+                .addComponent(jButton1)
+                .addContainerGap(161, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        txt.setText(puente.getDueño());
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,7 +133,8 @@ public class dado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel txt;
     // End of variables declaration//GEN-END:variables
 
   void cerrar (){
