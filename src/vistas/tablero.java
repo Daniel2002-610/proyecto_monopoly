@@ -1,5 +1,6 @@
 package vistas;
 
+import clases_base.jugadores;
 import clases_base.valores;
 import java.awt.Color;
 
@@ -14,6 +15,14 @@ import javax.swing.UIManager;
 
 import javax.swing.*;
 import javax.swing.plaf.ColorUIResource;
+import tarjetas_compras.VBAR_BLACK_SPOT;
+import tarjetas_compras.VBAR_FALCON;
+import tarjetas_compras.VBIBLIOTECA_PUBLICA;
+import tarjetas_compras.VCALLE_JACKSON;
+import tarjetas_compras.VCALLE_TURNER;
+import tarjetas_compras.VCASA_NEIBOLT;
+import tarjetas_compras.VLOS_BALDÍOS;
+import tarjetas_compras.vTERMINAL_DE_BUSES;
 
 /**
  *
@@ -21,10 +30,11 @@ import javax.swing.plaf.ColorUIResource;
  */
 public class tablero extends javax.swing.JFrame {
 
-    
+    jugadores juga = new jugadores();
     valores valor = new valores();
     Random random = new Random();
-
+    
+    String comboj1,comboj2;
     int dato, jugador1 = 1, jugador2 = 1, jugador3 = 1, jugador4 = 1, jugador5 = 1, jugador6 = 1;
   
 
@@ -46,6 +56,7 @@ public class tablero extends javax.swing.JFrame {
         ficha_5 = new javax.swing.JLabel();
         tablero = new javax.swing.JLabel();
         num = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         ver = new javax.swing.JLabel();
         btn_mini = new javax.swing.JLabel();
@@ -82,7 +93,15 @@ public class tablero extends javax.swing.JFrame {
 
         num.setForeground(new java.awt.Color(255, 255, 255));
         num.setText("jLabel1");
-        getContentPane().add(num, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+        getContentPane().add(num, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, -1));
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -127,17 +146,16 @@ public class tablero extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         dato = (int) Math.floor(Math.random()*12+1);
-
-         jugador1+=dato;
-        //jugador1++;
-        num.setText(String.valueOf(jugador1));
-
-        JOptionPane.showMessageDialog(null, jugador1);
-        pasoj1();
-        verificarj1();
-
-        /*if("1".equals(caja.getText())){
+     jugador1++;   
+    num.setText(String.valueOf(dato)); 
+    JOptionPane.showMessageDialog(null, dato);
+     pasoj1();
+    verificarj1();
+   
+        
+        
+/*
+        if("1".equals(caja.getText())){
      
       dato = (int) Math.floor(Math.random()*12+1);
     num.setText(String.valueOf(dato)); 
@@ -145,6 +163,7 @@ public class tablero extends javax.swing.JFrame {
       
       JOptionPane.showMessageDialog(null, dato);
     pasoj1();
+    verificarj1();
     pasoj2();
     
       
@@ -159,9 +178,8 @@ public class tablero extends javax.swing.JFrame {
     pasoj1();
       
     }    
-         */
-        // ver.setText(String.valueOf(jugador1));
-//al dar click se cambia de nombre
+      */   
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btn_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cerrarMouseClicked
@@ -175,6 +193,11 @@ public class tablero extends javax.swing.JFrame {
     private void btn_miniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_miniMouseClicked
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_btn_miniMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     JOptionPane.showMessageDialog(null, juga.getJugador1());
+    System.out.print(juga.getJugador1());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,15 +246,16 @@ public class tablero extends javax.swing.JFrame {
     private javax.swing.JLabel ficha_6;
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel num;
+    private javax.swing.JButton jButton2;
+    public static javax.swing.JLabel num;
     private javax.swing.JLabel tablero;
     private javax.swing.JLabel ver;
     // End of variables declaration//GEN-END:variables
 
     void pasoj1() {
-
-        if (jugador1 == 1) {
+ if (jugador1 == 1) {
             ficha_1.setLocation(980, 620);
+            
         } else if (jugador1 == 2) {
             ficha_1.setLocation(913, 620);
         } else if (jugador1 == 3) {
@@ -881,31 +905,45 @@ public class tablero extends javax.swing.JFrame {
 
     }
 
-    void verificarj1() {
-        if(jugador1==1){
-            JOptionPane.showMessageDialog(null, "pocision 1");
+    void verificarj1(){
+       if (jugador1>40){
+         int reset;
+         reset = jugador1-40;
+         jugador1=reset;
+         JOptionPane.showMessageDialog(null, "felicidades");
+         
         }else if(jugador1==2){
-         JOptionPane.showMessageDialog(null, "pocision 2");
+       VCALLE_JACKSON jack = new VCALLE_JACKSON();
+       jack.setVisible(true);
         }else if(jugador1==3){
-         JOptionPane.showMessageDialog(null, "pocision 3");
+         JOptionPane.showMessageDialog(null, "Pesadilla");
         }else if(jugador1==4){
-         JOptionPane.showMessageDialog(null, "pocision 4");
+         VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+         bal.setVisible(true);
         }else if(jugador1==5){
-         JOptionPane.showMessageDialog(null, "pocision 5");
+         JOptionPane.showMessageDialog(null, "Impuestos");
         }else if(jugador1==6){
-         JOptionPane.showMessageDialog(null, "pocision 6");
+        vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+        bus.setVisible(true);
         }else if(jugador1==7){
-         JOptionPane.showMessageDialog(null, "pocision 7");
+        VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+        bar.setVisible(true);
         }else if(jugador1==8){
-         JOptionPane.showMessageDialog(null, "pocision 8");
+         JOptionPane.showMessageDialog(null, "suspiro");
         }else if(jugador1==9){
-         JOptionPane.showMessageDialog(null, "pocision 9");
+         VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+         nei.setVisible(true);
         }else if(jugador1==10){
-         JOptionPane.showMessageDialog(null, "pocision 10");
+         VCALLE_TURNER tur = new VCALLE_TURNER();
+         tur.setVisible(true);
         }else if(jugador1==11){
-         JOptionPane.showMessageDialog(null, "pocision 12");
+         JOptionPane.showMessageDialog(null, "pasadita de carcel");
+        }else if(jugador1==12){
+         VBAR_FALCON fal = new VBAR_FALCON();
+         fal.setVisible(true);
         }else if(jugador1==13){
-         JOptionPane.showMessageDialog(null, "pocision 13");
+         VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+         bil.setVisible(true);
         }else if(jugador1==14){
          JOptionPane.showMessageDialog(null, "pocision 14");
         }else if(jugador1==15){
@@ -960,66 +998,6 @@ public class tablero extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(null, "pocision 39");
         }else if(jugador1==40){
          JOptionPane.showMessageDialog(null, "pocision 40");
-        }else if(jugador1==41){
-         JOptionPane.showMessageDialog(null, "pocision 41");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(980, 620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==42){
-         JOptionPane.showMessageDialog(null, "pocision 42");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(913,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==43){
-         JOptionPane.showMessageDialog(null, "pocision 43");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(859,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==44){
-         JOptionPane.showMessageDialog(null, "pocision 44");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(803,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==45){
-         JOptionPane.showMessageDialog(null, "pocision 45");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(749,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==46){
-         JOptionPane.showMessageDialog(null, "pocision 46");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(695,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==47){
-         JOptionPane.showMessageDialog(null, "pocision 47");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(639,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==48){
-         JOptionPane.showMessageDialog(null, "pocision 48");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(585,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==49){
-         JOptionPane.showMessageDialog(null, "pocision 49");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(529,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==50){
-         JOptionPane.showMessageDialog(null, "pocision 50");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(474,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==51){
-         JOptionPane.showMessageDialog(null, "pocision 51");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(390,620);
-         num.setText(String.valueOf(jugador1));
-        }else if(jugador1==52){
-         JOptionPane.showMessageDialog(null, "pocision 52");
-         jugador1=jugador1-40;
-         ficha_1.setLocation(430,578);
-         num.setText(String.valueOf(jugador1));
         }
     }   
 }

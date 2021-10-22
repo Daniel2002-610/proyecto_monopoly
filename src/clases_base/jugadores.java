@@ -10,12 +10,12 @@ package clases_base;
  * @author edgar
  */
 public class jugadores {
-    private String jugador1;
-    private String jugador2;
-    private String jugador3;
-    private String jugador4;
-    private String jugador5;
-    private String jugador6;
+    public String jugador1;
+    public String jugador2;
+    public String jugador3;
+    public String jugador4;
+    public String jugador5;
+    public String jugador6;
 
     public jugadores() {
     }

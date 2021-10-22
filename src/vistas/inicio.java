@@ -188,11 +188,14 @@ void agregar(){
         txtjugador1.setText("1. " + jnombre.getJugador1());
         cajanombre.setText("");
         contador+=1;
+        //System.out.println(jnombre.getJugador1());
+         tablero.num.setText(jnombre.getJugador1());
     }else if(contador==2){
         jnombre.setJugador2(cajanombre.getText());
         txtjugador2.setText("2. " + jnombre.getJugador2());
         cajanombre.setText("");
         contador+=1;
+        tab.comboj2=jnombre.getJugador2();
     }else if(contador==3){
         jnombre.setJugador3(cajanombre.getText());
         txtjugador3.setText("3. " + jnombre.getJugador3());
