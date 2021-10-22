@@ -21,13 +21,12 @@ import javax.swing.plaf.ColorUIResource;
  */
 public class tablero extends javax.swing.JFrame {
 
-    //son 40 pocisiones
-    //ficha_1.getX();
+    
     valores valor = new valores();
     Random random = new Random();
 
     int dato, jugador1 = 1, jugador2 = 1, jugador3 = 1, jugador4 = 1, jugador5 = 1, jugador6 = 1;
-    int x, y, x2, y2;
+  
 
     public tablero() {
         initComponents();
