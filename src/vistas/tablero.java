@@ -20,8 +20,28 @@ import tarjetas_compras.VBAR_FALCON;
 import tarjetas_compras.VBIBLIOTECA_PUBLICA;
 import tarjetas_compras.VCALLE_JACKSON;
 import tarjetas_compras.VCALLE_TURNER;
+import tarjetas_compras.VCALLE_WITCHMAN;
+import tarjetas_compras.VCASA_CLUB;
+import tarjetas_compras.VCASA_DE_HUESPEDES;
+import tarjetas_compras.VCASA_DE_LA_RISA;
 import tarjetas_compras.VCASA_NEIBOLT;
+import tarjetas_compras.VCENTRO_COMERCIAL;
+import tarjetas_compras.VCINE_CAPITOL;
+import tarjetas_compras.VESCUELA_PRIMARIA;
+import tarjetas_compras.VESCUELA_SECUNDARIA;
+import tarjetas_compras.VFARMACIA_KEENE;
+import tarjetas_compras.VIGLESIA_BAUTISTA;
+import tarjetas_compras.VLA_CANTERA;
+import tarjetas_compras.VLA_CASA_ANTIGUA;
 import tarjetas_compras.VLOS_BALDÍOS;
+import tarjetas_compras.VPARQUE_BASSEY;
+import tarjetas_compras.VPARQUE_MEMORIAL;
+import tarjetas_compras.VPARQUE_STRAWFORD;
+import tarjetas_compras.VPUENTE_DE_LOS_BESOS;
+import tarjetas_compras.VREPRESA;
+import tarjetas_compras.VRESTAURANTE_JADE;
+import tarjetas_compras.VTEATRO_ALADDIN;
+import tarjetas_compras.VTIENDA_COSTELLO;
 import tarjetas_compras.vTERMINAL_DE_BUSES;
 
 /**
@@ -146,15 +166,7 @@ public class tablero extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     jugador1++;   
-    num.setText(String.valueOf(dato)); 
-    JOptionPane.showMessageDialog(null, dato);
-     pasoj1();
-    verificarj1();
-   
-        
-        
-/*
+
         if("1".equals(caja.getText())){
      
       dato = (int) Math.floor(Math.random()*12+1);
@@ -178,8 +190,7 @@ public class tablero extends javax.swing.JFrame {
     pasoj1();
       
     }    
-      */   
-        
+            
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btn_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cerrarMouseClicked
@@ -945,59 +956,79 @@ public class tablero extends javax.swing.JFrame {
          VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
          bil.setVisible(true);
         }else if(jugador1==14){
-         JOptionPane.showMessageDialog(null, "pocision 14");
+         VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+         igle.setVisible(true);
         }else if(jugador1==15){
-         JOptionPane.showMessageDialog(null, "pocision 15");
+         VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+         tie.setVisible(true);
         }else if(jugador1==16){
-         JOptionPane.showMessageDialog(null, "pocision 16");
+         VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+         besos.setVisible(true);
         }else if(jugador1==17){
-         JOptionPane.showMessageDialog(null, "pocision 17");
+         VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+         come.setVisible(true);
         }else if(jugador1==18){
-         JOptionPane.showMessageDialog(null, "pocision 18");
+         JOptionPane.showMessageDialog(null, "pesadilla");
         }else if(jugador1==19){
-         JOptionPane.showMessageDialog(null, "pocision 19");
+        VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+        prima.setVisible(true);
         }else if(jugador1==20){
-         JOptionPane.showMessageDialog(null, "pocision 20");
+        VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+        teatro.setVisible(true);
         }else if(jugador1==21){
-         JOptionPane.showMessageDialog(null, "pocision 21");
+         JOptionPane.showMessageDialog(null, "descanso gratis");
         }else if(jugador1==22){
-         JOptionPane.showMessageDialog(null, "pocision 22");
+        VCASA_CLUB club = new VCASA_CLUB();
+        club.setVisible(true);
         }else if(jugador1==23){
-         JOptionPane.showMessageDialog(null, "pocision 23");
+         JOptionPane.showMessageDialog(null, "suspiro");
         }else if(jugador1==24){
-         JOptionPane.showMessageDialog(null, "pocision 24");
+        VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+        jade.setVisible(true);        
         }else if(jugador1==25){
-         JOptionPane.showMessageDialog(null, "pocision 25");
+         VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+         hues.setVisible(true);
         }else if(jugador1==26){
-         JOptionPane.showMessageDialog(null, "pocision 26");
+        VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+        secu.setVisible(true);
         }else if(jugador1==27){
-         JOptionPane.showMessageDialog(null, "pocision 27");
+       VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+         memo.setVisible(true);       
         }else if(jugador1==28){
-         JOptionPane.showMessageDialog(null, "pocision 28");
+        VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+        farm.setVisible(true);
         }else if(jugador1==29){
-         JOptionPane.showMessageDialog(null, "pocision 29");
+        VREPRESA repre = new VREPRESA();
+        repre.setVisible(true);
         }else if(jugador1==30){
-         JOptionPane.showMessageDialog(null, "pocision 30");
+         VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+         risa.setVisible(true);
         }else if(jugador1==31){
-         JOptionPane.showMessageDialog(null, "pocision 31");
+         JOptionPane.showMessageDialog(null, "vaya a la carcel");
         }else if(jugador1==32){
-         JOptionPane.showMessageDialog(null, "pocision 32");
+         VLA_CANTERA cantera = new VLA_CANTERA();
+         cantera.setVisible(true);
         }else if(jugador1==33){
-         JOptionPane.showMessageDialog(null, "pocision 33");
+         VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+         wit.setVisible(true);
         }else if(jugador1==34){
-         JOptionPane.showMessageDialog(null, "pocision 34");
+         JOptionPane.showMessageDialog(null, "pesadilla");
         }else if(jugador1==35){
-         JOptionPane.showMessageDialog(null, "pocision 35");
+       VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+       straw.setVisible(true);
         }else if(jugador1==36){
-         JOptionPane.showMessageDialog(null, "pocision 36");
+        VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+        bas.setVisible(true);
         }else if(jugador1==37){
-         JOptionPane.showMessageDialog(null, "pocision 37");
+         JOptionPane.showMessageDialog(null, "suspiro");
         }else if(jugador1==38){
-         JOptionPane.showMessageDialog(null, "pocision 38");
+         VCINE_CAPITOL capi = new VCINE_CAPITOL();
+         capi.setVisible(true);
         }else if(jugador1==39){
-         JOptionPane.showMessageDialog(null, "pocision 39");
+         JOptionPane.showMessageDialog(null, "impuesto de lujo");
         }else if(jugador1==40){
-         JOptionPane.showMessageDialog(null, "pocision 40");
+        VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+        casa.setVisible(true);
         }
     }   
 }
