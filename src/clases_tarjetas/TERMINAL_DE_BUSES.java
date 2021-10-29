@@ -9,17 +9,16 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class TERMINAL_DE_BUSES extends DatosMinoria {
+public class TERMINAL_DE_BUSES {
+
+    public static String nombre = "TERMINAL DE BUSES";
+    public static String dueño = "";
+    public static int precio = 210;
+    public static int paso = 25;
+    public static int alquiler = 100;
+    public static boolean estado = false;
 
     public TERMINAL_DE_BUSES() {
-        super();
-        nombre = "TERMINAL DE BUSES";
-         dueño = "";
-         precio = 210;
-         paso = 25;
-         alquiler = 100; 
     }
-    
-    
-    
+
 }

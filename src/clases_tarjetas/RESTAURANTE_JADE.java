@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class RESTAURANTE_JADE extends DatosMayoria{
+public class RESTAURANTE_JADE {
+
+    public static String nombre = "RESTAURANTE JADE";
+    public static String dueño = "";
+    public static int precio = 190;
+    public static int paso = 15;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 75;
+    public static int Pcasa2 = 210;
+    public static int Pcasa3 = 600;
+    public static int Pcasa4 = 800;
+    public static int Pmansion1 = 1000;
+    public static int ValorCasa = 105;
+    public static int ValorMansion = 105;
+    public static int alquiler = 95;
+    public static boolean estado=false;
 
     public RESTAURANTE_JADE() {
-        super();
-         nombre = "RESTAURANTE JADE";
-         dueño = "";
-         precio = 190; 
-         paso = 15;
-         Pcasa1 = 75;
-         Pcasa2 = 210;
-         Pcasa3 = 600;
-         Pcasa4 = 800;
-         Pmansion1 = 1000;
-         ValorCasa = 105;
-         ValorMansion = 105;
-         alquiler = 95;
     }
-    
-    
+
 }

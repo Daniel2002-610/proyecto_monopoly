@@ -9,16 +9,16 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class PARQUE_BASSEY extends DatosMinoria{
+public class PARQUE_BASSEY {
+
+    public static String nombre = "PARQUE BASSEY";
+    public static String dueño = "";
+    public static int precio = 190;
+    public static int paso = 25;
+    public static int alquiler = 100;
+    public static boolean estado=false;
 
     public PARQUE_BASSEY() {
-        super();
-        nombre = "PARQUE BASSEY";
-         dueño = "";
-         precio = 190;
-         paso = 25;
-         alquiler = 100; 
     }
-    
-    
+
 }

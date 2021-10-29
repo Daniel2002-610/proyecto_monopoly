@@ -5,29 +5,42 @@
  */
 package vistas;
 
-import clases_base.jugadores;
+
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
+import jugadores.play1;
+import jugadores.play2;
+import jugadores.play3;
+import jugadores.play4;
+import jugadores.play5;
+import jugadores.play6;
 
 /**
  *
  * @author edgar
  */
 public class inicio extends javax.swing.JFrame {
-jugadores jnombre = new jugadores();
-tablero tab = new tablero();
-int contador=1;
+
+    
+    tablero tab = new tablero();
+    play1 pl1 = new play1();
+    play2 pl2 = new play2();
+    play3 pl3 = new play3();
+    play4 pl4 = new play4();
+    play5 pl5 = new play5();
+    play6 pl6 = new play6();
+
+    int contador = 1;
+
     /**
      * Creates new form inicio
      */
     public inicio() {
         initComponents();
         this.setLocationRelativeTo(null);
-        cajanombre.setBackground(new java.awt.Color(0,0,0,1));
-       
-       
-        
+        cajanombre.setBackground(new java.awt.Color(0, 0, 0, 1));
+
     }
 
     /**
@@ -117,19 +130,19 @@ int contador=1;
     }// </editor-fold>//GEN-END:initComponents
 
     private void cajanombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajanombreKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             agregar();
         }
     }//GEN-LAST:event_cajanombreKeyPressed
 
     private void btnagregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnagregarMouseClicked
-       agregar();
+        agregar();
     }//GEN-LAST:event_btnagregarMouseClicked
 
     private void btniniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btniniciarMouseClicked
         //minimo de jugadores
         tab.setVisible(true);
-        this.hide();        
+        this.hide();
     }//GEN-LAST:event_btniniciarMouseClicked
 
     /**
@@ -181,46 +194,53 @@ int contador=1;
     private javax.swing.JLabel txtjugador6;
     // End of variables declaration//GEN-END:variables
 
-void agregar(){
-    if(!"".equals(cajanombre.getText())){
-    if(contador==1){
-        jnombre.setJugador1(cajanombre.getText());
-        txtjugador1.setText("1. " + jnombre.getJugador1());
-        cajanombre.setText("");
-        contador+=1;
-        //System.out.println(jnombre.getJugador1());
-         tablero.num.setText(jnombre.getJugador1());
-    }else if(contador==2){
-        jnombre.setJugador2(cajanombre.getText());
-        txtjugador2.setText("2. " + jnombre.getJugador2());
-        cajanombre.setText("");
-        contador+=1;
-        tab.comboj2=jnombre.getJugador2();
-    }else if(contador==3){
-        jnombre.setJugador3(cajanombre.getText());
-        txtjugador3.setText("3. " + jnombre.getJugador3());
-        cajanombre.setText("");
-        contador+=1; 
-    }else if(contador==4){
-        jnombre.setJugador4(cajanombre.getText());
-        txtjugador4.setText("4. " + jnombre.getJugador4());
-        cajanombre.setText("");
-        contador+=1; 
-    }else if(contador==5){
-        jnombre.setJugador5(cajanombre.getText());
-        txtjugador5.setText("5. " + jnombre.getJugador5());
-        cajanombre.setText("");
-        contador+=1;
-    }else if(contador==6){
-        jnombre.setJugador6(cajanombre.getText());
-        txtjugador6.setText("6. " + jnombre.getJugador6());
-        cajanombre.setText("");
-        contador+=1;
-    }else{
-         JOptionPane.showMessageDialog(null, "Lo siento, solo se adminten 6 jugadores"); 
-         cajanombre.setText("");    }
-}else{
-     JOptionPane.showMessageDialog(null, "Ingrese un nombre"); 
+    void agregar() {
+        if (!"".equals(cajanombre.getText())) {
+            if (contador == 1) {
+                pl1.nombre=cajanombre.getText();
+                txtjugador1.setText("1. " + cajanombre.getText());
+                cajanombre.setText("");
+                contador += 1;
+                System.out.println(pl1.nombre);
+                
+            } else if (contador == 2) {
+                pl2.nombre=cajanombre.getText();
+                txtjugador2.setText("2. " + cajanombre.getText());              
+                cajanombre.setText("");
+                contador += 1;
+                 System.out.println(pl2.nombre);
+            } else if (contador == 3) {
+                pl3.nombre=cajanombre.getText();
+                txtjugador3.setText("3. " + cajanombre.getText());                
+                cajanombre.setText("");
+                contador += 1;
+                 System.out.println(pl3.nombre);
+            } else if (contador == 4) {
+                pl4.nombre=cajanombre.getText();
+                txtjugador4.setText("4. " + cajanombre.getText());               
+                cajanombre.setText("");
+                contador += 1;
+                 System.out.println(pl4.nombre);
+            } else if (contador == 5) {
+                pl5.nombre=cajanombre.getText();
+                txtjugador5.setText("5. " + cajanombre.getText());
+                cajanombre.setText("");
+                contador += 1;
+                 System.out.println(pl5.nombre);
+            } else if (contador == 6) {
+                pl6.nombre=cajanombre.getText();
+                txtjugador6.setText("6. " + cajanombre.getText());
+                cajanombre.setText("");
+                contador += 1;
+                 System.out.println(pl5.nombre);
+            } else {
+                JOptionPane.showMessageDialog(null, "Lo siento, solo se adminten 6 jugadores");
+                cajanombre.setText("");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Ingrese un nombre");
+        }
     }
-}
+    
+
 }

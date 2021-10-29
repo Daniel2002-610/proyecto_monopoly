@@ -9,23 +9,24 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class CASA_NEIBOLT extends DatosMayoria{
+public class CASA_NEIBOLT {
+
+    public static String nombre = "CASA NEIBOLT";
+    public static String dueño = "";
+    public static int precio = 250;
+    public static int paso = 22;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 100;
+    public static int Pcasa2 = 275;
+    public static int Pcasa3 = 725;
+    public static int Pcasa4 = 900;
+    public static int Pmansion1 = 1050;
+    public static int ValorCasa = 150;
+    public static int ValorMansion = 150;
+    public static int alquiler = 95;
+    public static boolean estado=false;
 
     public CASA_NEIBOLT() {
-        super();
-         nombre = "CASA NEIBOLT";
-         dueño = "";
-         precio = 250; 
-         paso = 22;
-         Pcasa1 = 100;
-         Pcasa2 = 275;
-         Pcasa3 = 725;
-         Pcasa4 = 900;
-         Pmansion1 = 1050;
-         ValorCasa = 150;
-         ValorMansion = 150;
-         alquiler = 95;
     }
-    
-    
 }

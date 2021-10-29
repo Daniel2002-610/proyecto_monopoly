@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class CALLE_JACKSON extends DatosMayoria {
+public class CALLE_JACKSON {
+
+    public static String nombre = "CALLE JACKSON";
+    public static String dueño = "";
+    public static int precio = 310;
+    public static int paso = 35;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 165;
+    public static int Pcasa2 = 425;
+    public static int Pcasa3 = 1000;
+    public static int Pcasa4 = 1205;
+    public static int Pmansion1 = 1400;
+    public static int ValorCasa = 190;
+    public static int ValorMansion = 190;
+    public static int alquiler = 160;
+    public static boolean estado=false;
 
     public CALLE_JACKSON() {
-        super();
-     nombre = "CALLE JACKSON";
-     dueño = "";
-     precio = 310; 
-     paso = 35;
-     Pcasa1 = 165;
-     Pcasa2 = 425;
-     Pcasa3 = 1000;
-     Pcasa4 = 1205;
-     Pmansion1 = 1400;
-     ValorCasa = 190;
-     ValorMansion = 190;
-     alquiler = 160;
     }
-    
-    
+
 }

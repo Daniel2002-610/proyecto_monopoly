@@ -5,17 +5,31 @@
  */
 package tarjetas_compras;
 
+import clases_tarjetas.CALLE_JACKSON;
 import javax.swing.JOptionPane;
+import jugadores.play1;
+import jugadores.play2;
+import jugadores.play3;
+import jugadores.play4;
+import jugadores.play5;
+import jugadores.play6;
+import vistas.tablero;
 
 /**
  *
  * @author edgar
  */
 public class VCALLE_JACKSON extends javax.swing.JFrame {
-
-    /**
-     * Creates new form VCALLE_JACKSON
-     */
+      
+    
+  CALLE_JACKSON calle = new CALLE_JACKSON();
+  tablero tab = new tablero();
+  play1 pl1 = new play1();
+    play2 pl2 = new play2();
+    play3 pl3 = new play3();
+    play4 pl4 = new play4();
+    play5 pl5 = new play5();
+    play6 pl6 = new play6();
     public VCALLE_JACKSON() {
         initComponents();
         setLocationRelativeTo(null);
@@ -44,6 +58,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btncomprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/btncomprar.png"))); // NOI18N
@@ -95,7 +110,29 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncomprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncomprarMouseClicked
-        JOptionPane.showMessageDialog(null, "comprar");
+        if("".equals(calle.dueño)){
+       if(tab.cont==1){
+        calle.dueño=pl1.nombre;
+        pl1.dinero=pl1.dinero-calle.precio;      
+        JOptionPane.showMessageDialog(null, "VENDIDO");
+        JOptionPane.showMessageDialog(null, "dueño es: " + calle.dueño + " dinero: " + pl1.dinero);
+       
+        dispose();
+        }else if(tab.cont==2){
+        
+        }else if(tab.cont==3){
+        
+        }else if(tab.cont==4){
+        
+        }else if(tab.cont==5){
+        
+        }else if(tab.cont==6){
+        
+        }
+            
+        
+       }
+   
     }//GEN-LAST:event_btncomprarMouseClicked
 
     private void btnsubastarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsubastarMouseClicked

@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class TEATRO_ALADDIN extends DatosMayoria{
+public class TEATRO_ALADDIN {
+
+    public static String nombre = "TEATRO ALADDIN";
+    public static String dueño = "";
+    public static int precio = 150;
+    public static int paso = 10;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 50;
+    public static int Pcasa2 = 155;
+    public static int Pcasa3 = 455;
+    public static int Pcasa4 = 625;
+    public static int Pmansion1 = 760;
+    public static int ValorCasa = 110;
+    public static int ValorMansion = 100;
+    public static int alquiler = 70;
+    public static boolean estado=false;
 
     public TEATRO_ALADDIN() {
-        super();
-         nombre = "TEATRO ALADDIN";
-         dueño = "";
-         precio = 150; 
-         paso = 10;
-         Pcasa1 = 50;
-         Pcasa2 = 155;
-         Pcasa3 = 455;
-         Pcasa4 = 625;
-         Pmansion1 = 760;
-         ValorCasa = 110;
-         ValorMansion = 100;
-         alquiler = 70;
     }
-    
-    
+
 }

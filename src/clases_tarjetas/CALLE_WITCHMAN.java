@@ -9,24 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class CALLE_WITCHMAN extends DatosMayoria{
+public class CALLE_WITCHMAN {
+
+    public static String nombre = "CALLE WITCHMAN";
+    public static String dueño = "";
+    public static int precio = 390;
+    public static int paso = 50;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 210;
+    public static int Pcasa2 = 600;
+    public static int Pcasa3 = 1400;
+    public static int Pcasa4 = 1700;
+    public static int Pmansion1 = 2000;
+    public static int ValorCasa = 200;
+    public static int ValorMansion = 200;
+    public static int alquiler = 200;
+    public static boolean estado=false;
 
     public CALLE_WITCHMAN() {
-        super();
-     nombre = "CALLE WITCHMAN";
-     dueño = "";
-     precio = 390; 
-     paso = 50;
-     Pcasa1 = 210;
-     Pcasa2 = 600;
-     Pcasa3 = 1400;
-     Pcasa4 = 1700;
-     Pmansion1 = 2000;
-     ValorCasa = 200;
-     ValorMansion = 200;
-     alquiler = 200;
-        
     }
-    
-        
+
 }

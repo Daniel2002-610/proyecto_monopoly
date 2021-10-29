@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class CINE_CAPITOL extends DatosMayoria{
+public class CINE_CAPITOL {
+
+    public static String nombre = "CINE CAPITOL";
+    public static String dueño = "";
+    public static int precio = 50;
+    public static int paso = 5;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 18;
+    public static int Pcasa2 = 55;
+    public static int Pcasa3 = 160;
+    public static int Pcasa4 = 285;
+    public static int Pmansion1 = 420;
+    public static int ValorCasa = 55;
+    public static int ValorMansion = 55;
+    public static int alquiler = 35;
+    public static boolean estado=false;
 
     public CINE_CAPITOL() {
-        super();
-         nombre = "CINE CAPITOL";
-         dueño = "";
-         precio = 50; 
-         paso = 5;
-         Pcasa1 = 18;
-         Pcasa2 = 55;
-         Pcasa3 = 160;
-         Pcasa4 = 285;
-         Pmansion1 = 420;
-         ValorCasa = 55;
-         ValorMansion = 55;
-         alquiler = 35;
     }
-    
-    
+
 }

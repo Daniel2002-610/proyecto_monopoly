@@ -9,24 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class IGLESIA_BAUTISTA extends DatosMayoria{
+public class IGLESIA_BAUTISTA {
+
+    public static String nombre = "IGLESIA BAUTISTA";
+    public static String dueño = "";
+    public static int precio = 270;
+    public static int paso = 26;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 130;
+    public static int Pcasa2 = 360;
+    public static int Pcasa3 = 835;
+    public static int Pcasa4 = 1015;
+    public static int Pmansion1 = 1350;
+    public static int ValorCasa = 140;
+    public static int ValorMansion = 140;
+    public static int alquiler = 140;
+    public static boolean estado=false;
 
     public IGLESIA_BAUTISTA() {
-        super();
-         nombre = "IGLESIA BAUTISTA";
-         dueño = "";
-         precio = 270; 
-         paso = 26;
-         Pcasa1 = 130;
-         Pcasa2 = 360;
-         Pcasa3 = 835;
-         Pcasa4 = 1015;
-         Pmansion1 = 1350;
-         ValorCasa = 140;
-         ValorMansion = 140;
-         alquiler = 140;
-        
     }
-    
-    
+
 }

@@ -9,15 +9,16 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class PUENTE_DE_LOS_BESOS extends DatosMinoria {
+public class PUENTE_DE_LOS_BESOS {
+
+    public static String nombre = "PUENTE DE LOS BESOS";
+    public static String dueño = "";
+    public static int precio = 210;
+    public static int paso = 25;
+    public static int alquiler = 100;
+    public static boolean estado=false;
 
     public PUENTE_DE_LOS_BESOS() {
-         super();
-         nombre = "PUENTE DE LOS BESOS";
-         dueño = "";
-         precio = 210;
-         paso = 25;
-         alquiler = 100;  
     }
-   
+
 }

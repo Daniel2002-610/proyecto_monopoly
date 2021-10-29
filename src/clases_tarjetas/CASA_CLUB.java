@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class CASA_CLUB extends DatosMayoria {
+public class CASA_CLUB {
 
-    public CASA_CLUB(){ 
-            super();
-            nombre = "CASA CLUB";
-            dueño = "";
-             precio = 200; 
-             paso = 15;
-             Pcasa1 = 80;
-             Pcasa2 = 220;
-             Pcasa3 = 650;
-             Pcasa4 = 850;
-             Pmansion1 = 1050;
-             ValorCasa = 105;
-             ValorMansion = 105;
-             alquiler = 100;
-    
+    public static String nombre = "CASA CLUB";
+    public static String dueño = "";
+    public static int precio = 200;
+    public static int paso = 15;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 80;
+    public static int Pcasa2 = 220;
+    public static int Pcasa3 = 650;
+    public static int Pcasa4 = 850;
+    public static int Pmansion1 = 1050;
+    public static int ValorCasa = 105;
+    public static int ValorMansion = 105;
+    public static int alquiler = 100;
+    public static boolean estado=false;
+
+    public CASA_CLUB() {
     }
-    
+
 }

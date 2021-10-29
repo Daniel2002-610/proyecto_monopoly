@@ -9,24 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class BAR_FALCON extends DatosMayoria{
+public class BAR_FALCON {
+
+    public static String nombre = "BAR FALCON";
+    public static String dueño = "";
+    public static int precio = 250;
+    public static int paso = 20;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 110;
+    public static int Pcasa2 = 340;
+    public static int Pcasa3 = 815;
+    public static int Pcasa4 = 990;
+    public static int Pmansion1 = 1100;
+    public static int ValorCasa = 140;
+    public static int ValorMansion = 140;
+    public static int alquiler = 135;
+    public static boolean estado=false;
 
     public BAR_FALCON() {
-           super();
-     nombre = "BAR FALCON";
-     dueño = "";
-     precio = 250; 
-     paso = 20;
-     Pcasa1 = 110;
-     Pcasa2 = 340;
-     Pcasa3 = 815;
-     Pcasa4 = 990;
-     Pmansion1 = 1100;
-     ValorCasa = 140;
-     ValorMansion = 140;
-     alquiler = 135;
     }
-    
-    
-    
+
 }

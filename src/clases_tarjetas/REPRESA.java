@@ -9,16 +9,16 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class REPRESA extends DatosMinoria{
+public class REPRESA {
+
+    public static String nombre = "REPRESA";
+    public static String dueño = "";
+    public static int precio = 190;
+    public static int paso = 25;
+    public static int alquiler = 100;
+    public static boolean estado=false;
 
     public REPRESA() {
-        super();
-        nombre = "REPRESA";
-         dueño = "";
-         precio = 190;
-         paso = 25;
-         alquiler = 100; 
     }
-    
-    
+
 }

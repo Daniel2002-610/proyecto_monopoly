@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class LA_CANTERA extends DatosMayoria{
+public class LA_CANTERA {
+
+    public static String nombre = "LA CANTERA";
+    public static String dueño = "";
+    public static int precio = 360;
+    public static int paso = 40;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 180;
+    public static int Pcasa2 = 500;
+    public static int Pcasa3 = 1100;
+    public static int Pcasa4 = 1300;
+    public static int Pmansion1 = 1500;
+    public static int ValorCasa = 200;
+    public static int ValorMansion = 200;
+    public static int alquiler = 180;
+    public static boolean estado=false;
 
     public LA_CANTERA() {
-        super();
-         nombre = "LA CANTERA";
-         dueño = "";
-         precio = 360; 
-         paso = 40;
-         Pcasa1 = 180;
-         Pcasa2 = 500;
-         Pcasa3 = 1100;
-         Pcasa4 = 1300;
-         Pmansion1 = 1500;
-         ValorCasa = 200;
-         ValorMansion = 200;
-         alquiler = 180;
     }
-    
-    
+
 }

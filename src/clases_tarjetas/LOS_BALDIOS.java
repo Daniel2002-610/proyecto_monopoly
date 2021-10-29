@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class LOS_BALDIOS extends DatosMayoria{
+public class LOS_BALDIOS {
+
+    public static String nombre = "LOS BALDIOS";
+    public static String dueño = "";
+    public static int precio = 300;
+    public static int paso = 25;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 125;
+    public static int Pcasa2 = 375;
+    public static int Pcasa3 = 900;
+    public static int Pcasa4 = 1100;
+    public static int Pmansion1 = 1200;
+    public static int ValorCasa = 190;
+    public static int ValorMansion = 190;
+    public static int alquiler = 140;
+    public static boolean estado=false;
 
     public LOS_BALDIOS() {
-        super();
-         nombre = "LOS BALDIOS";
-         dueño = "";
-         precio = 300; 
-         paso = 25;
-         Pcasa1 = 125;
-         Pcasa2 = 375;
-         Pcasa3 = 900;
-         Pcasa4 = 1100;
-         Pmansion1 = 1200;
-         ValorCasa = 190;
-         ValorMansion = 190;
-         alquiler = 140;
     }
-    
-    
+
 }

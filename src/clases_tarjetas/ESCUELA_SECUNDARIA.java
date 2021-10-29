@@ -9,16 +9,16 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class ESCUELA_SECUNDARIA extends DatosMinoria{
+public class ESCUELA_SECUNDARIA {
+
+    public static String nombre = "ESCUELA SECUNDARIA";
+    public static String dueño = "";
+    public static int precio = 175;
+    public static int paso = 35;
+    public static int alquiler = 75;
+    public static boolean estado=false;
 
     public ESCUELA_SECUNDARIA() {
-        nombre = "ESCUELA SECUNDARIA";
-         dueño = "";
-         precio = 175;
-         paso = 35;
-         alquiler = 75; 
     }
-    
-    
-    
+
 }

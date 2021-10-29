@@ -9,23 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class TIENDA_COSTELLO extends DatosMayoria{
+public class TIENDA_COSTELLO {
+
+    public static String nombre = "TIENDA COSTELLO";
+    public static String dueño = "";
+    public static int precio = 180;
+    public static int paso = 20;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 30;
+    public static int Pcasa2 = 100;
+    public static int Pcasa3 = 800;
+    public static int Pcasa4 = 970;
+    public static int Pmansion1 = 1050;
+    public static int ValorCasa = 140;
+    public static int ValorMansion = 140;
+    public static int alquiler = 125;
+    public static boolean estado=false;
 
     public TIENDA_COSTELLO() {
-        super();
-         nombre = "TIENDA COSTELLO";
-         dueño = "";
-         precio = 180; 
-         paso = 20;
-         Pcasa1 = 30;
-         Pcasa2 = 100;
-         Pcasa3 = 800;
-         Pcasa4 = 970;
-         Pmansion1 = 1050;
-         ValorCasa = 140;
-         ValorMansion = 140;
-         alquiler = 125;
     }
-    
-    
+
 }

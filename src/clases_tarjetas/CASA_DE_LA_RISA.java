@@ -9,24 +9,25 @@ package clases_tarjetas;
  *
  * @author edgar
  */
-public class CASA_DE_LA_RISA extends DatosMayoria{
+public class CASA_DE_LA_RISA {
+
+    public static String nombre = "CASA DE LA RISA";
+    public static String dueño = "";
+    public static int precio = 90;
+    public static int paso = 8;
+    public static int cantcasas = 0;
+    public static int cantmasiones = 0;
+    public static int Pcasa1 = 40;
+    public static int Pcasa2 = 110;
+    public static int Pcasa3 = 295;
+    public static int Pcasa4 = 425;
+    public static int Pmansion1 = 590;
+    public static int ValorCasa = 45;
+    public static int ValorMansion = 45;
+    public static int alquiler = 65;
+    public static boolean estado=false;
 
     public CASA_DE_LA_RISA() {
-        super();
-         nombre = "CASA DE LA RISA";
-         dueño = "";
-         precio = 90; 
-         paso = 8;
-         Pcasa1 = 40;
-         Pcasa2 = 110;
-         Pcasa3 = 295;
-         Pcasa4 = 425;
-         Pmansion1 = 590;
-         ValorCasa = 45;
-         ValorMansion = 45;
-         alquiler = 65;
-    
     }
-    
-    
+
 }
