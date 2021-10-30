@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class LA_CANTERA {
 
     public static String nombre = "LA CANTERA";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 360;
     public static int paso = 40;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class LA_CANTERA {
     public static int ValorCasa = 200;
     public static int ValorMansion = 200;
     public static int alquiler = 180;
-    public static boolean estado=false;
+  
 
     public LA_CANTERA() {
     }

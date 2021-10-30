@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class CINE_CAPITOL {
 
     public static String nombre = "CINE CAPITOL";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 50;
     public static int paso = 5;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class CINE_CAPITOL {
     public static int ValorCasa = 55;
     public static int ValorMansion = 55;
     public static int alquiler = 35;
-    public static boolean estado=false;
+  
 
     public CINE_CAPITOL() {
     }

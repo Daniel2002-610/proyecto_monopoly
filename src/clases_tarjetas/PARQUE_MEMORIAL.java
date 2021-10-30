@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class PARQUE_MEMORIAL {
 
     public static String nombre = "PARQUE MEMORIAL";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 130;
     public static int paso = 7;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class PARQUE_MEMORIAL {
     public static int ValorCasa = 45;
     public static int ValorMansion = 45;
     public static int alquiler = 60;
-    public static boolean estado=false;
+   
 
     public PARQUE_MEMORIAL() {
     }

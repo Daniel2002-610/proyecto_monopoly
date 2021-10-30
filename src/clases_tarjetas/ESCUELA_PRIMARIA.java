@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class ESCUELA_PRIMARIA {
 
     public static String nombre = "ESCUELA PRIMARIA";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 150;
     public static int paso = 11;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class ESCUELA_PRIMARIA {
     public static int ValorCasa = 110;
     public static int ValorMansion = 110;
     public static int alquiler = 75;
-    public static boolean estado=false;
+    
 
     public ESCUELA_PRIMARIA() {
     }

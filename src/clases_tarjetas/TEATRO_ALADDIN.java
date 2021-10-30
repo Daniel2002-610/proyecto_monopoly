@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class TEATRO_ALADDIN {
 
     public static String nombre = "TEATRO ALADDIN";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 150;
     public static int paso = 10;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class TEATRO_ALADDIN {
     public static int ValorCasa = 110;
     public static int ValorMansion = 100;
     public static int alquiler = 70;
-    public static boolean estado=false;
+   
 
     public TEATRO_ALADDIN() {
     }

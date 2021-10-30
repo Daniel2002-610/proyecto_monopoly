@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class LOS_BALDIOS {
 
     public static String nombre = "LOS BALDIOS";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 300;
     public static int paso = 25;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class LOS_BALDIOS {
     public static int ValorCasa = 190;
     public static int ValorMansion = 190;
     public static int alquiler = 140;
-    public static boolean estado=false;
+   
 
     public LOS_BALDIOS() {
     }

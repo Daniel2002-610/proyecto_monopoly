@@ -12,11 +12,11 @@ package clases_tarjetas;
 public class REPRESA {
 
     public static String nombre = "REPRESA";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 190;
     public static int paso = 25;
     public static int alquiler = 100;
-    public static boolean estado=false;
+    
 
     public REPRESA() {
     }

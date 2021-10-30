@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class CALLE_WITCHMAN {
 
     public static String nombre = "CALLE WITCHMAN";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 390;
     public static int paso = 50;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class CALLE_WITCHMAN {
     public static int ValorCasa = 200;
     public static int ValorMansion = 200;
     public static int alquiler = 200;
-    public static boolean estado=false;
+  
 
     public CALLE_WITCHMAN() {
     }

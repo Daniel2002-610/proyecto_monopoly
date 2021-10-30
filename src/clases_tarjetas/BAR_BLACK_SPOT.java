@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class BAR_BLACK_SPOT {
 
     public static String nombre = "BAR BLACK SPOT";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 230;
     public static int paso = 24;
     public static int cantcasas = 0;

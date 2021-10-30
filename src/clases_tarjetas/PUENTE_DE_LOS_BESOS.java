@@ -12,11 +12,11 @@ package clases_tarjetas;
 public class PUENTE_DE_LOS_BESOS {
 
     public static String nombre = "PUENTE DE LOS BESOS";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 210;
     public static int paso = 25;
     public static int alquiler = 100;
-    public static boolean estado=false;
+   
 
     public PUENTE_DE_LOS_BESOS() {
     }

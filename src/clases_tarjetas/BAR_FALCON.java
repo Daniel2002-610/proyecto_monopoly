@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class BAR_FALCON {
 
     public static String nombre = "BAR FALCON";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 250;
     public static int paso = 20;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class BAR_FALCON {
     public static int ValorCasa = 140;
     public static int ValorMansion = 140;
     public static int alquiler = 135;
-    public static boolean estado=false;
+  
 
     public BAR_FALCON() {
     }

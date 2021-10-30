@@ -53,7 +53,6 @@ import tarjetas_compras.vTERMINAL_DE_BUSES;
  */
 public class tablero extends javax.swing.JFrame {
 
-    
     play1 pl1 = new play1();
     play2 pl2 = new play2();
     play3 pl3 = new play3();
@@ -69,7 +68,8 @@ public class tablero extends javax.swing.JFrame {
     public tablero() {
         initComponents();
         this.setLocationRelativeTo(null);
-        lbconta.setText(String.valueOf(cont));
+        turja.setText(String.valueOf(cont));
+        turno.setText(pl1.nombre);
         v1.setVisible(false);
         v2.setVisible(false);
         v3.setVisible(false);
@@ -82,7 +82,7 @@ public class tablero extends javax.swing.JFrame {
         btnj4.setVisible(false);
         btnj5.setVisible(false);
         btnj6.setVisible(false);
-      //  dinero11.setVisible(false);
+        //  dinero11.setVisible(false);
 
     }
 
@@ -90,33 +90,34 @@ public class tablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        turno = new javax.swing.JLabel();
         dinero6 = new javax.swing.JLabel();
         dinero5 = new javax.swing.JLabel();
         dinero4 = new javax.swing.JLabel();
         dinero3 = new javax.swing.JLabel();
         dinero2 = new javax.swing.JLabel();
-        player6 = new javax.swing.JLabel();
+        btnturno = new javax.swing.JButton();
         dinero = new javax.swing.JLabel();
+        player6 = new javax.swing.JLabel();
         player5 = new javax.swing.JLabel();
         player4 = new javax.swing.JLabel();
         player3 = new javax.swing.JLabel();
+        player2 = new javax.swing.JLabel();
+        player = new javax.swing.JLabel();
+        btnj1 = new javax.swing.JButton();
+        btnj3 = new javax.swing.JButton();
+        btnj2 = new javax.swing.JButton();
         btnj4 = new javax.swing.JButton();
         btnj5 = new javax.swing.JButton();
         btnj6 = new javax.swing.JButton();
-        player2 = new javax.swing.JLabel();
-        player = new javax.swing.JLabel();
-        lbconta = new javax.swing.JLabel();
-        btnj3 = new javax.swing.JButton();
+        turja = new javax.swing.JLabel();
+        turno = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         ficha_3 = new javax.swing.JLabel();
         ficha_2 = new javax.swing.JLabel();
         ficha_4 = new javax.swing.JLabel();
         ficha_6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         ficha_1 = new javax.swing.JLabel();
-        btnj1 = new javax.swing.JButton();
-        btnj2 = new javax.swing.JButton();
         ficha_5 = new javax.swing.JLabel();
         tablero = new javax.swing.JLabel();
         num = new javax.swing.JLabel();
@@ -136,38 +137,72 @@ public class tablero extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        turno.setForeground(new java.awt.Color(255, 255, 255));
-        turno.setText("jLabel1");
-        getContentPane().add(turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
-
         dinero6.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         dinero6.setForeground(new java.awt.Color(0, 0, 0));
         dinero6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        dinero6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dinero6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dinero6MouseClicked(evt);
+            }
+        });
         getContentPane().add(dinero6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1176, 635, 130, 20));
 
         dinero5.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         dinero5.setForeground(new java.awt.Color(0, 0, 0));
         dinero5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         dinero5.setText("          ");
+        dinero5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dinero5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dinero5MouseClicked(evt);
+            }
+        });
         getContentPane().add(dinero5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1176, 475, 130, 20));
 
         dinero4.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         dinero4.setForeground(new java.awt.Color(0, 0, 0));
         dinero4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        dinero4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dinero4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dinero4MouseClicked(evt);
+            }
+        });
         getContentPane().add(dinero4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1176, 305, 130, 20));
 
         dinero3.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         dinero3.setForeground(new java.awt.Color(0, 0, 0));
+        dinero3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dinero3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dinero3MouseClicked(evt);
+            }
+        });
         getContentPane().add(dinero3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 640, 130, 20));
 
         dinero2.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         dinero2.setForeground(new java.awt.Color(0, 0, 0));
+        dinero2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dinero2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dinero2MouseClicked(evt);
+            }
+        });
         getContentPane().add(dinero2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 130, 20));
 
-        player6.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        player6.setForeground(new java.awt.Color(255, 255, 255));
-        player6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        getContentPane().add(player6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 610, 150, 20));
+        btnturno.setText("turno");
+        btnturno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnturnoMouseClicked(evt);
+            }
+        });
+        btnturno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnturnoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnturno, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 80, 60, -1));
 
         dinero.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         dinero.setForeground(new java.awt.Color(0, 0, 0));
@@ -178,6 +213,11 @@ public class tablero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(dinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 130, 20));
+
+        player6.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        player6.setForeground(new java.awt.Color(255, 255, 255));
+        player6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(player6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 610, 150, 20));
 
         player5.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         player5.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,6 +232,53 @@ public class tablero extends javax.swing.JFrame {
         player3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         player3.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(player3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, 150, 20));
+
+        player2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        player2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(player2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 150, 20));
+
+        player.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        player.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(player, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 150, 20));
+
+        btnj1.setText("j1");
+        btnj1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnj1MouseClicked(evt);
+            }
+        });
+        btnj1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnj1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 30, 60, -1));
+
+        btnj3.setText("j3");
+        btnj3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnj3MouseClicked(evt);
+            }
+        });
+        btnj3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnj3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 140, 60, -1));
+
+        btnj2.setText("j2");
+        btnj2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnj2MouseClicked(evt);
+            }
+        });
+        btnj2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnj2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 90, 60, -1));
 
         btnj4.setText("j4");
         btnj4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,30 +319,13 @@ public class tablero extends javax.swing.JFrame {
         });
         getContentPane().add(btnj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 30, 60, -1));
 
-        player2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        player2.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(player2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 150, 20));
+        turja.setForeground(new java.awt.Color(255, 255, 255));
+        turja.setText("jLabel1");
+        getContentPane().add(turja, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
-        player.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        player.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(player, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 150, 20));
-
-        lbconta.setForeground(new java.awt.Color(255, 255, 255));
-        lbconta.setText("jLabel1");
-        getContentPane().add(lbconta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
-
-        btnj3.setText("j3");
-        btnj3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnj3MouseClicked(evt);
-            }
-        });
-        btnj3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnj3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 140, 60, -1));
+        turno.setForeground(new java.awt.Color(255, 255, 255));
+        turno.setText("jLabel1");
+        getContentPane().add(turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
 
         jButton2.setText("iniciar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -264,6 +334,14 @@ public class tablero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, -1, -1));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
         ficha_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/ficha3.png"))); // NOI18N
         getContentPane().add(ficha_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 645, -1, -1));
@@ -277,47 +355,8 @@ public class tablero extends javax.swing.JFrame {
         ficha_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/ficha6.png"))); // NOI18N
         getContentPane().add(ficha_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 670, -1, -1));
 
-        jButton1.setText("jButton1");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, -1, -1));
-
         ficha_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/ficha1.png"))); // NOI18N
         getContentPane().add(ficha_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 620, -1, -1));
-
-        btnj1.setText("j1");
-        btnj1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnj1MouseClicked(evt);
-            }
-        });
-        btnj1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnj1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 30, 60, -1));
-
-        btnj2.setText("j2");
-        btnj2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnj2MouseClicked(evt);
-            }
-        });
-        btnj2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnj2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 90, 60, -1));
 
         ficha_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/ficha5.png"))); // NOI18N
         getContentPane().add(ficha_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 670, -1, -1));
@@ -422,270 +461,334 @@ public class tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_btnj6ActionPerformed
 
     private void btnj1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnj1MouseClicked
-        if (evt.getButton() == MouseEvent.BUTTON1) {
-            if (cont == 1) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador1 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj1();
-            }
+
+        if (cont == 1) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador1 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj1();
+            verificarj1();
         }
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            turno();
-        }
+
+
     }//GEN-LAST:event_btnj1MouseClicked
 
     private void btnj2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnj2MouseClicked
-        if (evt.getButton() == MouseEvent.BUTTON1) {
-            if (cont == 1) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador1 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj1();
-                pasoj2();
-            } else if (cont == 2) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador2 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj2();
-                pasoj1();
-            }
+
+        if (cont == 1) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador1 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj1();
+            verificarj1();
+            pasoj2();
+        } else if (cont == 2) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador2 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj2();
+            verificarj2();
+            pasoj1();
         }
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            turno();
-        }
+
     }//GEN-LAST:event_btnj2MouseClicked
 
     private void btnj3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnj3MouseClicked
-        if (evt.getButton() == MouseEvent.BUTTON1) {
-            if (cont == 1) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador1 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj1();
-                pasoj2();
-                pasoj3();
-            } else if (cont == 2) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador2 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj2();
-                pasoj3();
-                pasoj1();
-            } else if (cont == 3) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador3 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            }
+
+        if (cont == 1) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador1 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj1();
+            verificarj1();
+            pasoj2();
+            pasoj3();
+        } else if (cont == 2) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador2 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj2();
+            verificarj2();
+            pasoj3();
+            pasoj1();
+        } else if (cont == 3) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador3 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj3();
+            verificarj3();
+            pasoj2();
+            pasoj1();
         }
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            turno();
-        }
+
     }//GEN-LAST:event_btnj3MouseClicked
 
     private void btnj6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnj6MouseClicked
-        if (evt.getButton() == MouseEvent.BUTTON1) {
-            if (cont == 1) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador1 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj1();
-                pasoj2();
-                pasoj3();
-                pasoj4();
-                pasoj5();
-                pasoj6();
-            } else if (cont == 2) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador2 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj2();
-                pasoj6();
-                pasoj5();
-                pasoj4();
-                pasoj3();
-                pasoj1();
-            } else if (cont == 3) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador3 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj3();
-                pasoj6();
-                pasoj5();
-                pasoj4();
-                pasoj2();
-                pasoj1();
-            } else if (cont == 4) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador4 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj4();
-                pasoj6();
-                pasoj5();
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            } else if (cont == 5) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador5 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj5();
-                pasoj6();
-                pasoj4();
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            } else if (cont == 6) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador6 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj6();
-                pasoj5();
-                pasoj4();
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            }
+
+        if (cont == 1) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador1 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj1();
+            verificarj1();
+            pasoj2();
+            pasoj3();
+            pasoj4();
+            pasoj5();
+            pasoj6();
+        } else if (cont == 2) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador2 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj2();
+            verificarj2();
+            pasoj6();
+            pasoj5();
+            pasoj4();
+            pasoj3();
+            pasoj1();
+        } else if (cont == 3) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador3 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj3();
+            verificarj3();
+            pasoj6();
+            pasoj5();
+            pasoj4();
+            pasoj2();
+            pasoj1();
+        } else if (cont == 4) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador4 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj4();
+            verificarj4();
+            pasoj6();
+            pasoj5();
+            pasoj3();
+            pasoj2();
+            pasoj1();
+        } else if (cont == 5) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador5 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj5();
+            verificarj5();
+            pasoj6();
+            pasoj4();
+            pasoj3();
+            pasoj2();
+            pasoj1();
+        } else if (cont == 6) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador6 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj6();
+            verificarj6();
+            pasoj5();
+            pasoj4();
+            pasoj3();
+            pasoj2();
+            pasoj1();
         }
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            turno();
-        }
+
     }//GEN-LAST:event_btnj6MouseClicked
 
     private void btnj5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnj5MouseClicked
-        if (evt.getButton() == MouseEvent.BUTTON1) {
-            if (cont == 1) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador1 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj1();
-                pasoj2();
-                pasoj3();
-                pasoj4();
-                pasoj5();
-            } else if (cont == 2) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador2 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj2();
-                pasoj5();
-                pasoj4();
-                pasoj3();
-                pasoj1();
-            } else if (cont == 3) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador3 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj3();
-                pasoj5();
-                pasoj4();
-                pasoj2();
-                pasoj1();
-            } else if (cont == 4) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador4 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj4();
-                pasoj5();
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            } else if (cont == 5) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador5 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj5();
-                pasoj4();
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            }
+
+        if (cont == 1) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador1 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj1();
+            verificarj1();
+            pasoj2();
+            pasoj3();
+            pasoj4();
+            pasoj5();
+        } else if (cont == 2) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador2 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj2();
+            verificarj2();
+            pasoj5();
+            pasoj4();
+            pasoj3();
+            pasoj1();
+        } else if (cont == 3) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador3 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj3();
+            verificarj3();
+            pasoj5();
+            pasoj4();
+            pasoj2();
+            pasoj1();
+        } else if (cont == 4) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador4 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj4();
+            verificarj4();
+            pasoj5();
+            pasoj3();
+            pasoj2();
+            pasoj1();
+        } else if (cont == 5) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador5 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj5();
+            verificarj5();
+            pasoj4();
+            pasoj3();
+            pasoj2();
+            pasoj1();
         }
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            turno();
-        }
+
     }//GEN-LAST:event_btnj5MouseClicked
 
     private void btnj4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnj4MouseClicked
-        if (evt.getButton() == MouseEvent.BUTTON1) {
-            if (cont == 1) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador1 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj1();
-                pasoj2();
-                pasoj3();
-                pasoj4();
-            } else if (cont == 2) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador2 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj2();
-                pasoj4();
-                pasoj3();
-                pasoj1();
-            } else if (cont == 3) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador3 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj3();
-                pasoj4();
-                pasoj2();
-                pasoj1();
-            } else if (cont == 4) {
-                dato = (int) Math.floor(Math.random() * 12 + 1);
-                num.setText(String.valueOf(dato));
-                jugador4 += dato;
-                JOptionPane.showMessageDialog(null, dato);
-                pasoj4();
-                pasoj3();
-                pasoj2();
-                pasoj1();
-            }
+
+        if (cont == 1) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador1 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj1();
+            verificarj1();
+            pasoj2();
+            pasoj3();
+            pasoj4();
+        } else if (cont == 2) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador2 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj2();
+            verificarj2();
+            pasoj4();
+            pasoj3();
+            pasoj1();
+        } else if (cont == 3) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador3 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj3();
+            verificarj3();
+            pasoj4();
+            pasoj2();
+            pasoj1();
+        } else if (cont == 4) {
+            dato = (int) Math.floor(Math.random() * 12 + 1);
+            num.setText(String.valueOf(dato));
+            jugador4 += dato;
+            JOptionPane.showMessageDialog(null, dato);
+            pasoj4();
+            verificarj4();
+            pasoj3();
+            pasoj2();
+            pasoj1();
         }
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            turno();
-        }
+
     }//GEN-LAST:event_btnj4MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jugador2++;
-        pasoj2();
-        verificarj2();
-              
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void dineroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dineroMouseClicked
-      dinero.setText(String.valueOf(pl1.dinero));
+        dinero.setText(String.valueOf(pl1.dinero));
         JOptionPane.showMessageDialog(null, pl1.dinero);
     }//GEN-LAST:event_dineroMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void dinero5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dinero5MouseClicked
+        dinero5.setText(String.valueOf(pl5.dinero));
+        JOptionPane.showMessageDialog(null, pl5.dinero);
+    }//GEN-LAST:event_dinero5MouseClicked
+
+    private void btnturnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturnoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnturnoMouseClicked
+
+    private void btnturnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnturnoActionPerformed
+        if (cont == 1) {
+            cont = 2;
+            turja.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        } else if (cont == 2) {
+            cont = 3;
+            turja.setText(String.valueOf(cont));
+            turno.setText(pl3.nombre);
+        } else if (cont == 3) {
+            cont = 4;
+            turja.setText(String.valueOf(cont));
+            turno.setText(pl4.nombre);
+        } else if (cont == 4) {
+            cont = 5;
+            turja.setText(String.valueOf(cont));
+            turno.setText(pl5.nombre);
+        } else if (cont == 5) {
+            cont = 6;
+            turja.setText(String.valueOf(cont));
+            turno.setText(pl6.nombre);
+        } else if (cont == 6) {
+            cont = 1;
+            turja.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+
+        dinero.setText(String.valueOf(pl1.dinero));
+        dinero2.setText(String.valueOf(pl2.dinero));
+        dinero3.setText(String.valueOf(pl3.dinero));
+        dinero4.setText(String.valueOf(pl4.dinero));
+        dinero5.setText(String.valueOf(pl5.dinero));
+        dinero6.setText(String.valueOf(pl6.dinero));
+
+    }//GEN-LAST:event_btnturnoActionPerformed
+
+    private void dinero3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dinero3MouseClicked
+        dinero3.setText(String.valueOf(pl3.dinero));
+        JOptionPane.showMessageDialog(null, pl3.dinero);
+    }//GEN-LAST:event_dinero3MouseClicked
+
+    private void dinero4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dinero4MouseClicked
+        dinero4.setText(String.valueOf(pl4.dinero));
+        JOptionPane.showMessageDialog(null, pl4.dinero);
+    }//GEN-LAST:event_dinero4MouseClicked
+
+    private void dinero6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dinero6MouseClicked
+        dinero.setText(String.valueOf(pl1.dinero));
+        JOptionPane.showMessageDialog(null, pl1.dinero);
+    }//GEN-LAST:event_dinero6MouseClicked
+
+    private void dinero2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dinero2MouseClicked
+        dinero2.setText(String.valueOf(pl2.dinero));
+        JOptionPane.showMessageDialog(null, pl2.dinero);
+    }//GEN-LAST:event_dinero2MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jugador1 = 10;
+        pasoj1();
+        verificarj1();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -731,13 +834,14 @@ public class tablero extends javax.swing.JFrame {
     private javax.swing.JButton btnj4;
     private javax.swing.JButton btnj5;
     private javax.swing.JButton btnj6;
+    private javax.swing.JButton btnturno;
     private javax.swing.JTextField caja;
-    public static javax.swing.JLabel dinero;
-    public static javax.swing.JLabel dinero2;
-    public static javax.swing.JLabel dinero3;
-    public static javax.swing.JLabel dinero4;
-    public static javax.swing.JLabel dinero5;
-    public static javax.swing.JLabel dinero6;
+    public javax.swing.JLabel dinero;
+    public javax.swing.JLabel dinero2;
+    public javax.swing.JLabel dinero3;
+    public javax.swing.JLabel dinero4;
+    public javax.swing.JLabel dinero5;
+    public javax.swing.JLabel dinero6;
     private javax.swing.JLabel ficha_1;
     private javax.swing.JLabel ficha_2;
     private javax.swing.JLabel ficha_3;
@@ -747,8 +851,7 @@ public class tablero extends javax.swing.JFrame {
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    public static javax.swing.JLabel lbconta;
-    public static javax.swing.JLabel num;
+    public javax.swing.JLabel num;
     public static javax.swing.JLabel player;
     public static javax.swing.JLabel player2;
     public static javax.swing.JLabel player3;
@@ -756,7 +859,8 @@ public class tablero extends javax.swing.JFrame {
     public static javax.swing.JLabel player5;
     public static javax.swing.JLabel player6;
     private javax.swing.JLabel tablero;
-    public static javax.swing.JLabel turno;
+    public javax.swing.JLabel turja;
+    public javax.swing.JLabel turno;
     private javax.swing.JLabel v1;
     private javax.swing.JLabel v2;
     private javax.swing.JLabel v3;
@@ -768,104 +872,104 @@ public class tablero extends javax.swing.JFrame {
     void turno() {
         if (!"".equals(player.getText())) {
             if (cont == 1) {
-                turno.setText(pl1.nombre);
+                turja.setText(pl1.nombre);
                 cont = 1;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             }
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText())) {
             if (cont == 1) {
-                turno.setText(pl2.nombre);
+                turja.setText(pl1.nombre);
                 cont = 2;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 2) {
-                turno.setText(pl3.nombre);
+                turja.setText(pl2.nombre);
                 cont = 1;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             }
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText())) {
             if (cont == 1) {
-                turno.setText(pl2.nombre);
+                turja.setText(pl1.nombre);
                 cont = 2;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 2) {
-                turno.setText(pl3.nombre);
+                turja.setText(pl2.nombre);
                 cont = 3;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 3) {
-                turno.setText(pl4.nombre);
+                turja.setText(pl3.nombre);
                 cont = 1;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             }
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText())) {
             if (cont == 1) {
-                turno.setText(pl2.nombre);
+                turja.setText(pl2.nombre);
                 cont = 2;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 2) {
-                turno.setText(pl3.nombre);
+                turja.setText(pl3.nombre);
                 cont = 3;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 3) {
-                turno.setText(pl4.nombre);
+                turja.setText(pl4.nombre);
                 cont = 4;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 4) {
-                turno.setText(pl5.nombre);
+                turja.setText(pl5.nombre);
                 cont = 1;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             }
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText())) {
             if (cont == 1) {
-                turno.setText(pl2.nombre);
+                turja.setText(pl2.nombre);
                 cont = 2;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 2) {
-                turno.setText(pl3.nombre);
+                turja.setText(pl3.nombre);
                 cont = 3;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 3) {
-                turno.setText(pl4.nombre);
+                turja.setText(pl4.nombre);
                 cont = 4;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 4) {
-                turno.setText(pl5.nombre);
+                turja.setText(pl5.nombre);
                 cont = 5;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 5) {
-                turno.setText(pl6.nombre);
+                turja.setText(pl6.nombre);
                 cont = 1;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             }
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText()) && !"".equals(player6.getText())) {
             if (cont == 1) {
-                turno.setText(pl2.nombre);
+                turja.setText(pl2.nombre);
                 cont = 2;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 2) {
-                turno.setText(pl3.nombre);
+                turja.setText(pl3.nombre);
                 cont = 3;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 3) {
-                turno.setText(pl4.nombre);
+                turja.setText(pl4.nombre);
                 cont = 4;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 4) {
-                turno.setText(pl5.nombre);
+                turja.setText(pl5.nombre);
                 cont = 5;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 5) {
-                turno.setText(pl6.nombre);
+                turja.setText(pl6.nombre);
                 cont = 6;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             } else if (cont == 6) {
-                turno.setText(pl1.nombre);
+                turja.setText(pl1.nombre);
                 cont = 1;
-                lbconta.setText(String.valueOf(cont));
+                turja.setText(String.valueOf(cont));
             }
 
         }
@@ -1618,7 +1722,7 @@ public class tablero extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "felicidades");
 
         } else if (jugador1 == 2) {
-           VCALLE_JACKSON jack = new VCALLE_JACKSON();  
+            VCALLE_JACKSON jack = new VCALLE_JACKSON();
             jack.setVisible(true);
         } else if (jugador1 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");

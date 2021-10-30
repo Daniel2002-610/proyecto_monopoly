@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class IGLESIA_BAUTISTA {
 
     public static String nombre = "IGLESIA BAUTISTA";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 270;
     public static int paso = 26;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class IGLESIA_BAUTISTA {
     public static int ValorCasa = 140;
     public static int ValorMansion = 140;
     public static int alquiler = 140;
-    public static boolean estado=false;
+   
 
     public IGLESIA_BAUTISTA() {
     }

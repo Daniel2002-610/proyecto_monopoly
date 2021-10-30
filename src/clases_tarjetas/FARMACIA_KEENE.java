@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class FARMACIA_KEENE {
 
     public static String nombre = "FARMACIA KEENE";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 100;
     public static int paso = 8;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class FARMACIA_KEENE {
     public static int ValorCasa = 45;
     public static int ValorMansion = 45;
     public static int alquiler = 55;
-    public static boolean estado=false;
+   
 
     public FARMACIA_KEENE() {
     }

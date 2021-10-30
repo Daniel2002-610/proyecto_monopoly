@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class CASA_NEIBOLT {
 
     public static String nombre = "CASA NEIBOLT";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 250;
     public static int paso = 22;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class CASA_NEIBOLT {
     public static int ValorCasa = 150;
     public static int ValorMansion = 150;
     public static int alquiler = 95;
-    public static boolean estado=false;
+    
 
     public CASA_NEIBOLT() {
     }

@@ -12,11 +12,11 @@ package clases_tarjetas;
 public class ESCUELA_SECUNDARIA {
 
     public static String nombre = "ESCUELA SECUNDARIA";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 175;
     public static int paso = 35;
     public static int alquiler = 75;
-    public static boolean estado=false;
+
 
     public ESCUELA_SECUNDARIA() {
     }

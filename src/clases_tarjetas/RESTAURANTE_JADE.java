@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class RESTAURANTE_JADE {
 
     public static String nombre = "RESTAURANTE JADE";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 190;
     public static int paso = 15;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class RESTAURANTE_JADE {
     public static int ValorCasa = 105;
     public static int ValorMansion = 105;
     public static int alquiler = 95;
-    public static boolean estado=false;
+    
 
     public RESTAURANTE_JADE() {
     }

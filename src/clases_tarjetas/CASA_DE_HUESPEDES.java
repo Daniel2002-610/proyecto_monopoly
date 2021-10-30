@@ -12,7 +12,7 @@ package clases_tarjetas;
 public class CASA_DE_HUESPEDES {
 
     public static String nombre = "CASA DE HUESPEDES";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 170;
     public static int paso = 14;
     public static int cantcasas = 0;
@@ -25,7 +25,7 @@ public class CASA_DE_HUESPEDES {
     public static int ValorCasa = 105;
     public static int ValorMansion = 105;
     public static int alquiler = 90;
-    public static boolean estado=false;
+    
 
     public CASA_DE_HUESPEDES() {
     }

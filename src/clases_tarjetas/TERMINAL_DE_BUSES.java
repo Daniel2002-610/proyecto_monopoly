@@ -12,11 +12,11 @@ package clases_tarjetas;
 public class TERMINAL_DE_BUSES {
 
     public static String nombre = "TERMINAL DE BUSES";
-    public static String dueño = "";
+    public  String dueño = "";
     public static int precio = 210;
     public static int paso = 25;
     public static int alquiler = 100;
-    public static boolean estado = false;
+   
 
     public TERMINAL_DE_BUSES() {
     }
