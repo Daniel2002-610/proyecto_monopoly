@@ -114,7 +114,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncomprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncomprarMouseClicked
-       /// if (!"".equals(vdat.dueño)) {
+      
             if (tab.cont == 1) {
                 if (pl1.dinero >= vdat.precio) {
                     vdat.dueño=pl1.nombre;
@@ -188,9 +188,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
                     dispose();
                 }
             }
-      // }else {
-        //JOptionPane.showMessageDialog(null, "Ya está comprado");
-        //}
+      
     
     }//GEN-LAST:event_btncomprarMouseClicked
 
@@ -248,7 +246,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
     private void btnaceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnaceptarMouseClicked
         //metodo comprar
         String valor = nombres.getSelectedItem().toString();
-        if ("".equals(vdat.dueño)) {
+       
          if (valor.equals(pl1.nombre)) {
                 if (pl1.dinero >= vdat.precio) {
                     vdat.dueño = pl1.nombre;
@@ -323,9 +321,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
                 }
             }
         
-        }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-        }
+       
         dispose();
     }//GEN-LAST:event_btnaceptarMouseClicked
 
