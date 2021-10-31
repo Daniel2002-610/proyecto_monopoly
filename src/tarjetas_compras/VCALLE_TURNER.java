@@ -7,37 +7,35 @@ package tarjetas_compras;
 
 import clases_tarjetas.CALLE_TURNER;
 import javax.swing.JOptionPane;
-import vistas.tablero;
 import jugadores.play1;
 import jugadores.play2;
 import jugadores.play3;
 import jugadores.play4;
 import jugadores.play5;
 import jugadores.play6;
-
+import vistas.tablero;
 /**
  *
  * @author edgar
  */
 public class VCALLE_TURNER extends javax.swing.JFrame {
-
-    CALLE_TURNER vdat = new CALLE_TURNER();
-    tablero tab = new tablero();
+  CALLE_TURNER vdat = new CALLE_TURNER();
+  tablero tab = new tablero();
     play1 pl1 = new play1();
     play2 pl2 = new play2();
     play3 pl3 = new play3();
     play4 pl4 = new play4();
     play5 pl5 = new play5();
     play6 pl6 = new play6();
-
+  
     public VCALLE_TURNER() {
         initComponents();
         setLocationRelativeTo(null);
-        btncomprar.setVisible(true);
-        btnsaltar.setVisible(true);
-        btnsubastar.setVisible(true);
-        btnaceptar.setVisible(false);
-        nombres.setVisible(false);
+      btncomprar.setVisible(true);
+      btnsaltar.setVisible(true);
+      btnsubastar.setVisible(true);
+      btnaceptar.setVisible(false);
+      nombres.setVisible(false);
     }
 
     /**
@@ -58,6 +56,7 @@ public class VCALLE_TURNER extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btncomprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/btncomprar.png"))); // NOI18N
@@ -109,7 +108,7 @@ public class VCALLE_TURNER extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncomprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncomprarMouseClicked
-        if ("".equals(vdat.dueño)) {
+if ("".equals(vdat.dueño)) {
             if (tab.cont == 1) {
                 if (pl1.dinero >= vdat.precio) {
                     vdat.dueño = pl1.nombre;
@@ -182,9 +181,7 @@ public class VCALLE_TURNER extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
                     dispose();
                 }
-            } else {
-                JOptionPane.showMessageDialog(null, "burro");
-            }
+            } 
         }
     }//GEN-LAST:event_btncomprarMouseClicked
 
@@ -197,7 +194,7 @@ public class VCALLE_TURNER extends javax.swing.JFrame {
     }//GEN-LAST:event_btnsubastarMouseClicked
 
     private void btnsaltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsaltarMouseClicked
-        dispose();
+      dispose();
     }//GEN-LAST:event_btnsaltarMouseClicked
 
     private void btnaceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnaceptarMouseClicked
