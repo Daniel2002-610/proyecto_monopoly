@@ -5,6 +5,7 @@
  */
 package vistas;
 
+import clases_base.jugadores;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
@@ -14,21 +15,19 @@ import jugadores.play3;
 import jugadores.play4;
 import jugadores.play5;
 import jugadores.play6;
-
 /**
  *
  * @author edgar
  */
 public class inicio extends javax.swing.JFrame {
-
-    tablero tab = new tablero();
+ tablero tab = new tablero();
     play1 pl1 = new play1();
     play2 pl2 = new play2();
     play3 pl3 = new play3();
     play4 pl4 = new play4();
     play5 pl5 = new play5();
     play6 pl6 = new play6();
-
+    jugadores jnombre = new jugadores();
     int contador = 1;
 
     /**
@@ -38,6 +37,7 @@ public class inicio extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         cajanombre.setBackground(new java.awt.Color(0, 0, 0, 1));
+        
 
     }
 
@@ -66,7 +66,7 @@ public class inicio extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cajanombre.setFont(new java.awt.Font("it font", 0, 28)); // NOI18N
+        cajanombre.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         cajanombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cajanombre.setBorder(null);
         cajanombre.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -76,7 +76,7 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(cajanombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 165, 20));
 
-        txtjugador2.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
+        txtjugador2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         getContentPane().add(txtjugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
         btnagregar.setFont(new java.awt.Font("it font", 0, 27)); // NOI18N
@@ -101,19 +101,19 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(btniniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, -1, -1));
 
-        txtjugador3.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
+        txtjugador3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         getContentPane().add(txtjugador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
-        txtjugador4.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
+        txtjugador4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         getContentPane().add(txtjugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
-        txtjugador5.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
+        txtjugador5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         getContentPane().add(txtjugador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        txtjugador6.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
+        txtjugador6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         getContentPane().add(txtjugador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
-        txtjugador1.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
+        txtjugador1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         getContentPane().add(txtjugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
@@ -195,41 +195,42 @@ public class inicio extends javax.swing.JFrame {
     void agregar() {
         if (!"".equals(cajanombre.getText())) {
             if (contador == 1) {
-                pl1.nombre = cajanombre.getText();
+                pl1.nombre=cajanombre.getText();
                 txtjugador1.setText("1. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-
+                System.out.println(pl1.nombre);
+                
             } else if (contador == 2) {
-                pl2.nombre = cajanombre.getText();
-                txtjugador2.setText("2. " + cajanombre.getText());
+                pl2.nombre=cajanombre.getText();
+                txtjugador2.setText("2. " + cajanombre.getText());              
                 cajanombre.setText("");
                 contador += 1;
-
+                 System.out.println(pl2.nombre);
             } else if (contador == 3) {
-                pl3.nombre = cajanombre.getText();
-                txtjugador3.setText("3. " + cajanombre.getText());
+                pl3.nombre=cajanombre.getText();
+                txtjugador3.setText("3. " + cajanombre.getText());                
                 cajanombre.setText("");
                 contador += 1;
-
+                 System.out.println(pl3.nombre);
             } else if (contador == 4) {
-                pl4.nombre = cajanombre.getText();
-                txtjugador4.setText("4. " + cajanombre.getText());
+                pl4.nombre=cajanombre.getText();
+                txtjugador4.setText("4. " + cajanombre.getText());               
                 cajanombre.setText("");
                 contador += 1;
-
+                 System.out.println(pl4.nombre);
             } else if (contador == 5) {
-                pl5.nombre = cajanombre.getText();
+                pl5.nombre=cajanombre.getText();
                 txtjugador5.setText("5. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-
+                 System.out.println(pl5.nombre);
             } else if (contador == 6) {
-                pl6.nombre = cajanombre.getText();
+                pl6.nombre=cajanombre.getText();
                 txtjugador6.setText("6. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-
+                 System.out.println(pl5.nombre);
             } else {
                 JOptionPane.showMessageDialog(null, "Lo siento, solo se adminten 6 jugadores");
                 cajanombre.setText("");
@@ -237,6 +238,5 @@ public class inicio extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Ingrese un nombre");
         }
-    }
-
+    }  
 }

@@ -25,7 +25,7 @@ public class CASA_CLUB {
     public static int ValorCasa = 105;
     public static int ValorMansion = 105;
     public static int alquiler = 100;
-   
+    public static boolean estado=false;
 
     public CASA_CLUB() {
     }

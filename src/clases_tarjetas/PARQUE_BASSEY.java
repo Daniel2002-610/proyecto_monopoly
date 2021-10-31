@@ -16,7 +16,7 @@ public class PARQUE_BASSEY {
     public static int precio = 190;
     public static int paso = 25;
     public static int alquiler = 100;
-   
+    public static boolean estado=false;
 
     public PARQUE_BASSEY() {
     }

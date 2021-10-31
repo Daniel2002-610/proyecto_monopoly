@@ -25,7 +25,7 @@ public class CASA_ANTIGUA {
     public static int ValorCasa = 55;
     public static int ValorMansion = 55;
     public static int alquiler = 25;
- 
+    public static boolean estado=false;
 
     public CASA_ANTIGUA() {
     }

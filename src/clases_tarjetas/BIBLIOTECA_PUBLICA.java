@@ -16,7 +16,7 @@ public class BIBLIOTECA_PUBLICA {
     public static int precio = 75;
     public static int paso = 25;
     public static int alquiler = 75;
-
+    public static boolean estado=false;
 
     public BIBLIOTECA_PUBLICA() {
     }

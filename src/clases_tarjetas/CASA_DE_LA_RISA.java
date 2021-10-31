@@ -25,7 +25,8 @@ public class CASA_DE_LA_RISA {
     public static int ValorCasa = 45;
     public static int ValorMansion = 45;
     public static int alquiler = 65;
-  
+    public static boolean estado=false;
+
     public CASA_DE_LA_RISA() {
     }
 

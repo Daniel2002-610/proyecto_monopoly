@@ -25,7 +25,7 @@ public class LOS_BALDIOS {
     public static int ValorCasa = 190;
     public static int ValorMansion = 190;
     public static int alquiler = 140;
-   
+    public static boolean estado=false;
 
     public LOS_BALDIOS() {
     }

@@ -25,7 +25,7 @@ public class TIENDA_COSTELLO {
     public static int ValorCasa = 140;
     public static int ValorMansion = 140;
     public static int alquiler = 125;
-   
+    public static boolean estado=false;
 
     public TIENDA_COSTELLO() {
     }

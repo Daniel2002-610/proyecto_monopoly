@@ -16,7 +16,7 @@ public class ESCUELA_SECUNDARIA {
     public static int precio = 175;
     public static int paso = 35;
     public static int alquiler = 75;
-
+    public static boolean estado=false;
 
     public ESCUELA_SECUNDARIA() {
     }

@@ -25,7 +25,7 @@ public class IGLESIA_BAUTISTA {
     public static int ValorCasa = 140;
     public static int ValorMansion = 140;
     public static int alquiler = 140;
-   
+    public static boolean estado=false;
 
     public IGLESIA_BAUTISTA() {
     }

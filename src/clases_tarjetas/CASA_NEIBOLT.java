@@ -25,7 +25,7 @@ public class CASA_NEIBOLT {
     public static int ValorCasa = 150;
     public static int ValorMansion = 150;
     public static int alquiler = 95;
-    
+    public static boolean estado=false;
 
     public CASA_NEIBOLT() {
     }

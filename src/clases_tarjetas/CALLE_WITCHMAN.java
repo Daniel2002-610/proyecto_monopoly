@@ -25,7 +25,7 @@ public class CALLE_WITCHMAN {
     public static int ValorCasa = 200;
     public static int ValorMansion = 200;
     public static int alquiler = 200;
-  
+    public static boolean estado=false;
 
     public CALLE_WITCHMAN() {
     }

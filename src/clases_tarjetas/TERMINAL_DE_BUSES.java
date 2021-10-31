@@ -16,7 +16,7 @@ public class TERMINAL_DE_BUSES {
     public static int precio = 210;
     public static int paso = 25;
     public static int alquiler = 100;
-   
+    public static boolean estado = false;
 
     public TERMINAL_DE_BUSES() {
     }

@@ -25,7 +25,7 @@ public class PARQUE_MEMORIAL {
     public static int ValorCasa = 45;
     public static int ValorMansion = 45;
     public static int alquiler = 60;
-   
+    public static boolean estado=false;
 
     public PARQUE_MEMORIAL() {
     }

@@ -25,7 +25,7 @@ public class PARQUE_STRAWFORD {
     public static int ValorCasa = 190;
     public static int ValorMansion = 190;
     public static int alquiler = 160;
-   
+    public static boolean estado=false;
 
     public PARQUE_STRAWFORD() {
     }

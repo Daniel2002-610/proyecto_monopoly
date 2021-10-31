@@ -25,7 +25,7 @@ public class CALLE_JACKSON {
     public static int ValorCasa = 190;
     public static int ValorMansion = 190;
     public static int alquiler = 160;
-   
+    public static boolean estado=false;
 
     public CALLE_JACKSON() {
     }

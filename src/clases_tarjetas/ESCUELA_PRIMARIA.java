@@ -25,7 +25,7 @@ public class ESCUELA_PRIMARIA {
     public static int ValorCasa = 110;
     public static int ValorMansion = 110;
     public static int alquiler = 75;
-    
+    public static boolean estado=false;
 
     public ESCUELA_PRIMARIA() {
     }

@@ -11,7 +11,7 @@ package clases_tarjetas;
  */
 public class CALLE_TURNER {
 
-    public static String nombre = "CALLE TUNER";
+    public static String nombre = "CALLE TURNER";
     public  String dueño = "";
     public static int precio = 200;
     public static int paso = 20;
@@ -25,7 +25,7 @@ public class CALLE_TURNER {
     public static int ValorCasa = 150;
     public static int ValorMansion = 150;
     public static int alquiler = 90;
- 
+    public static boolean estado=false;
 
     public CALLE_TURNER() {
     }

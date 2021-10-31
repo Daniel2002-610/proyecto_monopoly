@@ -5,25 +5,17 @@
  */
 package tarjetas_compras;
 
-import clases_tarjetas.PUENTE_DE_LOS_BESOS;
 import javax.swing.JOptionPane;
-import jugadores.play1;
-import jugadores.play2;
-import jugadores.play3;
-import jugadores.play4;
-import jugadores.play5;
-import jugadores.play6;
-import vistas.tablero;
 
+/**
+ *
+ * @author edgar
+ */
 public class VPUENTE_DE_LOS_BESOS extends javax.swing.JFrame {
-    PUENTE_DE_LOS_BESOS  vdat = new PUENTE_DE_LOS_BESOS();
-    tablero tab = new tablero();
-    play1 pl1 = new play1();
-    play2 pl2 = new play2();
-    play3 pl3 = new play3();
-    play4 pl4 = new play4();
-    play5 pl5 = new play5();
-    play6 pl6 = new play6();
+
+    /**
+     * Creates new form VPUENTE_DE_LOS_BESOS
+     */
     public VPUENTE_DE_LOS_BESOS() {
         initComponents();
         setLocationRelativeTo(null);
@@ -52,7 +44,6 @@ public class VPUENTE_DE_LOS_BESOS extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btncomprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/btncomprar.png"))); // NOI18N
@@ -104,52 +95,7 @@ public class VPUENTE_DE_LOS_BESOS extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncomprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncomprarMouseClicked
-if ("".equals(vdat.dueño)) {
-            if (tab.cont == 1) {
-                vdat.dueño = pl1.nombre;
-                pl1.dinero = pl1.dinero - vdat.precio;
-                tab.dinero.setText(String.valueOf(pl1.dinero));
-                JOptionPane.showMessageDialog(null, "VENDIDO");
-                dispose();
-            } else if (tab.cont == 2) {
-                vdat.dueño = pl2.nombre;
-                pl2.dinero = pl2.dinero - vdat.precio;
-                tab.dinero2.setText(String.valueOf(pl2.dinero));
-                JOptionPane.showMessageDialog(null, "VENDIDO");
-                dispose();
-
-            } else if (tab.cont == 3) {
-                vdat.dueño = pl3.nombre;
-                pl3.dinero = pl3.dinero - vdat.precio;
-                tab.dinero3.setText(String.valueOf(pl3.dinero));
-                JOptionPane.showMessageDialog(null, "VENDIDO");
-                dispose();
-
-            } else if (tab.cont == 4) {
-                vdat.dueño = pl4.nombre;
-                pl4.dinero = pl4.dinero - vdat.precio;
-                tab.dinero4.setText(String.valueOf(pl4.dinero));
-                JOptionPane.showMessageDialog(null, "VENDIDO");
-
-                dispose();
-
-            } else if (tab.cont == 5) {
-                vdat.dueño = pl5.nombre;
-                pl5.dinero = pl5.dinero - vdat.precio;
-                tab.dinero5.setText(String.valueOf(pl5.dinero));
-                JOptionPane.showMessageDialog(null, "VENDIDO");
-                dispose();
-
-            } else if (tab.cont == 6) {
-                vdat.dueño = pl6.nombre;
-                pl6.dinero = pl6.dinero - vdat.precio;
-                tab.dinero6.setText(String.valueOf(pl6.dinero));
-                JOptionPane.showMessageDialog(null, "VENDIDO");
-                dispose();
-
-            }
-
-        }
+        JOptionPane.showMessageDialog(null, "comprar");
     }//GEN-LAST:event_btncomprarMouseClicked
 
     private void btnsubastarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsubastarMouseClicked

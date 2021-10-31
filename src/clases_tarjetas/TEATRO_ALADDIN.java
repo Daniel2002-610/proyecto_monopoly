@@ -25,7 +25,7 @@ public class TEATRO_ALADDIN {
     public static int ValorCasa = 110;
     public static int ValorMansion = 100;
     public static int alquiler = 70;
-   
+    public static boolean estado=false;
 
     public TEATRO_ALADDIN() {
     }

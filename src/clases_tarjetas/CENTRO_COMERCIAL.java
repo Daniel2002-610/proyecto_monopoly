@@ -25,7 +25,7 @@ public class CENTRO_COMERCIAL {
    public static int  ValorCasa  = 110;
    public static int  ValorMansion  = 110;
    public static int  alquiler  = 80;
- 
+   public static boolean estado=false;
 
     public CENTRO_COMERCIAL() {
     }

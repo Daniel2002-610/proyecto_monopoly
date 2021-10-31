@@ -25,7 +25,7 @@ public class CINE_CAPITOL {
     public static int ValorCasa = 55;
     public static int ValorMansion = 55;
     public static int alquiler = 35;
-  
+    public static boolean estado=false;
 
     public CINE_CAPITOL() {
     }

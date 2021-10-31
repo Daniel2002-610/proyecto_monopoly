@@ -25,7 +25,7 @@ public class BAR_FALCON {
     public static int ValorCasa = 140;
     public static int ValorMansion = 140;
     public static int alquiler = 135;
-  
+    public static boolean estado=false;
 
     public BAR_FALCON() {
     }
