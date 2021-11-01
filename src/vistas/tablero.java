@@ -1,7 +1,5 @@
 package vistas;
 
-import clases_base.jugadores;
-import clases_base.valores;
 import clases_tarjetas.BAR_BLACK_SPOT;
 import clases_tarjetas.BAR_FALCON;
 import clases_tarjetas.BIBLIOTECA_PUBLICA;
@@ -31,8 +29,10 @@ import clases_tarjetas.TEATRO_ALADDIN;
 import clases_tarjetas.TERMINAL_DE_BUSES;
 import clases_tarjetas.TIENDA_COSTELLO;
 import java.awt.Color;
+import java.util.HashSet;
 
 import java.util.Random;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.Icon;
@@ -84,8 +84,6 @@ import tarjetas_compras.vTERMINAL_DE_BUSES;
  */
 public class tablero extends javax.swing.JFrame {
 
-    jugadores juga = new jugadores();
-    valores valor = new valores();
     Random random = new Random();
     play1 pl1 = new play1();
     play2 pl2 = new play2();
@@ -93,8 +91,36 @@ public class tablero extends javax.swing.JFrame {
     play4 pl4 = new play4();
     play5 pl5 = new play5();
     play6 pl6 = new play6();
+    CALLE_JACKSON jacki = new CALLE_JACKSON();
+    LOS_BALDIOS bali = new LOS_BALDIOS();
+    TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+    BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+    CASA_NEIBOLT neii = new CASA_NEIBOLT();
+    CALLE_TURNER turi = new CALLE_TURNER();
+    BAR_FALCON fali = new BAR_FALCON();
+    BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+    IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
+    TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
+    PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+    CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
+    ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
+    TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
+    CASA_CLUB clubi = new CASA_CLUB();
+    RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
+    CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
+    ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
+    PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
+    FARMACIA_KEENE farmi = new FARMACIA_KEENE();
+    REPRESA repri = new REPRESA();
+    CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
+    LA_CANTERA canterai = new LA_CANTERA();
+    CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
+    PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
+    PARQUE_BASSEY basi = new PARQUE_BASSEY();
+    CINE_CAPITOL capii = new CINE_CAPITOL();
+    CASA_ANTIGUA casai = new CASA_ANTIGUA();
 
-    public int cont = 2;
+    public int cont = 1;
     String comboj1, comboj2;
     public String comprador;
     int dato, jugador1 = 1, jugador2 = 1, jugador3 = 1, jugador4 = 1, jugador5 = 1, jugador6 = 1;
@@ -102,7 +128,7 @@ public class tablero extends javax.swing.JFrame {
     public tablero() {
         initComponents();
         this.setLocationRelativeTo(null);
-
+        pay.setVisible(true);
         v1.setVisible(false);
         v2.setVisible(false);
         v3.setVisible(false);
@@ -128,19 +154,21 @@ public class tablero extends javax.swing.JFrame {
         player5 = new javax.swing.JLabel();
         dinero5 = new javax.swing.JLabel();
         v5 = new javax.swing.JLabel();
+        player2 = new javax.swing.JLabel();
         player4 = new javax.swing.JLabel();
         dinero4 = new javax.swing.JLabel();
         v4 = new javax.swing.JLabel();
         player3 = new javax.swing.JLabel();
         ficha_3 = new javax.swing.JLabel();
         ficha_2 = new javax.swing.JLabel();
+        prop = new javax.swing.JLabel();
+        pay = new javax.swing.JLabel();
         ficha_4 = new javax.swing.JLabel();
         conta = new javax.swing.JLabel();
         ficha_6 = new javax.swing.JLabel();
         ficha_1 = new javax.swing.JLabel();
         dinero3 = new javax.swing.JLabel();
         btninicio = new javax.swing.JLabel();
-        player2 = new javax.swing.JLabel();
         v3 = new javax.swing.JLabel();
         ficha_5 = new javax.swing.JLabel();
         player = new javax.swing.JLabel();
@@ -154,12 +182,12 @@ public class tablero extends javax.swing.JFrame {
         btn_mini = new javax.swing.JLabel();
         turno = new javax.swing.JLabel();
         dinero = new javax.swing.JLabel();
-        btnj6 = new javax.swing.JLabel();
         btnj1 = new javax.swing.JLabel();
         btnj2 = new javax.swing.JLabel();
         btnj3 = new javax.swing.JLabel();
         btnj4 = new javax.swing.JLabel();
         btnj5 = new javax.swing.JLabel();
+        btnj6 = new javax.swing.JLabel();
         btntirar = new javax.swing.JLabel();
         v1 = new javax.swing.JLabel();
         btn_cerrar = new javax.swing.JLabel();
@@ -211,6 +239,10 @@ public class tablero extends javax.swing.JFrame {
         v5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/punteonaranja.png"))); // NOI18N
         getContentPane().add(v5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 240, -1, -1));
 
+        player2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        player2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(player2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 170, 30));
+
         player4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         player4.setForeground(new java.awt.Color(255, 255, 255));
         player4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -240,6 +272,14 @@ public class tablero extends javax.swing.JFrame {
 
         ficha_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/ficha3.png"))); // NOI18N
         getContentPane().add(ficha_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 620, -1, -1));
+
+        prop.setForeground(new java.awt.Color(255, 255, 255));
+        prop.setText("jLabel1");
+        getContentPane().add(prop, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 660, -1, -1));
+
+        pay.setForeground(new java.awt.Color(255, 255, 255));
+        pay.setText("jLabel1");
+        getContentPane().add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 660, -1, -1));
 
         ficha_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/ficha6.png"))); // NOI18N
         getContentPane().add(ficha_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 645, -1, -1));
@@ -273,10 +313,6 @@ public class tablero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, -1, -1));
-
-        player2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        player2.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(player2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 170, 30));
 
         v3.setForeground(new java.awt.Color(255, 255, 255));
         v3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/punteolila.png"))); // NOI18N
@@ -355,6 +391,11 @@ public class tablero extends javax.swing.JFrame {
 
         turno.setForeground(new java.awt.Color(255, 255, 255));
         turno.setText("jLabel1");
+        turno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                turnoMouseClicked(evt);
+            }
+        });
         getContentPane().add(turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         dinero.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -366,15 +407,6 @@ public class tablero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(dinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 302, 120, 20));
-
-        btnj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/333-10.png"))); // NOI18N
-        btnj6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnj6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnj6MouseClicked(evt);
-            }
-        });
-        getContentPane().add(btnj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 630, -1, -1));
 
         btnj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/333-10.png"))); // NOI18N
         btnj1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -420,6 +452,15 @@ public class tablero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 630, -1, -1));
+
+        btnj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/333-10.png"))); // NOI18N
+        btnj6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnj6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnj6MouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 630, -1, -1));
 
         btntirar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
         btntirar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -468,6 +509,8 @@ public class tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_miniMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        cont = 2;
         jugador1 = 2;
         pasoj1();
         verificarj1();
@@ -728,8 +771,8 @@ public class tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_btnj6MouseClicked
 
     private void btntirarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btntirarMouseClicked
-        turno();
-        /*
+//        turno();
+
         if (cont == 1) {
             cont = 2;
             conta.setText(String.valueOf(cont));
@@ -755,7 +798,7 @@ public class tablero extends javax.swing.JFrame {
             conta.setText(String.valueOf(cont));
             turno.setText(pl1.nombre);
         }
-         */
+
 
     }//GEN-LAST:event_btntirarMouseClicked
 
@@ -764,20 +807,32 @@ public class tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_btntirarMouseEntered
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-     CALLE_JACKSON vdat = new CALLE_JACKSON();
-        JOptionPane.showMessageDialog(null, vdat.dueño);
+   JOptionPane.showMessageDialog(null, cont);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         jugador2 = 2;
+
+        jugador2 = 2;
         pasoj2();
         verificarj2();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        cont=1;
-        conta.setText(String.valueOf(cont));
+        if (cont == 1) {
+            cont = 2;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        } else if (cont == 2) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        }
+
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void turnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_turnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_turnoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -843,12 +898,14 @@ public class tablero extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    public javax.swing.JLabel pay;
     public javax.swing.JLabel player;
     public javax.swing.JLabel player2;
     public javax.swing.JLabel player3;
     public javax.swing.JLabel player4;
     public javax.swing.JLabel player5;
     public javax.swing.JLabel player6;
+    public javax.swing.JLabel prop;
     public javax.swing.JLabel prueba;
     private javax.swing.JLabel tablero;
     private javax.swing.JLabel turno;
@@ -1058,50 +1115,73 @@ public class tablero extends javax.swing.JFrame {
 
         } else if (jugador1 == 2) {
             ficha_1.setLocation(913, 620);
+
         } else if (jugador1 == 3) {
             ficha_1.setLocation(859, 620);
+
         } else if (jugador1 == 4) {
             ficha_1.setLocation(803, 620);
+
         } else if (jugador1 == 5) {
             ficha_1.setLocation(749, 620);
+
         } else if (jugador1 == 6) {
             ficha_1.setLocation(695, 620);
+
         } else if (jugador1 == 7) {
             ficha_1.setLocation(639, 620);
+
         } else if (jugador1 == 8) {
             ficha_1.setLocation(585, 620);
+
         } else if (jugador1 == 9) {
             ficha_1.setLocation(529, 620);
+
         } else if (jugador1 == 10) {
             ficha_1.setLocation(474, 620);
+
         } else if (jugador1 == 11) {
             ficha_1.setLocation(390, 620);
+
         } else if (jugador1 == 12) {
             ficha_1.setLocation(430, 578);
+
         } else if (jugador1 == 13) {
             ficha_1.setLocation(430, 525);
+
         } else if (jugador1 == 14) {
             ficha_1.setLocation(430, 470);
+
         } else if (jugador1 == 15) {
             ficha_1.setLocation(430, 415);
+
         } else if (jugador1 == 16) {
             ficha_1.setLocation(430, 361);
+
         } else if (jugador1 == 17) {
             ficha_1.setLocation(430, 304);
+
         } else if (jugador1 == 18) {
             ficha_1.setLocation(430, 251);
+
         } else if (jugador1 == 19) {
             ficha_1.setLocation(430, 195);
+
         } else if (jugador1 == 20) {
             ficha_1.setLocation(430, 141);
+
         } else if (jugador1 == 21) {
             ficha_1.setLocation(390, 20);
+
         } else if (jugador1 == 22) {
             ficha_1.setLocation(474, 20);
+
         } else if (jugador1 == 23) {
             ficha_1.setLocation(530, 20);
+
         } else if (jugador1 == 24) {
             ficha_1.setLocation(585, 20);
+
         } else if (jugador1 == 25) {
             ficha_1.setLocation(640, 20);
         } else if (jugador1 == 26) {
@@ -1705,380 +1785,529 @@ public class tablero extends javax.swing.JFrame {
 
     }
 
-    
-    
-     void verificarj1() {
+    void verificarj1() {
         if (jugador1 > 40) {
             int reset;
-            pl1.dinero+=200;
+            pl1.dinero += 200;
             dinero.setText(String.valueOf(pl1.dinero));
             reset = jugador1 - 40;
             jugador1 = reset;
             JOptionPane.showMessageDialog(null, "Ganaste Q200");
 
         } else if (jugador1 == 2) {
-            
-           CALLE_JACKSON jack1 = new CALLE_JACKSON();
-          if("".equals(jack1.dueño)){
-           VCALLE_JACKSON jack = new VCALLE_JACKSON();  
-            jack.setVisible(true);
-          }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+
+            CALLE_JACKSON jack1 = new CALLE_JACKSON();
+            if ("".equals(jack1.dueño)) {
+                VCALLE_JACKSON jack = new VCALLE_JACKSON();
+                jack.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                pay.setText(String.valueOf(jacki.paso));
+                prop.setText(jacki.dueño);
+                pagar();                
+               
+            }
         } else if (jugador1 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");
         } else if (jugador1 == 4) {
-             LOS_BALDIOS bali = new LOS_BALDIOS();
-             if("".equals(bali.dueño)){
-            VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
-            bal.setVisible(true);
-             }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            LOS_BALDIOS bali = new LOS_BALDIOS();
+            if ("".equals(bali.dueño)) {
+                VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+                bal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+            }
         } else if (jugador1 == 5) {
             JOptionPane.showMessageDialog(null, "Impuestos");
         } else if (jugador1 == 6) {
-             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
-             if("".equals(busi.dueño)){
-            vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
-            bus.setVisible(true);
-             }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+            if ("".equals(busi.dueño)) {
+                vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+                bus.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+            }
         } else if (jugador1 == 7) {
-              BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
-              if("".equals(bari.dueño)){
-            VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
-            bar.setVisible(true);
-              }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+            if ("".equals(bari.dueño)) {
+                VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+                bar.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+            }
         } else if (jugador1 == 8) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador1 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
-            if("".equals(neii)){
-            VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
-            nei.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(neii.dueño)) {
+                VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+                nei.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+            }
         } else if (jugador1 == 10) {
-           CALLE_TURNER turi = new CALLE_TURNER();
-           if("".equals(turi.dueño)){
-            VCALLE_TURNER tur = new VCALLE_TURNER();
-            tur.setVisible(true);
-           }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            CALLE_TURNER turi = new CALLE_TURNER();
+            if ("".equals(turi.dueño)) {
+                VCALLE_TURNER tur = new VCALLE_TURNER();
+                tur.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+            }
         } else if (jugador1 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
         } else if (jugador1 == 12) {
             BAR_FALCON fali = new BAR_FALCON();
-            if("".equals(fali.dueño)){
-            VBAR_FALCON fal = new VBAR_FALCON();
-            fal.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(fali.dueño)) {
+                VBAR_FALCON fal = new VBAR_FALCON();
+                fal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+            }
         } else if (jugador1 == 13) {
-             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
-             if("".equals(bili.dueño)){
-            VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
-            bil.setVisible(true);
-             }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+            if ("".equals(bili.dueño)) {
+                VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+                bil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+            }
         } else if (jugador1 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
-            if("".equals(iglei.dueño)){
-            VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
-            igle.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(iglei.dueño)) {
+                VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+                igle.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+            }
         } else if (jugador1 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
-            if("".equals(tiei.dueño)){
-            VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
-            tie.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(tiei.dueño)) {
+                VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+                tie.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+            }
         } else if (jugador1 == 16) {
-             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
-             if("".equals(besosi.dueño)){
-            VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
-            besos.setVisible(true);
-             }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+            if ("".equals(besosi.dueño)) {
+                VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+                besos.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+            }
         } else if (jugador1 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
-            if("".equals(comei)){
-            VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
-            come.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(comei.dueño)) {
+                VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+                come.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+            }
         } else if (jugador1 == 18) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador1 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
-            if("".equals(primai.dueño)){
-            VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
-            prima.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(primai.dueño)) {
+                VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+                prima.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+            }
         } else if (jugador1 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
-            if("".equals(teatroi)){
-            VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
-            teatro.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(teatroi.dueño)) {
+                VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+                teatro.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+            }
         } else if (jugador1 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
         } else if (jugador1 == 22) {
             CASA_CLUB clubi = new CASA_CLUB();
-            if("".equals(clubi.dueño)){
-            VCASA_CLUB club = new VCASA_CLUB();
-            club.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(clubi.dueño)) {
+                VCASA_CLUB club = new VCASA_CLUB();
+                club.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+            }
         } else if (jugador1 == 23) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador1 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
-            if("".equals(jadei)){
-            VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
-            jade.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(jadei.dueño)) {
+                VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+                jade.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+            }
         } else if (jugador1 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
-            if("".equals(huesi)){
-            VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
-            hues.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(huesi.dueño)) {
+                VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+                hues.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+            }
         } else if (jugador1 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
-            if("".equals(secui)){
-            VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
-            secu.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(secui.dueño)) {
+                VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+                secu.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+            }
         } else if (jugador1 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
-            if("".equals(memoi)){
-            VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
-            memo.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(memoi.dueño)) {
+                VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+                memo.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+            }
         } else if (jugador1 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
-            if("".equals(farmi.dueño)){
-            VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
-            farm.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(farmi.dueño)) {
+                VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+                farm.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+            }
         } else if (jugador1 == 29) {
             REPRESA repri = new REPRESA();
-            if("".equals(repri.dueño)){
-            VREPRESA repre = new VREPRESA();
-            repre.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(repri.dueño)) {
+                VREPRESA repre = new VREPRESA();
+                repre.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+            }
         } else if (jugador1 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
-            if("".equals(risai.dueño)){
-            VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
-            risa.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(risai.dueño)) {
+                VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+                risa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+            }
         } else if (jugador1 == 31) {
             JOptionPane.showMessageDialog(null, "vaya a la carcel");
         } else if (jugador1 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
-            if("".equals(canterai)){
-            VLA_CANTERA cantera = new VLA_CANTERA();
-            cantera.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(canterai.dueño)) {
+                VLA_CANTERA cantera = new VLA_CANTERA();
+                cantera.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+            }
         } else if (jugador1 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
-            if("".equals(witi.dueño)){
-            VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
-            wit.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(witi.dueño)) {
+                VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+                wit.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+            }
         } else if (jugador1 == 34) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador1 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
-            if("".equals(strawi)){
-            VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
-            straw.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(strawi.dueño)) {
+                VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+                straw.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+            }
         } else if (jugador1 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
-            if("".equals(basi.dueño)){
-            VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
-            bas.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(basi.dueño)) {
+                VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+                bas.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+            }
         } else if (jugador1 == 37) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador1 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
-            if("".equals(capii.dueño)){
-            VCINE_CAPITOL capi = new VCINE_CAPITOL();
-            capi.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(capii.dueño)) {
+                VCINE_CAPITOL capi = new VCINE_CAPITOL();
+                capi.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+            }
         } else if (jugador1 == 39) {
             JOptionPane.showMessageDialog(null, "impuesto de lujo");
         } else if (jugador1 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
-            if("".equals(casai.dueño)){
-            VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
-            casa.setVisible(true);
-            }else{
-          JOptionPane.showMessageDialog(null, "Lo siento, ya se compró");
-           }
+            if ("".equals(casai.dueño)) {
+                VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+                casa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+            }
         }
+
     }
 
     void verificarj2() {
         if (jugador2 > 40) {
             int reset;
+            pl2.dinero += 200;
+            dinero2.setText(String.valueOf(pl2.dinero));
             reset = jugador2 - 40;
             jugador2 = reset;
-            JOptionPane.showMessageDialog(null, "felicidades");
+            JOptionPane.showMessageDialog(null, "Ganaste Q200");
 
         } else if (jugador2 == 2) {
-            VCALLE_JACKSON jack = new VCALLE_JACKSON();
-            jack.setVisible(true);
+
+            CALLE_JACKSON jack1 = new CALLE_JACKSON();
+            if ("".equals(jack1.dueño)) {
+                VCALLE_JACKSON jack = new VCALLE_JACKSON();
+                jack.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+               pay.setText(String.valueOf(jacki.paso));
+                prop.setText(jacki.dueño);
+                pagar();  
+            }
         } else if (jugador2 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");
         } else if (jugador2 == 4) {
-            VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
-            bal.setVisible(true);
+            LOS_BALDIOS bali = new LOS_BALDIOS();
+            if ("".equals(bali.dueño)) {
+                VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+                bal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+            }
         } else if (jugador2 == 5) {
             JOptionPane.showMessageDialog(null, "Impuestos");
         } else if (jugador2 == 6) {
-            vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
-            bus.setVisible(true);
+            TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+            if ("".equals(busi.dueño)) {
+                vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+                bus.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+            }
         } else if (jugador2 == 7) {
-            VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
-            bar.setVisible(true);
+            BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+            if ("".equals(bari.dueño)) {
+                VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+                bar.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+            }
         } else if (jugador2 == 8) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador2 == 9) {
-            VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
-            nei.setVisible(true);
+            CASA_NEIBOLT neii = new CASA_NEIBOLT();
+            if ("".equals(neii.dueño)) {
+                VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+                nei.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+            }
         } else if (jugador2 == 10) {
-            VCALLE_TURNER tur = new VCALLE_TURNER();
-            tur.setVisible(true);
+            CALLE_TURNER turi = new CALLE_TURNER();
+            if ("".equals(turi.dueño)) {
+                VCALLE_TURNER tur = new VCALLE_TURNER();
+                tur.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+            }
         } else if (jugador2 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
         } else if (jugador2 == 12) {
-            VBAR_FALCON fal = new VBAR_FALCON();
-            fal.setVisible(true);
+            BAR_FALCON fali = new BAR_FALCON();
+            if ("".equals(fali.dueño)) {
+                VBAR_FALCON fal = new VBAR_FALCON();
+                fal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+            }
         } else if (jugador2 == 13) {
-            VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
-            bil.setVisible(true);
+            BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+            if ("".equals(bili.dueño)) {
+                VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+                bil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+            }
         } else if (jugador2 == 14) {
-            VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
-            igle.setVisible(true);
+            IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
+            if ("".equals(iglei.dueño)) {
+                VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+                igle.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+            }
         } else if (jugador2 == 15) {
-            VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
-            tie.setVisible(true);
+            TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
+            if ("".equals(tiei.dueño)) {
+                VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+                tie.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+            }
         } else if (jugador2 == 16) {
-            VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
-            besos.setVisible(true);
+            PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+            if ("".equals(besosi.dueño)) {
+                VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+                besos.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+            }
         } else if (jugador2 == 17) {
-            VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
-            come.setVisible(true);
+            CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
+            if ("".equals(comei.dueño)) {
+                VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+                come.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+            }
         } else if (jugador2 == 18) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador2 == 19) {
-            VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
-            prima.setVisible(true);
+            ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
+            if ("".equals(primai.dueño)) {
+                VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+                prima.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+            }
         } else if (jugador2 == 20) {
-            VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
-            teatro.setVisible(true);
+            TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
+            if ("".equals(teatroi.dueño)) {
+                VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+                teatro.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+            }
         } else if (jugador2 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
         } else if (jugador2 == 22) {
-            VCASA_CLUB club = new VCASA_CLUB();
-            club.setVisible(true);
+            CASA_CLUB clubi = new CASA_CLUB();
+            if ("".equals(clubi.dueño)) {
+                VCASA_CLUB club = new VCASA_CLUB();
+                club.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+            }
         } else if (jugador2 == 23) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador2 == 24) {
-            VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
-            jade.setVisible(true);
+            RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
+            if ("".equals(jadei.dueño)) {
+                VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+                jade.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+            }
         } else if (jugador2 == 25) {
-            VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
-            hues.setVisible(true);
+            CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
+            if ("".equals(huesi.dueño)) {
+                VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+                hues.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+            }
         } else if (jugador2 == 26) {
-            VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
-            secu.setVisible(true);
+            ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
+            if ("".equals(secui.dueño)) {
+                VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+                secu.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+            }
         } else if (jugador2 == 27) {
-            VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
-            memo.setVisible(true);
+            PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
+            if ("".equals(memoi.dueño)) {
+                VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+                memo.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+            }
         } else if (jugador2 == 28) {
-            VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
-            farm.setVisible(true);
+            FARMACIA_KEENE farmi = new FARMACIA_KEENE();
+            if ("".equals(farmi.dueño)) {
+                VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+                farm.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+            }
         } else if (jugador2 == 29) {
-            VREPRESA repre = new VREPRESA();
-            repre.setVisible(true);
+            REPRESA repri = new REPRESA();
+            if ("".equals(repri.dueño)) {
+                VREPRESA repre = new VREPRESA();
+                repre.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+            }
         } else if (jugador2 == 30) {
-            VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
-            risa.setVisible(true);
+            CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
+            if ("".equals(risai.dueño)) {
+                VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+                risa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+            }
         } else if (jugador2 == 31) {
             JOptionPane.showMessageDialog(null, "vaya a la carcel");
         } else if (jugador2 == 32) {
-            VLA_CANTERA cantera = new VLA_CANTERA();
-            cantera.setVisible(true);
+            LA_CANTERA canterai = new LA_CANTERA();
+            if ("".equals(canterai.dueño)) {
+                VLA_CANTERA cantera = new VLA_CANTERA();
+                cantera.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+            }
         } else if (jugador2 == 33) {
-            VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
-            wit.setVisible(true);
+            CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
+            if ("".equals(witi.dueño)) {
+                VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+                wit.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+            }
         } else if (jugador2 == 34) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador2 == 35) {
-            VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
-            straw.setVisible(true);
+            PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
+            if ("".equals(strawi.dueño)) {
+                VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+                straw.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+            }
         } else if (jugador2 == 36) {
-            VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
-            bas.setVisible(true);
+            PARQUE_BASSEY basi = new PARQUE_BASSEY();
+            if ("".equals(basi.dueño)) {
+                VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+                bas.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+            }
         } else if (jugador2 == 37) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador2 == 38) {
-            VCINE_CAPITOL capi = new VCINE_CAPITOL();
-            capi.setVisible(true);
+            CINE_CAPITOL capii = new CINE_CAPITOL();
+            if ("".equals(capii.dueño)) {
+                VCINE_CAPITOL capi = new VCINE_CAPITOL();
+                capi.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+            }
         } else if (jugador2 == 39) {
             JOptionPane.showMessageDialog(null, "impuesto de lujo");
         } else if (jugador2 == 40) {
-            VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
-            casa.setVisible(true);
+            CASA_ANTIGUA casai = new CASA_ANTIGUA();
+            if ("".equals(casai.dueño)) {
+                VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+                casa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+            }
         }
 
     }
@@ -2086,116 +2315,259 @@ public class tablero extends javax.swing.JFrame {
     void verificarj3() {
         if (jugador3 > 40) {
             int reset;
+            pl3.dinero += 200;
+            dinero3.setText(String.valueOf(pl3.dinero));
             reset = jugador3 - 40;
             jugador3 = reset;
-            JOptionPane.showMessageDialog(null, "felicidades");
+            JOptionPane.showMessageDialog(null, "Ganaste Q200");
 
         } else if (jugador3 == 2) {
-            VCALLE_JACKSON jack = new VCALLE_JACKSON();
-            jack.setVisible(true);
+
+            CALLE_JACKSON jack1 = new CALLE_JACKSON();
+            if ("".equals(jack1.dueño)) {
+                VCALLE_JACKSON jack = new VCALLE_JACKSON();
+                jack.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+            }
         } else if (jugador3 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");
         } else if (jugador3 == 4) {
-            VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
-            bal.setVisible(true);
+            LOS_BALDIOS bali = new LOS_BALDIOS();
+            if ("".equals(bali.dueño)) {
+                VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+                bal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+            }
         } else if (jugador3 == 5) {
             JOptionPane.showMessageDialog(null, "Impuestos");
         } else if (jugador3 == 6) {
-            vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
-            bus.setVisible(true);
+            TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+            if ("".equals(busi.dueño)) {
+                vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+                bus.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+            }
         } else if (jugador3 == 7) {
-            VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
-            bar.setVisible(true);
+            BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+            if ("".equals(bari.dueño)) {
+                VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+                bar.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+            }
         } else if (jugador3 == 8) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador3 == 9) {
-            VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
-            nei.setVisible(true);
+            CASA_NEIBOLT neii = new CASA_NEIBOLT();
+            if ("".equals(neii.dueño)) {
+                VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+                nei.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+            }
         } else if (jugador3 == 10) {
-            VCALLE_TURNER tur = new VCALLE_TURNER();
-            tur.setVisible(true);
+            CALLE_TURNER turi = new CALLE_TURNER();
+            if ("".equals(turi.dueño)) {
+                VCALLE_TURNER tur = new VCALLE_TURNER();
+                tur.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+            }
         } else if (jugador3 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
         } else if (jugador3 == 12) {
-            VBAR_FALCON fal = new VBAR_FALCON();
-            fal.setVisible(true);
+            BAR_FALCON fali = new BAR_FALCON();
+            if ("".equals(fali.dueño)) {
+                VBAR_FALCON fal = new VBAR_FALCON();
+                fal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+            }
         } else if (jugador3 == 13) {
-            VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
-            bil.setVisible(true);
+            BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+            if ("".equals(bili.dueño)) {
+                VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+                bil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+            }
         } else if (jugador3 == 14) {
-            VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
-            igle.setVisible(true);
+            IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
+            if ("".equals(iglei.dueño)) {
+                VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+                igle.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+            }
         } else if (jugador3 == 15) {
-            VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
-            tie.setVisible(true);
+            TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
+            if ("".equals(tiei.dueño)) {
+                VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+                tie.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+            }
         } else if (jugador3 == 16) {
-            VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
-            besos.setVisible(true);
+            PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+            if ("".equals(besosi.dueño)) {
+                VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+                besos.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+            }
         } else if (jugador3 == 17) {
-            VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
-            come.setVisible(true);
+            CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
+            if ("".equals(comei.dueño)) {
+                VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+                come.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+            }
         } else if (jugador3 == 18) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador3 == 19) {
-            VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
-            prima.setVisible(true);
+            ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
+            if ("".equals(primai.dueño)) {
+                VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+                prima.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+            }
         } else if (jugador3 == 20) {
-            VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
-            teatro.setVisible(true);
+            TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
+            if ("".equals(teatroi.dueño)) {
+                VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+                teatro.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+            }
         } else if (jugador3 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
         } else if (jugador3 == 22) {
-            VCASA_CLUB club = new VCASA_CLUB();
-            club.setVisible(true);
+            CASA_CLUB clubi = new CASA_CLUB();
+            if ("".equals(clubi.dueño)) {
+                VCASA_CLUB club = new VCASA_CLUB();
+                club.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+            }
         } else if (jugador3 == 23) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador3 == 24) {
-            VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
-            jade.setVisible(true);
+            RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
+            if ("".equals(jadei.dueño)) {
+                VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+                jade.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+            }
         } else if (jugador3 == 25) {
-            VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
-            hues.setVisible(true);
+            CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
+            if ("".equals(huesi.dueño)) {
+                VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+                hues.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+            }
         } else if (jugador3 == 26) {
-            VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
-            secu.setVisible(true);
+            ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
+            if ("".equals(secui.dueño)) {
+                VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+                secu.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+            }
         } else if (jugador3 == 27) {
-            VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
-            memo.setVisible(true);
+            PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
+            if ("".equals(memoi.dueño)) {
+                VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+                memo.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+            }
         } else if (jugador3 == 28) {
-            VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
-            farm.setVisible(true);
+            FARMACIA_KEENE farmi = new FARMACIA_KEENE();
+            if ("".equals(farmi.dueño)) {
+                VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+                farm.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+            }
         } else if (jugador3 == 29) {
-            VREPRESA repre = new VREPRESA();
-            repre.setVisible(true);
+            REPRESA repri = new REPRESA();
+            if ("".equals(repri.dueño)) {
+                VREPRESA repre = new VREPRESA();
+                repre.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+            }
         } else if (jugador3 == 30) {
-            VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
-            risa.setVisible(true);
+            CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
+            if ("".equals(risai.dueño)) {
+                VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+                risa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+            }
         } else if (jugador3 == 31) {
             JOptionPane.showMessageDialog(null, "vaya a la carcel");
         } else if (jugador3 == 32) {
-            VLA_CANTERA cantera = new VLA_CANTERA();
-            cantera.setVisible(true);
+            LA_CANTERA canterai = new LA_CANTERA();
+            if ("".equals(canterai.dueño)) {
+                VLA_CANTERA cantera = new VLA_CANTERA();
+                cantera.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+            }
         } else if (jugador3 == 33) {
-            VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
-            wit.setVisible(true);
+            CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
+            if ("".equals(witi.dueño)) {
+                VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+                wit.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+            }
         } else if (jugador3 == 34) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador3 == 35) {
-            VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
-            straw.setVisible(true);
+            PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
+            if ("".equals(strawi.dueño)) {
+                VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+                straw.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+            }
         } else if (jugador3 == 36) {
-            VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
-            bas.setVisible(true);
+            PARQUE_BASSEY basi = new PARQUE_BASSEY();
+            if ("".equals(basi.dueño)) {
+                VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+                bas.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+            }
         } else if (jugador3 == 37) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador3 == 38) {
-            VCINE_CAPITOL capi = new VCINE_CAPITOL();
-            capi.setVisible(true);
+            CINE_CAPITOL capii = new CINE_CAPITOL();
+            if ("".equals(capii.dueño)) {
+                VCINE_CAPITOL capi = new VCINE_CAPITOL();
+                capi.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+            }
         } else if (jugador3 == 39) {
             JOptionPane.showMessageDialog(null, "impuesto de lujo");
         } else if (jugador3 == 40) {
-            VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
-            casa.setVisible(true);
+            CASA_ANTIGUA casai = new CASA_ANTIGUA();
+            if ("".equals(casai.dueño)) {
+                VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+                casa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+            }
         }
 
     }
@@ -2203,116 +2575,259 @@ public class tablero extends javax.swing.JFrame {
     void verificarj4() {
         if (jugador4 > 40) {
             int reset;
+            pl4.dinero += 200;
+            dinero4.setText(String.valueOf(pl4.dinero));
             reset = jugador4 - 40;
             jugador4 = reset;
-            JOptionPane.showMessageDialog(null, "felicidades");
+            JOptionPane.showMessageDialog(null, "Ganaste Q200");
 
         } else if (jugador4 == 2) {
-            VCALLE_JACKSON jack = new VCALLE_JACKSON();
-            jack.setVisible(true);
+
+            CALLE_JACKSON jack1 = new CALLE_JACKSON();
+            if ("".equals(jack1.dueño)) {
+                VCALLE_JACKSON jack = new VCALLE_JACKSON();
+                jack.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+            }
         } else if (jugador4 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");
         } else if (jugador4 == 4) {
-            VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
-            bal.setVisible(true);
+            LOS_BALDIOS bali = new LOS_BALDIOS();
+            if ("".equals(bali.dueño)) {
+                VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+                bal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+            }
         } else if (jugador4 == 5) {
             JOptionPane.showMessageDialog(null, "Impuestos");
         } else if (jugador4 == 6) {
-            vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
-            bus.setVisible(true);
+            TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+            if ("".equals(busi.dueño)) {
+                vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+                bus.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+            }
         } else if (jugador4 == 7) {
-            VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
-            bar.setVisible(true);
+            BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+            if ("".equals(bari.dueño)) {
+                VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+                bar.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+            }
         } else if (jugador4 == 8) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador4 == 9) {
-            VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
-            nei.setVisible(true);
+            CASA_NEIBOLT neii = new CASA_NEIBOLT();
+            if ("".equals(neii.dueño)) {
+                VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+                nei.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+            }
         } else if (jugador4 == 10) {
-            VCALLE_TURNER tur = new VCALLE_TURNER();
-            tur.setVisible(true);
+            CALLE_TURNER turi = new CALLE_TURNER();
+            if ("".equals(turi.dueño)) {
+                VCALLE_TURNER tur = new VCALLE_TURNER();
+                tur.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+            }
         } else if (jugador4 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
         } else if (jugador4 == 12) {
-            VBAR_FALCON fal = new VBAR_FALCON();
-            fal.setVisible(true);
+            BAR_FALCON fali = new BAR_FALCON();
+            if ("".equals(fali.dueño)) {
+                VBAR_FALCON fal = new VBAR_FALCON();
+                fal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+            }
         } else if (jugador4 == 13) {
-            VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
-            bil.setVisible(true);
+            BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+            if ("".equals(bili.dueño)) {
+                VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+                bil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+            }
         } else if (jugador4 == 14) {
-            VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
-            igle.setVisible(true);
+            IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
+            if ("".equals(iglei.dueño)) {
+                VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+                igle.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+            }
         } else if (jugador4 == 15) {
-            VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
-            tie.setVisible(true);
+            TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
+            if ("".equals(tiei.dueño)) {
+                VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+                tie.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+            }
         } else if (jugador4 == 16) {
-            VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
-            besos.setVisible(true);
+            PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+            if ("".equals(besosi.dueño)) {
+                VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+                besos.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+            }
         } else if (jugador4 == 17) {
-            VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
-            come.setVisible(true);
+            CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
+            if ("".equals(comei.dueño)) {
+                VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+                come.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+            }
         } else if (jugador4 == 18) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador4 == 19) {
-            VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
-            prima.setVisible(true);
+            ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
+            if ("".equals(primai.dueño)) {
+                VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+                prima.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+            }
         } else if (jugador4 == 20) {
-            VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
-            teatro.setVisible(true);
+            TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
+            if ("".equals(teatroi.dueño)) {
+                VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+                teatro.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+            }
         } else if (jugador4 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
         } else if (jugador4 == 22) {
-            VCASA_CLUB club = new VCASA_CLUB();
-            club.setVisible(true);
+            CASA_CLUB clubi = new CASA_CLUB();
+            if ("".equals(clubi.dueño)) {
+                VCASA_CLUB club = new VCASA_CLUB();
+                club.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+            }
         } else if (jugador4 == 23) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador4 == 24) {
-            VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
-            jade.setVisible(true);
+            RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
+            if ("".equals(jadei.dueño)) {
+                VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+                jade.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+            }
         } else if (jugador4 == 25) {
-            VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
-            hues.setVisible(true);
+            CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
+            if ("".equals(huesi.dueño)) {
+                VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+                hues.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+            }
         } else if (jugador4 == 26) {
-            VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
-            secu.setVisible(true);
+            ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
+            if ("".equals(secui.dueño)) {
+                VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+                secu.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+            }
         } else if (jugador4 == 27) {
-            VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
-            memo.setVisible(true);
+            PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
+            if ("".equals(memoi.dueño)) {
+                VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+                memo.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+            }
         } else if (jugador4 == 28) {
-            VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
-            farm.setVisible(true);
+            FARMACIA_KEENE farmi = new FARMACIA_KEENE();
+            if ("".equals(farmi.dueño)) {
+                VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+                farm.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+            }
         } else if (jugador4 == 29) {
-            VREPRESA repre = new VREPRESA();
-            repre.setVisible(true);
+            REPRESA repri = new REPRESA();
+            if ("".equals(repri.dueño)) {
+                VREPRESA repre = new VREPRESA();
+                repre.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+            }
         } else if (jugador4 == 30) {
-            VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
-            risa.setVisible(true);
+            CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
+            if ("".equals(risai.dueño)) {
+                VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+                risa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+            }
         } else if (jugador4 == 31) {
             JOptionPane.showMessageDialog(null, "vaya a la carcel");
         } else if (jugador4 == 32) {
-            VLA_CANTERA cantera = new VLA_CANTERA();
-            cantera.setVisible(true);
+            LA_CANTERA canterai = new LA_CANTERA();
+            if ("".equals(canterai.dueño)) {
+                VLA_CANTERA cantera = new VLA_CANTERA();
+                cantera.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+            }
         } else if (jugador4 == 33) {
-            VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
-            wit.setVisible(true);
+            CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
+            if ("".equals(witi.dueño)) {
+                VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+                wit.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+            }
         } else if (jugador4 == 34) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador4 == 35) {
-            VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
-            straw.setVisible(true);
+            PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
+            if ("".equals(strawi.dueño)) {
+                VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+                straw.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+            }
         } else if (jugador4 == 36) {
-            VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
-            bas.setVisible(true);
+            PARQUE_BASSEY basi = new PARQUE_BASSEY();
+            if ("".equals(basi.dueño)) {
+                VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+                bas.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+            }
         } else if (jugador4 == 37) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador4 == 38) {
-            VCINE_CAPITOL capi = new VCINE_CAPITOL();
-            capi.setVisible(true);
+            CINE_CAPITOL capii = new CINE_CAPITOL();
+            if ("".equals(capii.dueño)) {
+                VCINE_CAPITOL capi = new VCINE_CAPITOL();
+                capi.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+            }
         } else if (jugador4 == 39) {
             JOptionPane.showMessageDialog(null, "impuesto de lujo");
         } else if (jugador4 == 40) {
-            VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
-            casa.setVisible(true);
+            CASA_ANTIGUA casai = new CASA_ANTIGUA();
+            if ("".equals(casai.dueño)) {
+                VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+                casa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+            }
         }
 
     }
@@ -2320,116 +2835,259 @@ public class tablero extends javax.swing.JFrame {
     void verificarj5() {
         if (jugador5 > 40) {
             int reset;
+            pl5.dinero += 200;
+            dinero5.setText(String.valueOf(pl5.dinero));
             reset = jugador5 - 40;
             jugador5 = reset;
-            JOptionPane.showMessageDialog(null, "felicidades");
+            JOptionPane.showMessageDialog(null, "Ganaste Q200");
 
         } else if (jugador5 == 2) {
-            VCALLE_JACKSON jack = new VCALLE_JACKSON();
-            jack.setVisible(true);
+
+            CALLE_JACKSON jack1 = new CALLE_JACKSON();
+            if ("".equals(jack1.dueño)) {
+                VCALLE_JACKSON jack = new VCALLE_JACKSON();
+                jack.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+            }
         } else if (jugador5 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");
         } else if (jugador5 == 4) {
-            VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
-            bal.setVisible(true);
+            LOS_BALDIOS bali = new LOS_BALDIOS();
+            if ("".equals(bali.dueño)) {
+                VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+                bal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+            }
         } else if (jugador5 == 5) {
             JOptionPane.showMessageDialog(null, "Impuestos");
         } else if (jugador5 == 6) {
-            vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
-            bus.setVisible(true);
+            TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+            if ("".equals(busi.dueño)) {
+                vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+                bus.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+            }
         } else if (jugador5 == 7) {
-            VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
-            bar.setVisible(true);
+            BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+            if ("".equals(bari.dueño)) {
+                VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+                bar.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+            }
         } else if (jugador5 == 8) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador5 == 9) {
-            VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
-            nei.setVisible(true);
+            CASA_NEIBOLT neii = new CASA_NEIBOLT();
+            if ("".equals(neii.dueño)) {
+                VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+                nei.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+            }
         } else if (jugador5 == 10) {
-            VCALLE_TURNER tur = new VCALLE_TURNER();
-            tur.setVisible(true);
+            CALLE_TURNER turi = new CALLE_TURNER();
+            if ("".equals(turi.dueño)) {
+                VCALLE_TURNER tur = new VCALLE_TURNER();
+                tur.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+            }
         } else if (jugador5 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
         } else if (jugador5 == 12) {
-            VBAR_FALCON fal = new VBAR_FALCON();
-            fal.setVisible(true);
+            BAR_FALCON fali = new BAR_FALCON();
+            if ("".equals(fali.dueño)) {
+                VBAR_FALCON fal = new VBAR_FALCON();
+                fal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+            }
         } else if (jugador5 == 13) {
-            VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
-            bil.setVisible(true);
+            BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+            if ("".equals(bili.dueño)) {
+                VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+                bil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+            }
         } else if (jugador5 == 14) {
-            VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
-            igle.setVisible(true);
+            IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
+            if ("".equals(iglei.dueño)) {
+                VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+                igle.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+            }
         } else if (jugador5 == 15) {
-            VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
-            tie.setVisible(true);
+            TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
+            if ("".equals(tiei.dueño)) {
+                VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+                tie.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+            }
         } else if (jugador5 == 16) {
-            VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
-            besos.setVisible(true);
+            PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+            if ("".equals(besosi.dueño)) {
+                VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+                besos.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+            }
         } else if (jugador5 == 17) {
-            VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
-            come.setVisible(true);
+            CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
+            if ("".equals(comei.dueño)) {
+                VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+                come.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+            }
         } else if (jugador5 == 18) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador5 == 19) {
-            VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
-            prima.setVisible(true);
+            ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
+            if ("".equals(primai.dueño)) {
+                VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+                prima.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+            }
         } else if (jugador5 == 20) {
-            VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
-            teatro.setVisible(true);
+            TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
+            if ("".equals(teatroi.dueño)) {
+                VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+                teatro.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+            }
         } else if (jugador5 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
         } else if (jugador5 == 22) {
-            VCASA_CLUB club = new VCASA_CLUB();
-            club.setVisible(true);
+            CASA_CLUB clubi = new CASA_CLUB();
+            if ("".equals(clubi.dueño)) {
+                VCASA_CLUB club = new VCASA_CLUB();
+                club.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+            }
         } else if (jugador5 == 23) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador5 == 24) {
-            VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
-            jade.setVisible(true);
+            RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
+            if ("".equals(jadei.dueño)) {
+                VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+                jade.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+            }
         } else if (jugador5 == 25) {
-            VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
-            hues.setVisible(true);
+            CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
+            if ("".equals(huesi.dueño)) {
+                VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+                hues.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+            }
         } else if (jugador5 == 26) {
-            VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
-            secu.setVisible(true);
+            ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
+            if ("".equals(secui.dueño)) {
+                VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+                secu.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+            }
         } else if (jugador5 == 27) {
-            VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
-            memo.setVisible(true);
+            PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
+            if ("".equals(memoi.dueño)) {
+                VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+                memo.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+            }
         } else if (jugador5 == 28) {
-            VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
-            farm.setVisible(true);
+            FARMACIA_KEENE farmi = new FARMACIA_KEENE();
+            if ("".equals(farmi.dueño)) {
+                VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+                farm.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+            }
         } else if (jugador5 == 29) {
-            VREPRESA repre = new VREPRESA();
-            repre.setVisible(true);
+            REPRESA repri = new REPRESA();
+            if ("".equals(repri.dueño)) {
+                VREPRESA repre = new VREPRESA();
+                repre.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+            }
         } else if (jugador5 == 30) {
-            VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
-            risa.setVisible(true);
+            CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
+            if ("".equals(risai.dueño)) {
+                VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+                risa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+            }
         } else if (jugador5 == 31) {
             JOptionPane.showMessageDialog(null, "vaya a la carcel");
         } else if (jugador5 == 32) {
-            VLA_CANTERA cantera = new VLA_CANTERA();
-            cantera.setVisible(true);
+            LA_CANTERA canterai = new LA_CANTERA();
+            if ("".equals(canterai.dueño)) {
+                VLA_CANTERA cantera = new VLA_CANTERA();
+                cantera.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+            }
         } else if (jugador5 == 33) {
-            VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
-            wit.setVisible(true);
+            CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
+            if ("".equals(witi.dueño)) {
+                VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+                wit.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+            }
         } else if (jugador5 == 34) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador5 == 35) {
-            VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
-            straw.setVisible(true);
+            PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
+            if ("".equals(strawi.dueño)) {
+                VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+                straw.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+            }
         } else if (jugador5 == 36) {
-            VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
-            bas.setVisible(true);
+            PARQUE_BASSEY basi = new PARQUE_BASSEY();
+            if ("".equals(basi.dueño)) {
+                VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+                bas.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+            }
         } else if (jugador5 == 37) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador5 == 38) {
-            VCINE_CAPITOL capi = new VCINE_CAPITOL();
-            capi.setVisible(true);
+            CINE_CAPITOL capii = new CINE_CAPITOL();
+            if ("".equals(capii.dueño)) {
+                VCINE_CAPITOL capi = new VCINE_CAPITOL();
+                capi.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+            }
         } else if (jugador5 == 39) {
             JOptionPane.showMessageDialog(null, "impuesto de lujo");
         } else if (jugador5 == 40) {
-            VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
-            casa.setVisible(true);
+            CASA_ANTIGUA casai = new CASA_ANTIGUA();
+            if ("".equals(casai.dueño)) {
+                VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+                casa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+            }
         }
 
     }
@@ -2437,119 +3095,407 @@ public class tablero extends javax.swing.JFrame {
     void verificarj6() {
         if (jugador6 > 40) {
             int reset;
+            pl6.dinero += 200;
+            dinero6.setText(String.valueOf(pl6.dinero));
             reset = jugador6 - 40;
             jugador6 = reset;
-            JOptionPane.showMessageDialog(null, "felicidades");
+            JOptionPane.showMessageDialog(null, "Ganaste Q200");
 
         } else if (jugador6 == 2) {
-            VCALLE_JACKSON jack = new VCALLE_JACKSON();
-            jack.setVisible(true);
+
+            CALLE_JACKSON jack1 = new CALLE_JACKSON();
+            if ("".equals(jack1.dueño)) {
+                VCALLE_JACKSON jack = new VCALLE_JACKSON();
+                jack.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+            }
         } else if (jugador6 == 3) {
             JOptionPane.showMessageDialog(null, "Pesadilla");
         } else if (jugador6 == 4) {
-            VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
-            bal.setVisible(true);
+            LOS_BALDIOS bali = new LOS_BALDIOS();
+            if ("".equals(bali.dueño)) {
+                VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
+                bal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+            }
         } else if (jugador6 == 5) {
             JOptionPane.showMessageDialog(null, "Impuestos");
         } else if (jugador6 == 6) {
-            vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
-            bus.setVisible(true);
+            TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
+            if ("".equals(busi.dueño)) {
+                vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
+                bus.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+            }
         } else if (jugador6 == 7) {
-            VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
-            bar.setVisible(true);
+            BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
+            if ("".equals(bari.dueño)) {
+                VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
+                bar.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+            }
         } else if (jugador6 == 8) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador6 == 9) {
-            VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
-            nei.setVisible(true);
+            CASA_NEIBOLT neii = new CASA_NEIBOLT();
+            if ("".equals(neii.dueño)) {
+                VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
+                nei.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+            }
         } else if (jugador6 == 10) {
-            VCALLE_TURNER tur = new VCALLE_TURNER();
-            tur.setVisible(true);
+            CALLE_TURNER turi = new CALLE_TURNER();
+            if ("".equals(turi.dueño)) {
+                VCALLE_TURNER tur = new VCALLE_TURNER();
+                tur.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+            }
         } else if (jugador6 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
         } else if (jugador6 == 12) {
-            VBAR_FALCON fal = new VBAR_FALCON();
-            fal.setVisible(true);
+            BAR_FALCON fali = new BAR_FALCON();
+            if ("".equals(fali.dueño)) {
+                VBAR_FALCON fal = new VBAR_FALCON();
+                fal.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+            }
         } else if (jugador6 == 13) {
-            VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
-            bil.setVisible(true);
+            BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
+            if ("".equals(bili.dueño)) {
+                VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
+                bil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+            }
         } else if (jugador6 == 14) {
-            VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
-            igle.setVisible(true);
+            IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
+            if ("".equals(iglei.dueño)) {
+                VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
+                igle.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+            }
         } else if (jugador6 == 15) {
-            VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
-            tie.setVisible(true);
+            TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
+            if ("".equals(tiei.dueño)) {
+                VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
+                tie.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+            }
         } else if (jugador6 == 16) {
-            VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
-            besos.setVisible(true);
+            PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
+            if ("".equals(besosi.dueño)) {
+                VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
+                besos.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+            }
         } else if (jugador6 == 17) {
-            VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
-            come.setVisible(true);
+            CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
+            if ("".equals(comei.dueño)) {
+                VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
+                come.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+            }
         } else if (jugador6 == 18) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador6 == 19) {
-            VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
-            prima.setVisible(true);
+            ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
+            if ("".equals(primai.dueño)) {
+                VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
+                prima.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+            }
         } else if (jugador6 == 20) {
-            VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
-            teatro.setVisible(true);
+            TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
+            if ("".equals(teatroi.dueño)) {
+                VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
+                teatro.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+            }
         } else if (jugador6 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
         } else if (jugador6 == 22) {
-            VCASA_CLUB club = new VCASA_CLUB();
-            club.setVisible(true);
+            CASA_CLUB clubi = new CASA_CLUB();
+            if ("".equals(clubi.dueño)) {
+                VCASA_CLUB club = new VCASA_CLUB();
+                club.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+            }
         } else if (jugador6 == 23) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador6 == 24) {
-            VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
-            jade.setVisible(true);
+            RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
+            if ("".equals(jadei.dueño)) {
+                VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
+                jade.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+            }
         } else if (jugador6 == 25) {
-            VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
-            hues.setVisible(true);
+            CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
+            if ("".equals(huesi.dueño)) {
+                VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
+                hues.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+            }
         } else if (jugador6 == 26) {
-            VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
-            secu.setVisible(true);
+            ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
+            if ("".equals(secui.dueño)) {
+                VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
+                secu.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+            }
         } else if (jugador6 == 27) {
-            VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
-            memo.setVisible(true);
+            PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
+            if ("".equals(memoi.dueño)) {
+                VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
+                memo.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+            }
         } else if (jugador6 == 28) {
-            VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
-            farm.setVisible(true);
+            FARMACIA_KEENE farmi = new FARMACIA_KEENE();
+            if ("".equals(farmi.dueño)) {
+                VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
+                farm.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+            }
         } else if (jugador6 == 29) {
-            VREPRESA repre = new VREPRESA();
-            repre.setVisible(true);
+            REPRESA repri = new REPRESA();
+            if ("".equals(repri.dueño)) {
+                VREPRESA repre = new VREPRESA();
+                repre.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+            }
         } else if (jugador6 == 30) {
-            VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
-            risa.setVisible(true);
+            CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
+            if ("".equals(risai.dueño)) {
+                VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
+                risa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+            }
         } else if (jugador6 == 31) {
             JOptionPane.showMessageDialog(null, "vaya a la carcel");
         } else if (jugador6 == 32) {
-            VLA_CANTERA cantera = new VLA_CANTERA();
-            cantera.setVisible(true);
+            LA_CANTERA canterai = new LA_CANTERA();
+            if ("".equals(canterai.dueño)) {
+                VLA_CANTERA cantera = new VLA_CANTERA();
+                cantera.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+            }
         } else if (jugador6 == 33) {
-            VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
-            wit.setVisible(true);
+            CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
+            if ("".equals(witi.dueño)) {
+                VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
+                wit.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+            }
         } else if (jugador6 == 34) {
             JOptionPane.showMessageDialog(null, "pesadilla");
         } else if (jugador6 == 35) {
-            VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
-            straw.setVisible(true);
+            PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
+            if ("".equals(strawi.dueño)) {
+                VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
+                straw.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+            }
         } else if (jugador6 == 36) {
-            VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
-            bas.setVisible(true);
+            PARQUE_BASSEY basi = new PARQUE_BASSEY();
+            if ("".equals(basi.dueño)) {
+                VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
+                bas.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+            }
         } else if (jugador6 == 37) {
             JOptionPane.showMessageDialog(null, "suspiro");
         } else if (jugador6 == 38) {
-            VCINE_CAPITOL capi = new VCINE_CAPITOL();
-            capi.setVisible(true);
+            CINE_CAPITOL capii = new CINE_CAPITOL();
+            if ("".equals(capii.dueño)) {
+                VCINE_CAPITOL capi = new VCINE_CAPITOL();
+                capi.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+            }
         } else if (jugador6 == 39) {
             JOptionPane.showMessageDialog(null, "impuesto de lujo");
         } else if (jugador6 == 40) {
-            VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
-            casa.setVisible(true);
+            CASA_ANTIGUA casai = new CASA_ANTIGUA();
+            if ("".equals(casai.dueño)) {
+                VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
+                casa.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+            }
         }
 
     }
-                               
 
+    void pagar() {
+        if (cont == 2 && prop.getText().equals(pl1.nombre) ) {
+            int par = Integer.parseInt(pay.getText());
+            pl2.dinero -= par;
+            pl1.dinero += par;
+        } else if (cont == 3 && prop.getText().equals(pl1.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl3.dinero -= par;
+            pl1.dinero += par;
+        } else if (cont == 4 && prop.getText().equals(pl1.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl4.dinero -= par;
+            pl1.dinero += par;
+        } else if (cont == 5 && prop.getText().equals(pl1.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl5.dinero -= par;
+            pl1.dinero += par;
+        } else if (cont == 6 && prop.getText().equals(pl1.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl6.dinero -= par;
+            pl1.dinero += par;
+        }else  if (cont == 1 && prop.getText().equals(pl2.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl1.dinero -= par;
+            pl2.dinero += par;
+        } else if (cont == 3 && prop.getText().equals(pl2.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl3.dinero -= par;
+            pl2.dinero += par;
+        } else if (cont == 4 && prop.getText().equals(pl2.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl4.dinero -= par;
+            pl2.dinero += par;
+        } else if (cont == 5 && prop.getText().equals(pl2.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl5.dinero -= par;
+            pl2.dinero += par;
+        } else if (cont == 6 && prop.getText().equals(pl2.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl6.dinero -= par;
+            pl2.dinero += par;
+        }else  if (cont == 1 && prop.getText().equals(pl3.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl1.dinero -= par;
+            pl3.dinero += par;
+        } else if (cont == 2 && prop.getText().equals(pl3.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl2.dinero -= par;
+            pl3.dinero += par;
+        } else if (cont == 4 && prop.getText().equals(pl3.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl4.dinero -= par;
+            pl3.dinero += par;
+        } else if (cont == 5 && prop.getText().equals(pl3.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl5.dinero -= par;
+            pl3.dinero += par;
+        } else if (cont == 6 && prop.getText().equals(pl3.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl6.dinero -= par;
+            pl3.dinero += par;
+        }else if (cont == 1 && prop.getText().equals(pl4.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl1.dinero -= par;
+            pl4.dinero += par;
+        } else if (cont == 2 && prop.getText().equals(pl4.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl2.dinero -= par;
+            pl4.dinero += par;
+        } else if (cont == 3 && prop.getText().equals(pl4.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl3.dinero -= par;
+            pl4.dinero += par;
+        } else if (cont == 5 && prop.getText().equals(pl4.nombre) ) {
+            int par = Integer.parseInt(pay.getText());
+            pl5.dinero -= par;
+            pl4.dinero += par;
+        } else if (cont == 6&& prop.getText().equals(pl4.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl6.dinero -= par;
+            pl4.dinero += par;
+        }else  if (cont == 1 && prop.getText().equals(pl5.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl1.dinero -= par;
+            pl5.dinero += par;
+        } else if (cont == 2 && prop.getText().equals(pl5.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl2.dinero -= par;
+            pl5.dinero += par;
+        } else if (cont == 3 && prop.getText().equals(pl5.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl3.dinero -= par;
+            pl5.dinero += par;
+        } else if (cont == 4 && prop.getText().equals(pl5.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl4.dinero -= par;
+            pl5.dinero += par;
+        } else if (cont == 6 && prop.getText().equals(pl5.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl6.dinero -= par;
+            pl5.dinero += par;
+        }else if (cont == 1 && prop.getText().equals(pl6.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl1.dinero -= par;
+            pl6.dinero += par;
+        } else if (cont == 2 && prop.getText().equals(pl6.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl2.dinero -= par;
+            pl6.dinero += par;
+        } else if (cont == 3 && prop.getText().equals(pl6.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl3.dinero -= par;
+            pl6.dinero += par;
+        } else if (cont == 4 && prop.getText().equals(pl6.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl4.dinero -= par;
+            pl6.dinero += par;
+        } else if (cont == 5 && prop.getText().equals(pl6.nombre)) {
+            int par = Integer.parseInt(pay.getText());
+            pl5.dinero -= par;
+            pl6.dinero += par;
+        }
+        dinero.setText(String.valueOf(pl1.dinero));
+        dinero2.setText(String.valueOf(pl2.dinero));
+        dinero3.setText(String.valueOf(pl3.dinero));
+        dinero4.setText(String.valueOf(pl4.dinero));
+        dinero5.setText(String.valueOf(pl5.dinero));
+        dinero6.setText(String.valueOf(pl6.dinero));
+
+    }
+
+   
+
+   
+
+  
+
+   
+
+    void pagarj6() {
+        
+       
+
+    }
+
+  
 }

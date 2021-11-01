@@ -68,6 +68,9 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btncomprarMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btncomprarMouseEntered(evt);
+            }
         });
         getContentPane().add(btncomprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
@@ -141,7 +144,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
                 }
             } else if (tab.cont == 3) {
                 if (pl3.dinero >= vdat.precio) {
-                    tab.comprador = pl3.nombre;
+                    vdat.dueño=pl3.nombre;
                     pl3.dinero = pl3.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl3.dinero));
                     JOptionPane.showMessageDialog(null, "COMPRADO");
@@ -153,7 +156,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
                 }
             } else if (tab.cont == 4) {
                 if (pl4.dinero >= vdat.precio) {
-                    tab.comprador = pl4.nombre;
+                    vdat.dueño=pl4.nombre;
                     pl4.dinero = pl4.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl4.dinero));
                     JOptionPane.showMessageDialog(null, "COMPRADO");
@@ -165,7 +168,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
                 }
             } else if (tab.cont == 5) {
                 if (pl5.dinero >= vdat.precio) {
-                   tab.comprador = pl5.nombre;
+                 vdat.dueño=pl5.nombre;
                     pl5.dinero = pl5.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl5.dinero));
                     JOptionPane.showMessageDialog(null, "COMPRADO");
@@ -177,7 +180,7 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
                 }
             } else if (tab.cont == 6) {
                 if (pl6.dinero >= vdat.precio) {
-                    tab.comprador = pl6.nombre;
+                   vdat.dueño=pl6.nombre;
                     pl6.dinero = pl6.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl6.dinero));
                     JOptionPane.showMessageDialog(null, "COMPRADO");
@@ -328,6 +331,10 @@ public class VCALLE_JACKSON extends javax.swing.JFrame {
     private void nombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombresActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombresActionPerformed
+
+    private void btncomprarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncomprarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncomprarMouseEntered
 
     /**
      * @param args the command line arguments
