@@ -5,7 +5,6 @@
  */
 package vistas;
 
-
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
@@ -53,6 +52,8 @@ public class inicio extends javax.swing.JFrame {
         cajanombre = new javax.swing.JTextField();
         txtjugador2 = new javax.swing.JLabel();
         btnagregar = new javax.swing.JLabel();
+        btn_mini = new javax.swing.JLabel();
+        btn_cerrar = new javax.swing.JLabel();
         btniniciar = new javax.swing.JLabel();
         txtjugador3 = new javax.swing.JLabel();
         txtjugador4 = new javax.swing.JLabel();
@@ -66,7 +67,7 @@ public class inicio extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cajanombre.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        cajanombre.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         cajanombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cajanombre.setBorder(null);
         cajanombre.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -76,7 +77,7 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(cajanombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 165, 20));
 
-        txtjugador2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        txtjugador2.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         getContentPane().add(txtjugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
         btnagregar.setFont(new java.awt.Font("it font", 0, 27)); // NOI18N
@@ -90,6 +91,29 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, -1, -1));
 
+        btn_mini.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/boton_minimizar.png"))); // NOI18N
+        btn_mini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_mini.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_miniMouseClicked(evt);
+            }
+        });
+        btn_mini.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btn_miniKeyPressed(evt);
+            }
+        });
+        getContentPane().add(btn_mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
+
+        btn_cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/boton_cerrar.png"))); // NOI18N
+        btn_cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_cerrarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btn_cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
+
         btniniciar.setFont(new java.awt.Font("it font", 0, 36)); // NOI18N
         btniniciar.setForeground(new java.awt.Color(255, 255, 255));
         btniniciar.setText("INICIAR");
@@ -101,19 +125,19 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(btniniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, -1, -1));
 
-        txtjugador3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        txtjugador3.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         getContentPane().add(txtjugador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
-        txtjugador4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        txtjugador4.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         getContentPane().add(txtjugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
-        txtjugador5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        txtjugador5.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         getContentPane().add(txtjugador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        txtjugador6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        txtjugador6.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         getContentPane().add(txtjugador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
-        txtjugador1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        txtjugador1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
         getContentPane().add(txtjugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("it font", 0, 24)); // NOI18N
@@ -142,6 +166,18 @@ public class inicio extends javax.swing.JFrame {
         tab.setVisible(true);
         this.hide();
     }//GEN-LAST:event_btniniciarMouseClicked
+
+    private void btn_miniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_miniMouseClicked
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_btn_miniMouseClicked
+
+    private void btn_miniKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_miniKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_miniKeyPressed
+
+    private void btn_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cerrarMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btn_cerrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -179,6 +215,8 @@ public class inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btn_cerrar;
+    private javax.swing.JLabel btn_mini;
     private javax.swing.JLabel btnagregar;
     private javax.swing.JLabel btniniciar;
     private javax.swing.JTextField cajanombre;
@@ -199,38 +237,38 @@ public class inicio extends javax.swing.JFrame {
                 txtjugador1.setText("1. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-                System.out.println(pl1.nombre);
+          
 
             } else if (contador == 2) {
                 pl2.nombre = cajanombre.getText();
                 txtjugador2.setText("2. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-                System.out.println(pl2.nombre);
+        
             } else if (contador == 3) {
                 pl3.nombre = cajanombre.getText();
                 txtjugador3.setText("3. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-                System.out.println(pl3.nombre);
+               
             } else if (contador == 4) {
                 pl4.nombre = cajanombre.getText();
                 txtjugador4.setText("4. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-                System.out.println(pl4.nombre);
+               
             } else if (contador == 5) {
                 pl5.nombre = cajanombre.getText();
                 txtjugador5.setText("5. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-                System.out.println(pl5.nombre);
+              
             } else if (contador == 6) {
                 pl6.nombre = cajanombre.getText();
                 txtjugador6.setText("6. " + cajanombre.getText());
                 cajanombre.setText("");
                 contador += 1;
-                System.out.println(pl5.nombre);
+                
             } else {
                 JOptionPane.showMessageDialog(null, "Lo siento, solo se adminten 6 jugadores");
                 cajanombre.setText("");
