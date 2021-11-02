@@ -13,6 +13,7 @@ import jugadores.play3;
 import jugadores.play4;
 import jugadores.play5;
 import jugadores.play6;
+import vistas.jpanel;
 import vistas.tablero;
 
 /**
@@ -28,6 +29,7 @@ public class VCASA_NEIBOLT extends javax.swing.JFrame {
     play4 pl4 = new play4();
     play5 pl5 = new play5();
     play6 pl6 = new play6();
+     jpanel jpanel = new jpanel();
     public VCASA_NEIBOLT() {
         initComponents();
         setLocationRelativeTo(null);
@@ -110,49 +112,54 @@ public class VCASA_NEIBOLT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncomprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncomprarMouseClicked
-if (tab.cont == 1) {
+      
+            if (tab.cont == 1) {
                 if (pl1.dinero >= vdat.precio) {
                     vdat.dueño=pl1.nombre;
                     pl1.dinero = pl1.dinero - vdat.precio;
-                    tab.dinero.setText(String.valueOf(pl1.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl1.dinero);
-                    dispose();
+                 tab.dinero.setText(String.valueOf(pl1.dinero));                
+                    jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO");   
+                 dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                  jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente");
                     dispose();
                 }
             } else if (tab.cont == 2) {
                 if (pl2.dinero >= vdat.precio) {
                     vdat.dueño=pl2.nombre;
                     pl2.dinero = pl2.dinero - vdat.precio;
-                    tab.dinero.setText(String.valueOf(pl2.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl2.dinero);
+                    tab.dinero2.setText(String.valueOf(pl2.dinero));
+                   jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                    jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             } else if (tab.cont == 3) {
                 if (pl3.dinero >= vdat.precio) {
                     vdat.dueño=pl3.nombre;
                     pl3.dinero = pl3.dinero - vdat.precio;
-                    tab.dinero.setText(String.valueOf(pl3.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl3.dinero);
+                    tab.dinero3.setText(String.valueOf(pl3.dinero));
+                   jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                     jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             } else if (tab.cont == 4) {
                 if (pl4.dinero >= vdat.precio) {
                     vdat.dueño=pl4.nombre;
                     pl4.dinero = pl4.dinero - vdat.precio;
-                    tab.dinero.setText(String.valueOf(pl4.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl4.dinero);
+                    tab.dinero4.setText(String.valueOf(pl4.dinero));
+                    jpanel.setVisible(true);
+                     jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
@@ -162,9 +169,10 @@ if (tab.cont == 1) {
                 if (pl5.dinero >= vdat.precio) {
                  vdat.dueño=pl5.nombre;
                     pl5.dinero = pl5.dinero - vdat.precio;
-                    tab.dinero.setText(String.valueOf(pl5.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl5.dinero);
+                    tab.dinero5.setText(String.valueOf(pl5.dinero));
+                   jpanel.setVisible(true);
+                    jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
@@ -174,17 +182,18 @@ if (tab.cont == 1) {
                 if (pl6.dinero >= vdat.precio) {
                    vdat.dueño=pl6.nombre;
                     pl6.dinero = pl6.dinero - vdat.precio;
-                    tab.dinero.setText(String.valueOf(pl6.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl6.dinero);
+                    tab.dinero6.setText(String.valueOf(pl6.dinero));
+                   jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                    jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             }
-      
-           
+   
+  
       
     }//GEN-LAST:event_btncomprarMouseClicked
 
@@ -238,7 +247,7 @@ if (tab.cont == 1) {
     }//GEN-LAST:event_btnsaltarMouseClicked
 
     private void btnaceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnaceptarMouseClicked
- //metodo comprar
+  //metodo comprar
         String valor = nombres.getSelectedItem().toString();
        
          if (valor.equals(pl1.nombre)) {
@@ -246,8 +255,8 @@ if (tab.cont == 1) {
                     vdat.dueño = pl1.nombre;
                     pl1.dinero = pl1.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl1.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl1.dinero);
+                     jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
@@ -258,8 +267,8 @@ if (tab.cont == 1) {
                     vdat.dueño = pl2.nombre;
                     pl2.dinero = pl2.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl2.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl2.dinero);
+                      jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
@@ -270,11 +279,12 @@ if (tab.cont == 1) {
                     vdat.dueño = pl3.nombre;
                     pl3.dinero = pl3.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl3.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl3.dinero);
+                      jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                     jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             } else if (valor.equals(pl4.nombre)) {
@@ -282,11 +292,12 @@ if (tab.cont == 1) {
                     vdat.dueño = pl4.nombre;
                     pl4.dinero = pl4.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl4.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl4.dinero);
+                      jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                    jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             } else if (valor.equals(pl5.nombre)) {
@@ -294,11 +305,12 @@ if (tab.cont == 1) {
                     vdat.dueño = pl5.nombre;
                     pl5.dinero = pl5.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl5.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl5.dinero);
+                     jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                    jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             } else if (valor.equals(pl6.nombre)) {
@@ -306,15 +318,17 @@ if (tab.cont == 1) {
                     vdat.dueño = pl6.nombre;
                     pl6.dinero = pl6.dinero - vdat.precio;
                     tab.dinero.setText(String.valueOf(pl6.dinero));
-                    JOptionPane.showMessageDialog(null, "COMPRADO");
-                    JOptionPane.showMessageDialog(null, "Dueño: " + vdat.dueño + "  Dinero: " + pl6.dinero);
+                      jpanel.setVisible(true);
+                    jpanel.mensaje("COMPRADO"); 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "No tienes dinero suficiente");
+                     jpanel.setVisible(true);
+                    jpanel.mensaje("No tienes dinero suficiente"); 
                     dispose();
                 }
             }
         
+       
        
         dispose();
     }//GEN-LAST:event_btnaceptarMouseClicked

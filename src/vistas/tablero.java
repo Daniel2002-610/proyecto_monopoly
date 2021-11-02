@@ -28,7 +28,11 @@ import clases_tarjetas.RESTAURANTE_JADE;
 import clases_tarjetas.TEATRO_ALADDIN;
 import clases_tarjetas.TERMINAL_DE_BUSES;
 import clases_tarjetas.TIENDA_COSTELLO;
+import extras.meta;
+import extras.pesadilla;
+import extras.suspiro;
 import java.awt.Color;
+import java.awt.Image;
 import java.util.HashSet;
 
 import java.util.Random;
@@ -84,6 +88,7 @@ import tarjetas_compras.vTERMINAL_DE_BUSES;
  */
 public class tablero extends javax.swing.JFrame {
 
+    meta meta = new meta();
     Random random = new Random();
     play1 pl1 = new play1();
     play2 pl2 = new play2();
@@ -119,6 +124,7 @@ public class tablero extends javax.swing.JFrame {
     PARQUE_BASSEY basi = new PARQUE_BASSEY();
     CINE_CAPITOL capii = new CINE_CAPITOL();
     CASA_ANTIGUA casai = new CASA_ANTIGUA();
+    jpanel jpanel = new jpanel();
 
     public int cont = 1;
     String comboj1, comboj2;
@@ -128,19 +134,19 @@ public class tablero extends javax.swing.JFrame {
     public tablero() {
         initComponents();
         this.setLocationRelativeTo(null);
-        pay.setVisible(true);
+        pay.setVisible(false);
         v1.setVisible(false);
         v2.setVisible(false);
         v3.setVisible(false);
         v4.setVisible(false);
         v5.setVisible(false);
         v6.setVisible(false);
-        btnj1.setVisible(false);
-        btnj2.setVisible(false);
-        btnj3.setVisible(false);
-        btnj4.setVisible(false);
-        btnj5.setVisible(false);
-        btnj6.setVisible(false);
+        btnturno1.setVisible(false);
+        btnturno2.setVisible(false);
+        btnturno3.setVisible(false);
+        btnturno4.setVisible(false);
+        btnturno5.setVisible(false);
+        btnturno6.setVisible(false);
 
     }
 
@@ -148,6 +154,42 @@ public class tablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ps28 = new javax.swing.JLabel();
+        ps29 = new javax.swing.JLabel();
+        ps30 = new javax.swing.JLabel();
+        ps31 = new javax.swing.JLabel();
+        ps32 = new javax.swing.JLabel();
+        ps33 = new javax.swing.JLabel();
+        ps34 = new javax.swing.JLabel();
+        ps35 = new javax.swing.JLabel();
+        ps36 = new javax.swing.JLabel();
+        ps19 = new javax.swing.JLabel();
+        ps20 = new javax.swing.JLabel();
+        ps21 = new javax.swing.JLabel();
+        ps22 = new javax.swing.JLabel();
+        ps23 = new javax.swing.JLabel();
+        ps24 = new javax.swing.JLabel();
+        ps25 = new javax.swing.JLabel();
+        ps26 = new javax.swing.JLabel();
+        ps27 = new javax.swing.JLabel();
+        ps18 = new javax.swing.JLabel();
+        ps17 = new javax.swing.JLabel();
+        ps16 = new javax.swing.JLabel();
+        ps15 = new javax.swing.JLabel();
+        ps14 = new javax.swing.JLabel();
+        ps13 = new javax.swing.JLabel();
+        ps12 = new javax.swing.JLabel();
+        ps11 = new javax.swing.JLabel();
+        ps10 = new javax.swing.JLabel();
+        ps9 = new javax.swing.JLabel();
+        ban9 = new javax.swing.JLabel();
+        ban8 = new javax.swing.JLabel();
+        ban7 = new javax.swing.JLabel();
+        ban3 = new javax.swing.JLabel();
+        ban6 = new javax.swing.JLabel();
+        ban5 = new javax.swing.JLabel();
+        ban4 = new javax.swing.JLabel();
+        ban2 = new javax.swing.JLabel();
         dinero6 = new javax.swing.JLabel();
         player6 = new javax.swing.JLabel();
         v6 = new javax.swing.JLabel();
@@ -175,10 +217,6 @@ public class tablero extends javax.swing.JFrame {
         dinero2 = new javax.swing.JLabel();
         v2 = new javax.swing.JLabel();
         prueba = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         btn_mini = new javax.swing.JLabel();
         turno = new javax.swing.JLabel();
         dinero = new javax.swing.JLabel();
@@ -188,7 +226,12 @@ public class tablero extends javax.swing.JFrame {
         btnj4 = new javax.swing.JLabel();
         btnj5 = new javax.swing.JLabel();
         btnj6 = new javax.swing.JLabel();
-        btntirar = new javax.swing.JLabel();
+        btnturno1 = new javax.swing.JLabel();
+        btnturno2 = new javax.swing.JLabel();
+        btnturno3 = new javax.swing.JLabel();
+        btnturno4 = new javax.swing.JLabel();
+        btnturno5 = new javax.swing.JLabel();
+        btnturno6 = new javax.swing.JLabel();
         v1 = new javax.swing.JLabel();
         btn_cerrar = new javax.swing.JLabel();
         tablero = new javax.swing.JLabel();
@@ -199,6 +242,114 @@ public class tablero extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        ps28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps28, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 110, 50, 50));
+
+        ps29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps29, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 550, 50, 50));
+
+        ps30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps30, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 492, 50, 50));
+
+        ps31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps31, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 440, 50, 50));
+
+        ps32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps32, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 384, 50, 50));
+
+        ps33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps33, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 330, 50, 50));
+
+        ps34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps34, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 275, 50, 50));
+
+        ps35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps35, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 220, 50, 50));
+
+        ps36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/d3.png"))); // NOI18N
+        getContentPane().add(ps36, new org.netbeans.lib.awtextra.AbsoluteConstraints(912, 162, 50, 50));
+
+        ps19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps19, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 493, 50, 50));
+
+        ps20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1056, 550, 50, 50));
+
+        ps21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps21, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 50, 50));
+
+        ps22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps22, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 163, 50, 50));
+
+        ps23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps23, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 220, 50, 50));
+
+        ps24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps24, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 277, 50, 50));
+
+        ps25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps25, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 332, 50, 50));
+
+        ps26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps26, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 385, 50, 50));
+
+        ps27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/b1.png"))); // NOI18N
+        getContentPane().add(ps27, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 440, 50, 50));
+
+        ps18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps18, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 107, 50, 50));
+
+        ps17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps17, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 107, 50, 50));
+
+        ps16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps16, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 107, 50, 50));
+
+        ps15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps15, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 107, 50, 50));
+
+        ps14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps14, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 107, 50, 50));
+
+        ps13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps13, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 107, 50, 50));
+
+        ps12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 107, 50, 50));
+
+        ps11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 107, 50, 50));
+
+        ps10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/c2.png"))); // NOI18N
+        getContentPane().add(ps10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 107, 50, 50));
+
+        ps9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ps9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 550, 50, 50));
+
+        ban9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban9, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 550, 50, 50));
+
+        ban8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 50, 50));
+
+        ban7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban7, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 550, 50, 50));
+
+        ban3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban3, new org.netbeans.lib.awtextra.AbsoluteConstraints(853, 550, 50, 50));
+
+        ban6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 550, 50, 50));
+
+        ban5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban5, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 550, 50, 50));
+
+        ban4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 50, 50));
+
+        ban2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a2.png"))); // NOI18N
+        getContentPane().add(ban2, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 550, 50, 50));
+
         dinero6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         dinero6.setForeground(new java.awt.Color(0, 0, 0));
         dinero6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -208,21 +359,21 @@ public class tablero extends javax.swing.JFrame {
                 dinero6MouseClicked(evt);
             }
         });
-        getContentPane().add(dinero6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 510, 120, 20));
+        getContentPane().add(dinero6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 540, 120, 20));
 
         player6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         player6.setForeground(new java.awt.Color(255, 255, 255));
         player6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        getContentPane().add(player6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 480, 170, 30));
+        getContentPane().add(player6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 510, 170, 30));
 
         v6.setForeground(new java.awt.Color(255, 255, 255));
         v6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/punteomorado.png"))); // NOI18N
-        getContentPane().add(v6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 410, -1, -1));
+        getContentPane().add(v6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 440, -1, -1));
 
         player5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         player5.setForeground(new java.awt.Color(255, 255, 255));
         player5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        getContentPane().add(player5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 310, 170, 30));
+        getContentPane().add(player5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 360, 170, 30));
 
         dinero5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         dinero5.setForeground(new java.awt.Color(0, 0, 0));
@@ -233,11 +384,11 @@ public class tablero extends javax.swing.JFrame {
                 dinero5MouseClicked(evt);
             }
         });
-        getContentPane().add(dinero5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 340, 120, 20));
+        getContentPane().add(dinero5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 390, 120, 20));
 
         v5.setForeground(new java.awt.Color(255, 255, 255));
         v5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/punteonaranja.png"))); // NOI18N
-        getContentPane().add(v5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 240, -1, -1));
+        getContentPane().add(v5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 290, -1, -1));
 
         player2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         player2.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,7 +397,7 @@ public class tablero extends javax.swing.JFrame {
         player4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         player4.setForeground(new java.awt.Color(255, 255, 255));
         player4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        getContentPane().add(player4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 150, 170, 30));
+        getContentPane().add(player4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 190, 170, 30));
 
         dinero4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         dinero4.setForeground(new java.awt.Color(0, 0, 0));
@@ -257,11 +408,11 @@ public class tablero extends javax.swing.JFrame {
                 dinero4MouseClicked(evt);
             }
         });
-        getContentPane().add(dinero4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 180, 120, 20));
+        getContentPane().add(dinero4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, 120, 20));
 
         v4.setForeground(new java.awt.Color(255, 255, 255));
         v4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/punteorosa.png"))); // NOI18N
-        getContentPane().add(v4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, -1, -1));
+        getContentPane().add(v4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 120, -1, -1));
 
         player3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         player3.setForeground(new java.awt.Color(255, 255, 255));
@@ -342,38 +493,6 @@ public class tablero extends javax.swing.JFrame {
         prueba.setForeground(new java.awt.Color(255, 255, 255));
         prueba.setText("jLabel1");
         getContentPane().add(prueba, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
-
-        jButton5.setText("cambiar contador");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
-
-        jButton4.setText("j2");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 70, -1));
-
-        jButton3.setText("jButton2");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
-
-        jButton2.setText("j1");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 70, -1));
 
         btn_mini.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/boton_minimizar.png"))); // NOI18N
         btn_mini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -462,17 +581,77 @@ public class tablero extends javax.swing.JFrame {
         });
         getContentPane().add(btnj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 630, -1, -1));
 
-        btntirar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
-        btntirar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btntirar.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnturno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
+        btnturno1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturno1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btntirarMouseClicked(evt);
+                btnturno1MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btntirarMouseEntered(evt);
+                btnturno1MouseEntered(evt);
             }
         });
-        getContentPane().add(btntirar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
+        getContentPane().add(btnturno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
+
+        btnturno2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
+        btnturno2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturno2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnturno2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnturno2MouseEntered(evt);
+            }
+        });
+        getContentPane().add(btnturno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
+
+        btnturno3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
+        btnturno3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturno3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnturno3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnturno3MouseEntered(evt);
+            }
+        });
+        getContentPane().add(btnturno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
+
+        btnturno4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
+        btnturno4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturno4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnturno4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnturno4MouseEntered(evt);
+            }
+        });
+        getContentPane().add(btnturno4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
+
+        btnturno5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
+        btnturno5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturno5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnturno5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnturno5MouseEntered(evt);
+            }
+        });
+        getContentPane().add(btnturno5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
+
+        btnturno6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/2222-10.png"))); // NOI18N
+        btnturno6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturno6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnturno6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnturno6MouseEntered(evt);
+            }
+        });
+        getContentPane().add(btnturno6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1099, 570, 200, -1));
 
         v1.setForeground(new java.awt.Color(255, 255, 255));
         v1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/punteoceleste.png"))); // NOI18N
@@ -508,14 +687,6 @@ public class tablero extends javax.swing.JFrame {
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_btn_miniMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        cont = 2;
-        jugador1 = 2;
-        pasoj1();
-        verificarj1();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void dineroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dineroMouseClicked
         dinero.setText(String.valueOf(pl1.dinero));
     }//GEN-LAST:event_dineroMouseClicked
@@ -542,6 +713,7 @@ public class tablero extends javax.swing.JFrame {
 
     private void btninicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninicioMouseClicked
         inicio();
+        iniciarbtn();
         btninicio.setVisible(false);
         conta.setText(String.valueOf(cont));
         turno.setText(pl1.nombre);
@@ -770,9 +942,123 @@ public class tablero extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnj6MouseClicked
 
-    private void btntirarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btntirarMouseClicked
+    private void btnturno1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno1MouseClicked
 //        turno();
 
+        if (cont == 1) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+
+
+    }//GEN-LAST:event_btnturno1MouseClicked
+
+    private void btnturno1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnturno1MouseEntered
+
+    private void turnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_turnoMouseClicked
+        if (cont == 1) {
+            cont = 2;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        } else if (cont == 2) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+    }//GEN-LAST:event_turnoMouseClicked
+
+    private void btnturno2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno2MouseClicked
+        if (cont == 1) {
+            cont = 2;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        } else if (cont == 2) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+    }//GEN-LAST:event_btnturno2MouseClicked
+
+    private void btnturno2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnturno2MouseEntered
+
+    private void btnturno3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno3MouseClicked
+        if (cont == 1) {
+            cont = 2;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        } else if (cont == 2) {
+            cont = 3;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl3.nombre);
+        } else if (cont == 3) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+    }//GEN-LAST:event_btnturno3MouseClicked
+
+    private void btnturno3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnturno3MouseEntered
+
+    private void btnturno4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno4MouseClicked
+        if (cont == 1) {
+            cont = 2;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        } else if (cont == 2) {
+            cont = 3;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl3.nombre);
+        } else if (cont == 3) {
+            cont = 4;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl4.nombre);
+        } else if (cont == 4) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+    }//GEN-LAST:event_btnturno4MouseClicked
+
+    private void btnturno4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnturno4MouseEntered
+
+    private void btnturno5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno5MouseClicked
+        if (cont == 1) {
+            cont = 2;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl2.nombre);
+        } else if (cont == 2) {
+            cont = 3;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl3.nombre);
+        } else if (cont == 3) {
+            cont = 4;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl4.nombre);
+        } else if (cont == 4) {
+            cont = 5;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl5.nombre);
+        } else if (cont == 5) {
+            cont = 1;
+            conta.setText(String.valueOf(cont));
+            turno.setText(pl1.nombre);
+        }
+    }//GEN-LAST:event_btnturno5MouseClicked
+
+    private void btnturno5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnturno5MouseEntered
+
+    private void btnturno6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno6MouseClicked
         if (cont == 1) {
             cont = 2;
             conta.setText(String.valueOf(cont));
@@ -798,41 +1084,11 @@ public class tablero extends javax.swing.JFrame {
             conta.setText(String.valueOf(cont));
             turno.setText(pl1.nombre);
         }
+    }//GEN-LAST:event_btnturno6MouseClicked
 
-
-    }//GEN-LAST:event_btntirarMouseClicked
-
-    private void btntirarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btntirarMouseEntered
+    private void btnturno6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturno6MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btntirarMouseEntered
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-   JOptionPane.showMessageDialog(null, cont);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
-        jugador2 = 2;
-        pasoj2();
-        verificarj2();
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        if (cont == 1) {
-            cont = 2;
-            conta.setText(String.valueOf(cont));
-            turno.setText(pl1.nombre);
-        } else if (cont == 2) {
-            cont = 1;
-            conta.setText(String.valueOf(cont));
-            turno.setText(pl2.nombre);
-        }
-
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void turnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_turnoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_turnoMouseClicked
+    }//GEN-LAST:event_btnturno6MouseEntered
 
     /**
      * @param args the command line arguments
@@ -870,6 +1126,14 @@ public class tablero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel ban2;
+    public javax.swing.JLabel ban3;
+    public javax.swing.JLabel ban4;
+    public javax.swing.JLabel ban5;
+    public javax.swing.JLabel ban6;
+    public javax.swing.JLabel ban7;
+    public javax.swing.JLabel ban8;
+    public javax.swing.JLabel ban9;
     private javax.swing.JLabel btn_cerrar;
     private javax.swing.JLabel btn_mini;
     private javax.swing.JLabel btninicio;
@@ -879,7 +1143,12 @@ public class tablero extends javax.swing.JFrame {
     private javax.swing.JLabel btnj4;
     private javax.swing.JLabel btnj5;
     private javax.swing.JLabel btnj6;
-    private javax.swing.JLabel btntirar;
+    private javax.swing.JLabel btnturno1;
+    private javax.swing.JLabel btnturno2;
+    private javax.swing.JLabel btnturno3;
+    private javax.swing.JLabel btnturno4;
+    private javax.swing.JLabel btnturno5;
+    private javax.swing.JLabel btnturno6;
     public javax.swing.JLabel conta;
     public javax.swing.JLabel dinero;
     public javax.swing.JLabel dinero2;
@@ -894,10 +1163,6 @@ public class tablero extends javax.swing.JFrame {
     private javax.swing.JLabel ficha_5;
     private javax.swing.JLabel ficha_6;
     private javax.swing.JLabel fondo;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     public javax.swing.JLabel pay;
     public javax.swing.JLabel player;
     public javax.swing.JLabel player2;
@@ -907,6 +1172,34 @@ public class tablero extends javax.swing.JFrame {
     public javax.swing.JLabel player6;
     public javax.swing.JLabel prop;
     public javax.swing.JLabel prueba;
+    public javax.swing.JLabel ps10;
+    public javax.swing.JLabel ps11;
+    public javax.swing.JLabel ps12;
+    public javax.swing.JLabel ps13;
+    public javax.swing.JLabel ps14;
+    public javax.swing.JLabel ps15;
+    public javax.swing.JLabel ps16;
+    public javax.swing.JLabel ps17;
+    public javax.swing.JLabel ps18;
+    public javax.swing.JLabel ps19;
+    public javax.swing.JLabel ps20;
+    public javax.swing.JLabel ps21;
+    public javax.swing.JLabel ps22;
+    public javax.swing.JLabel ps23;
+    public javax.swing.JLabel ps24;
+    public javax.swing.JLabel ps25;
+    public javax.swing.JLabel ps26;
+    public javax.swing.JLabel ps27;
+    public javax.swing.JLabel ps28;
+    public javax.swing.JLabel ps29;
+    public javax.swing.JLabel ps30;
+    public javax.swing.JLabel ps31;
+    public javax.swing.JLabel ps32;
+    public javax.swing.JLabel ps33;
+    public javax.swing.JLabel ps34;
+    public javax.swing.JLabel ps35;
+    public javax.swing.JLabel ps36;
+    public javax.swing.JLabel ps9;
     private javax.swing.JLabel tablero;
     private javax.swing.JLabel turno;
     public javax.swing.JLabel v1;
@@ -926,186 +1219,177 @@ public class tablero extends javax.swing.JFrame {
         player6.setText(pl6.nombre);
 
         if (!"".equals(player.getText())) {
+            dinero.setVisible(true);
             dinero.setText(String.valueOf(pl1.dinero));
             v1.setVisible(true);
             btnj1.setVisible(true);
+
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText())) {
+            dinero.setVisible(true);
             dinero.setText(String.valueOf(pl1.dinero));
             v1.setVisible(true);
+
             btnj1.setVisible(false);
+            dinero2.setVisible(true);
             dinero2.setText(String.valueOf(pl2.dinero));
             v2.setVisible(true);
             btnj2.setVisible(true);
+
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText())) {
+            dinero.setVisible(true);
             dinero.setText(String.valueOf(pl1.dinero));
             v1.setVisible(true);
+
             btnj1.setVisible(false);
+            dinero2.setVisible(true);
             dinero2.setText(String.valueOf(pl2.dinero));
             v2.setVisible(true);
+
             btnj2.setVisible(false);
+            dinero3.setVisible(true);
             dinero3.setText(String.valueOf(pl3.dinero));
             v3.setVisible(true);
             btnj3.setVisible(true);
+
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText())) {
+            dinero.setVisible(true);
             dinero.setText(String.valueOf(pl1.dinero));
             v1.setVisible(true);
+
             btnj1.setVisible(false);
+            dinero2.setVisible(true);
             dinero2.setText(String.valueOf(pl2.dinero));
             v2.setVisible(true);
-            btnj2.setVisible(false);
+            btnturno2.setVisible(false);
+
+            dinero3.setVisible(true);
             dinero3.setText(String.valueOf(pl3.dinero));
             v3.setVisible(true);
             btnj3.setVisible(false);
+
+            dinero4.setVisible(true);
             dinero4.setText(String.valueOf(pl4.dinero));
             v4.setVisible(true);
             btnj4.setVisible(true);
+
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText())) {
+            dinero.setVisible(true);
             dinero.setText(String.valueOf(pl1.dinero));
             v1.setVisible(true);
+
             btnj1.setVisible(false);
+            dinero2.setVisible(true);
             dinero2.setText(String.valueOf(pl2.dinero));
             v2.setVisible(true);
+
             btnj2.setVisible(false);
+            dinero3.setVisible(true);
             dinero3.setText(String.valueOf(pl3.dinero));
             v3.setVisible(true);
+
             btnj3.setVisible(false);
+            dinero4.setVisible(true);
             dinero4.setText(String.valueOf(pl4.dinero));
             v4.setVisible(true);
             btnj4.setVisible(false);
+
+            dinero5.setVisible(true);
             dinero5.setText(String.valueOf(pl5.dinero));
             v5.setVisible(true);
             btnj5.setVisible(true);
         }
         if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText()) && !"".equals(player6.getText())) {
+            dinero.setVisible(true);
             dinero.setText(String.valueOf(pl1.dinero));
             v1.setVisible(true);
             btnj1.setVisible(false);
+
+            dinero2.setVisible(true);
             dinero2.setText(String.valueOf(pl2.dinero));
             v2.setVisible(true);
+
             btnj2.setVisible(false);
+            dinero3.setVisible(true);
             dinero3.setText(String.valueOf(pl3.dinero));
             v3.setVisible(true);
+
             btnj3.setVisible(false);
+            dinero4.setVisible(true);
             dinero4.setText(String.valueOf(pl4.dinero));
             v4.setVisible(true);
             btnj4.setVisible(false);
+
+            dinero5.setVisible(true);
             dinero5.setText(String.valueOf(pl5.dinero));
             v5.setVisible(true);
             btnj5.setVisible(false);
+
+            dinero6.setVisible(true);
             dinero6.setText(String.valueOf(pl6.dinero));
             v6.setVisible(true);
             btnj6.setVisible(true);
+
         }
 
     }
 
-    void turno() {
+    void iniciarbtn() {
         if (!"".equals(player.getText())) {
-            if (cont == 1) {
-                turno.setText(pl1.nombre);
-                cont = 1;
-                conta.setText(String.valueOf(cont));
-            }
-        }
-        if (!"".equals(player.getText()) && !"".equals(dinero.getText())) {
-            if (cont == 1) {
-                turno.setText(pl2.nombre);
-                cont = 2;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 2) {
-                turno.setText(pl3.nombre);
-                cont = 1;
-                conta.setText(String.valueOf(cont));
-            }
-        }
-        if (!"".equals(player.getText()) && !"".equals(dinero.getText()) && !"".equals(v1.getText())) {
-            if (cont == 1) {
-                turno.setText(pl2.nombre);
-                cont = 2;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 2) {
-                turno.setText(pl3.nombre);
-                cont = 3;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 3) {
-                turno.setText(pl4.nombre);
-                cont = 1;
-                conta.setText(String.valueOf(cont));
-            }
-        }
-        if (!"".equals(player.getText()) && !"".equals(dinero.getText()) && !"".equals(v1.getText()) && !"".equals(player4.getText())) {
-            if (cont == 1) {
-                turno.setText(pl2.nombre);
-                cont = 2;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 2) {
-                turno.setText(pl3.nombre);
-                cont = 3;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 3) {
-                turno.setText(pl4.nombre);
-                cont = 4;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 4) {
-                turno.setText(pl5.nombre);
-                cont = 1;
-                conta.setText(String.valueOf(cont));
-            }
-        }
-        if (!"".equals(player.getText()) && !"".equals(dinero.getText()) && !"".equals(v1.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText())) {
-            if (cont == 1) {
-                turno.setText(pl2.nombre);
-                cont = 2;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 2) {
-                turno.setText(pl3.nombre);
-                cont = 3;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 3) {
-                turno.setText(pl4.nombre);
-                cont = 4;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 4) {
-                turno.setText(pl5.nombre);
-                cont = 5;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 5) {
-                turno.setText(pl6.nombre);
-                cont = 1;
-                conta.setText(String.valueOf(cont));
-            }
-        }
-        if (!"".equals(player.getText()) && !"".equals(dinero.getText()) && !"".equals(v1.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText()) && !"".equals(player6.getText())) {
-            if (cont == 1) {
-                turno.setText(pl2.nombre);
-                cont = 2;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 2) {
-                turno.setText(pl3.nombre);
-                cont = 3;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 3) {
-                turno.setText(pl4.nombre);
-                cont = 4;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 4) {
-                turno.setText(pl5.nombre);
-                cont = 5;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 5) {
-                turno.setText(pl6.nombre);
-                cont = 6;
-                conta.setText(String.valueOf(cont));
-            } else if (cont == 6) {
-                turno.setText(pl1.nombre);
-                cont = 1;
-                conta.setText(String.valueOf(cont));
-            }
+            btnturno1.setVisible(true);
+            btnturno2.setVisible(false);
+            btnturno3.setVisible(false);
+            btnturno4.setVisible(false);
+            btnturno5.setVisible(false);
+            btnturno6.setVisible(false);
 
+        }
+        if (!"".equals(player.getText()) && !"".equals(player2.getText())) {
+            btnturno1.setVisible(false);
+            btnturno2.setVisible(true);
+            btnturno3.setVisible(false);
+            btnturno4.setVisible(false);
+            btnturno5.setVisible(false);
+            btnturno6.setVisible(false);
+
+        }
+        if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText())) {
+            btnturno1.setVisible(false);
+            btnturno2.setVisible(false);
+            btnturno3.setVisible(true);
+            btnturno4.setVisible(false);
+            btnturno5.setVisible(false);
+            btnturno6.setVisible(false);
+
+        }
+        if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText())) {
+
+            btnturno1.setVisible(false);
+            btnturno2.setVisible(false);
+            btnturno3.setVisible(false);
+            btnturno4.setVisible(true);
+            btnturno5.setVisible(false);
+            btnturno6.setVisible(false);
+        }
+        if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText())) {
+            btnturno1.setVisible(false);
+            btnturno2.setVisible(false);
+            btnturno3.setVisible(false);
+            btnturno4.setVisible(false);
+            btnturno5.setVisible(true);
+            btnturno6.setVisible(false);
+        }
+        if (!"".equals(player.getText()) && !"".equals(player2.getText()) && !"".equals(player3.getText()) && !"".equals(player4.getText()) && !"".equals(player5.getText()) && !"".equals(player6.getText())) {
+
+            btnturno1.setVisible(false);          
+            btnturno2.setVisible(false);
+           btnturno3.setVisible(false);
+           btnturno4.setVisible(false);
+            btnturno5.setVisible(false);
+             btnturno6.setVisible(true);
         }
     }
 
@@ -1792,7 +2076,8 @@ public class tablero extends javax.swing.JFrame {
             dinero.setText(String.valueOf(pl1.dinero));
             reset = jugador1 - 40;
             jugador1 = reset;
-            JOptionPane.showMessageDialog(null, "Ganaste Q200");
+            jpanel.setVisible(true);
+            jpanel.mensaje("Ganaste 200");
 
         } else if (jugador1 == 2) {
 
@@ -1801,31 +2086,65 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_JACKSON jack = new VCALLE_JACKSON();
                 jack.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jacki.paso + " a " + jacki.dueño);
                 pay.setText(String.valueOf(jacki.paso));
                 prop.setText(jacki.dueño);
-                pagar();                
-               
+                pagar();
+
             }
         } else if (jugador1 == 3) {
-            JOptionPane.showMessageDialog(null, "Pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl1.dinero -= 110;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 2) {
+                pl1.dinero -= 110;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 3) {
+                pl1.dinero -= 230;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 4) {
+                pl1.dinero -= 95;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 5) {
+                pl1.dinero -= 45;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 6) {
+                pl1.dinero -= 38;
+                dinero.setText(String.valueOf(pl1.dinero));
+            }
+
         } else if (jugador1 == 4) {
             LOS_BALDIOS bali = new LOS_BALDIOS();
             if ("".equals(bali.dueño)) {
                 VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
                 bal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bali.paso + " a " + bali.dueño);
+                pay.setText(String.valueOf(bali.paso));
+                prop.setText(bali.dueño);
+                pagar();
             }
         } else if (jugador1 == 5) {
-            JOptionPane.showMessageDialog(null, "Impuestos");
+            pl1.dinero -= 45;
+            dinero.setText(String.valueOf(pl1.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 45 de impuestos");;
         } else if (jugador1 == 6) {
             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
             if ("".equals(busi.dueño)) {
                 vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
                 bus.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + busi.paso + " a " + busi.dueño);
+                pay.setText(String.valueOf(busi.paso));
+                prop.setText(busi.dueño);
+                pagar();
             }
         } else if (jugador1 == 7) {
             BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
@@ -1833,17 +2152,46 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
                 bar.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bari.paso + " a " + bari.dueño);
+                pay.setText(String.valueOf(bari.paso));
+                prop.setText(bari.dueño);
+                pagar();
             }
         } else if (jugador1 == 8) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl1.dinero += 125;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 2) {
+                pl1.dinero += 50;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 3) {
+                pl1.dinero += 200;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 4) {
+                pl1.dinero += 100;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 5) {
+                pl1.dinero += 30;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 6) {
+                pl1.dinero += 55;
+                dinero.setText(String.valueOf(pl1.dinero));
+            }
         } else if (jugador1 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
             if ("".equals(neii.dueño)) {
                 VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
                 nei.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + neii.paso + " a " + neii.dueño);
+                pay.setText(String.valueOf(neii.paso));
+                prop.setText(neii.dueño);
+                pagar();
             }
         } else if (jugador1 == 10) {
             CALLE_TURNER turi = new CALLE_TURNER();
@@ -1851,7 +2199,11 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_TURNER tur = new VCALLE_TURNER();
                 tur.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + turi.paso + " a " + turi.dueño);
+                pay.setText(String.valueOf(turi.paso));
+                prop.setText(turi.dueño);
+                pagar();
             }
         } else if (jugador1 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
@@ -1861,7 +2213,11 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_FALCON fal = new VBAR_FALCON();
                 fal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + fali.paso + " a " + fali.dueño);
+                pay.setText(String.valueOf(fali.paso));
+                prop.setText(fali.dueño);
+                pagar();
             }
         } else if (jugador1 == 13) {
             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
@@ -1869,7 +2225,11 @@ public class tablero extends javax.swing.JFrame {
                 VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
                 bil.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bili.paso + " a " + bili.dueño);
+                pay.setText(String.valueOf(bili.paso));
+                prop.setText(bili.dueño);
+                pagar();
             }
         } else if (jugador1 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
@@ -1877,7 +2237,11 @@ public class tablero extends javax.swing.JFrame {
                 VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
                 igle.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + iglei.paso + " a " + iglei.dueño);
+                pay.setText(String.valueOf(iglei.paso));
+                prop.setText(iglei.dueño);
+                pagar();
             }
         } else if (jugador1 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
@@ -1885,7 +2249,11 @@ public class tablero extends javax.swing.JFrame {
                 VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
                 tie.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + tiei.paso + " a " + tiei.dueño);
+                pay.setText(String.valueOf(tiei.paso));
+                prop.setText(tiei.dueño);
+                pagar();
             }
         } else if (jugador1 == 16) {
             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
@@ -1893,7 +2261,11 @@ public class tablero extends javax.swing.JFrame {
                 VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
                 besos.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + besosi.paso + " a " + besosi.dueño);
+                pay.setText(String.valueOf(besosi.paso));
+                prop.setText(besosi.dueño);
+                pagar();
             }
         } else if (jugador1 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
@@ -1901,17 +2273,47 @@ public class tablero extends javax.swing.JFrame {
                 VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
                 come.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + comei.paso + " a " + comei.dueño);
+                pay.setText(String.valueOf(comei.paso));
+                prop.setText(comei.dueño);
+                pagar();
             }
         } else if (jugador1 == 18) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl1.dinero -= 110;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 2) {
+                pl1.dinero -= 110;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 3) {
+                pl1.dinero -= 230;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 4) {
+                pl1.dinero -= 95;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 5) {
+                pl1.dinero -= 45;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 6) {
+                pl1.dinero -= 38;
+                dinero.setText(String.valueOf(pl1.dinero));
+            }
+
         } else if (jugador1 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
             if ("".equals(primai.dueño)) {
                 VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
                 prima.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + primai.paso + " a " + primai.dueño);
+                pay.setText(String.valueOf(primai.paso));
+                prop.setText(primai.dueño);
+                pagar();
             }
         } else if (jugador1 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
@@ -1919,7 +2321,11 @@ public class tablero extends javax.swing.JFrame {
                 VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
                 teatro.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + teatroi.paso + " a " + teatroi.dueño);
+                pay.setText(String.valueOf(teatroi.paso));
+                prop.setText(teatroi.dueño);
+                pagar();
             }
         } else if (jugador1 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
@@ -1929,17 +2335,46 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_CLUB club = new VCASA_CLUB();
                 club.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + clubi.paso + " a " + clubi.dueño);
+                pay.setText(String.valueOf(clubi.paso));
+                prop.setText(clubi.dueño);
+                pagar();
             }
         } else if (jugador1 == 23) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl1.dinero += 125;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 2) {
+                pl1.dinero += 50;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 3) {
+                pl1.dinero += 200;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 4) {
+                pl1.dinero += 100;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 5) {
+                pl1.dinero += 30;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 6) {
+                pl1.dinero += 55;
+                dinero.setText(String.valueOf(pl1.dinero));
+            }
         } else if (jugador1 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
             if ("".equals(jadei.dueño)) {
                 VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
                 jade.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jadei.paso + " a " + jadei.dueño);
+                pay.setText(String.valueOf(jadei.paso));
+                prop.setText(jadei.dueño);
+                pagar();
             }
         } else if (jugador1 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
@@ -1947,7 +2382,11 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
                 hues.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + huesi.paso + " a " + huesi.dueño);
+                pay.setText(String.valueOf(huesi.paso));
+                prop.setText(huesi.dueño);
+                pagar();
             }
         } else if (jugador1 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
@@ -1955,7 +2394,11 @@ public class tablero extends javax.swing.JFrame {
                 VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
                 secu.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + secui.paso + " a " + secui.dueño);
+                pay.setText(String.valueOf(secui.paso));
+                prop.setText(secui.dueño);
+                pagar();
             }
         } else if (jugador1 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
@@ -1963,7 +2406,11 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
                 memo.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + memoi.paso + " a " + memoi.dueño);
+                pay.setText(String.valueOf(memoi.paso));
+                prop.setText(memoi.dueño);
+                pagar();
             }
         } else if (jugador1 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
@@ -1971,7 +2418,11 @@ public class tablero extends javax.swing.JFrame {
                 VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
                 farm.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + farmi.paso + " a " + farmi.dueño);
+                pay.setText(String.valueOf(farmi.paso));
+                prop.setText(farmi.dueño);
+                pagar();
             }
         } else if (jugador1 == 29) {
             REPRESA repri = new REPRESA();
@@ -1979,7 +2430,11 @@ public class tablero extends javax.swing.JFrame {
                 VREPRESA repre = new VREPRESA();
                 repre.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + repri.paso + " a " + repri.dueño);
+                pay.setText(String.valueOf(repri.paso));
+                prop.setText(repri.dueño);
+                pagar();
             }
         } else if (jugador1 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
@@ -1987,17 +2442,28 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
                 risa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + risai.paso + " a " + risai.dueño);
+                pay.setText(String.valueOf(risai.paso));
+                prop.setText(risai.dueño);
+                pagar();
             }
         } else if (jugador1 == 31) {
-            JOptionPane.showMessageDialog(null, "vaya a la carcel");
+            pl1.dinero -= 50;
+            dinero.setText(String.valueOf(pl1.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 50 por fianza");;
         } else if (jugador1 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
             if ("".equals(canterai.dueño)) {
                 VLA_CANTERA cantera = new VLA_CANTERA();
                 cantera.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + canterai.paso + " a " + canterai.dueño);
+                pay.setText(String.valueOf(canterai.paso));
+                prop.setText(canterai.dueño);
+                pagar();
             }
         } else if (jugador1 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
@@ -2005,17 +2471,46 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
                 wit.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + witi.paso + " a " + witi.dueño);
+                pay.setText(String.valueOf(witi.paso));
+                prop.setText(witi.dueño);
+                pagar();
             }
         } else if (jugador1 == 34) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl1.dinero -= 110;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 2) {
+                pl1.dinero -= 110;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 3) {
+                pl1.dinero -= 230;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 4) {
+                pl1.dinero -= 95;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 5) {
+                pl1.dinero -= 45;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (pes.rampes == 6) {
+                pl1.dinero -= 38;
+                dinero.setText(String.valueOf(pl1.dinero));
+            }
         } else if (jugador1 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
             if ("".equals(strawi.dueño)) {
                 VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
                 straw.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + strawi.paso + " a " + strawi.dueño);
+                pay.setText(String.valueOf(strawi.paso));
+                prop.setText(strawi.dueño);
+                pagar();
             }
         } else if (jugador1 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
@@ -2023,27 +2518,63 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
                 bas.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + basi.paso + " a " + basi.dueño);
+                pay.setText(String.valueOf(basi.paso));
+                prop.setText(basi.dueño);
+                pagar();
             }
         } else if (jugador1 == 37) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl1.dinero += 125;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 2) {
+                pl1.dinero += 50;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 3) {
+                pl1.dinero += 200;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 4) {
+                pl1.dinero += 100;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 5) {
+                pl1.dinero += 30;
+                dinero.setText(String.valueOf(pl1.dinero));
+            } else if (sus.ramsus == 6) {
+                pl1.dinero += 55;
+                dinero.setText(String.valueOf(pl1.dinero));
+            }
         } else if (jugador1 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
             if ("".equals(capii.dueño)) {
                 VCINE_CAPITOL capi = new VCINE_CAPITOL();
                 capi.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + capii.paso + " a " + capii.dueño);
+                pay.setText(String.valueOf(capii.paso));
+                prop.setText(capii.dueño);
+                pagar();
             }
         } else if (jugador1 == 39) {
-            JOptionPane.showMessageDialog(null, "impuesto de lujo");
+            pl1.dinero -= 210;
+            dinero.setText(String.valueOf(pl1.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 210 de impuestos de lujo");;
         } else if (jugador1 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
             if ("".equals(casai.dueño)) {
                 VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
                 casa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + casai.paso + " a " + casai.dueño);
+                pay.setText(String.valueOf(casai.paso));
+                prop.setText(casai.dueño);
+                pagar();
             }
         }
 
@@ -2056,7 +2587,8 @@ public class tablero extends javax.swing.JFrame {
             dinero2.setText(String.valueOf(pl2.dinero));
             reset = jugador2 - 40;
             jugador2 = reset;
-            JOptionPane.showMessageDialog(null, "Ganaste Q200");
+            jpanel.setVisible(true);
+            jpanel.mensaje("Ganaste 200");
 
         } else if (jugador2 == 2) {
 
@@ -2065,30 +2597,65 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_JACKSON jack = new VCALLE_JACKSON();
                 jack.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
-               pay.setText(String.valueOf(jacki.paso));
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                pay.setText(String.valueOf(jacki.paso));
                 prop.setText(jacki.dueño);
-                pagar();  
+                pagar();
+
             }
         } else if (jugador2 == 3) {
-            JOptionPane.showMessageDialog(null, "Pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl2.dinero -= 110;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 2) {
+                pl2.dinero -= 110;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 3) {
+                pl2.dinero -= 230;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 4) {
+                pl2.dinero -= 95;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 5) {
+                pl2.dinero -= 45;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 6) {
+                pl2.dinero -= 38;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            }
+
         } else if (jugador2 == 4) {
             LOS_BALDIOS bali = new LOS_BALDIOS();
             if ("".equals(bali.dueño)) {
                 VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
                 bal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bali.paso + " a " + bali.dueño);
+                pay.setText(String.valueOf(bali.paso));
+                prop.setText(bali.dueño);
+                pagar();
             }
         } else if (jugador2 == 5) {
-            JOptionPane.showMessageDialog(null, "Impuestos");
+            pl2.dinero -= 45;
+            dinero2.setText(String.valueOf(pl2.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 45 de impuestos");;
         } else if (jugador2 == 6) {
             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
             if ("".equals(busi.dueño)) {
                 vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
                 bus.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + busi.paso + " a " + busi.dueño);
+                pay.setText(String.valueOf(busi.paso));
+                prop.setText(busi.dueño);
+                pagar();
             }
         } else if (jugador2 == 7) {
             BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
@@ -2096,17 +2663,46 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
                 bar.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bari.paso + " a " + bari.dueño);
+                pay.setText(String.valueOf(bari.paso));
+                prop.setText(bari.dueño);
+                pagar();
             }
         } else if (jugador2 == 8) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl2.dinero += 125;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 2) {
+                pl2.dinero += 50;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 3) {
+                pl2.dinero += 200;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 4) {
+                pl2.dinero += 100;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 5) {
+                pl2.dinero += 30;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 6) {
+                pl2.dinero += 55;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            }
         } else if (jugador2 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
             if ("".equals(neii.dueño)) {
                 VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
                 nei.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + neii.paso + " a " + neii.dueño);
+                pay.setText(String.valueOf(neii.paso));
+                prop.setText(neii.dueño);
+                pagar();
             }
         } else if (jugador2 == 10) {
             CALLE_TURNER turi = new CALLE_TURNER();
@@ -2114,7 +2710,11 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_TURNER tur = new VCALLE_TURNER();
                 tur.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + turi.paso + " a " + turi.dueño);
+                pay.setText(String.valueOf(turi.paso));
+                prop.setText(turi.dueño);
+                pagar();
             }
         } else if (jugador2 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
@@ -2124,7 +2724,11 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_FALCON fal = new VBAR_FALCON();
                 fal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + fali.paso + " a " + fali.dueño);
+                pay.setText(String.valueOf(fali.paso));
+                prop.setText(fali.dueño);
+                pagar();
             }
         } else if (jugador2 == 13) {
             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
@@ -2132,7 +2736,11 @@ public class tablero extends javax.swing.JFrame {
                 VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
                 bil.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bili.paso + " a " + bili.dueño);
+                pay.setText(String.valueOf(bili.paso));
+                prop.setText(bili.dueño);
+                pagar();
             }
         } else if (jugador2 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
@@ -2140,7 +2748,11 @@ public class tablero extends javax.swing.JFrame {
                 VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
                 igle.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + iglei.paso + " a " + iglei.dueño);
+                pay.setText(String.valueOf(iglei.paso));
+                prop.setText(iglei.dueño);
+                pagar();
             }
         } else if (jugador2 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
@@ -2148,7 +2760,11 @@ public class tablero extends javax.swing.JFrame {
                 VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
                 tie.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + tiei.paso + " a " + tiei.dueño);
+                pay.setText(String.valueOf(tiei.paso));
+                prop.setText(tiei.dueño);
+                pagar();
             }
         } else if (jugador2 == 16) {
             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
@@ -2156,7 +2772,11 @@ public class tablero extends javax.swing.JFrame {
                 VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
                 besos.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + besosi.paso + " a " + besosi.dueño);
+                pay.setText(String.valueOf(besosi.paso));
+                prop.setText(besosi.dueño);
+                pagar();
             }
         } else if (jugador2 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
@@ -2164,17 +2784,47 @@ public class tablero extends javax.swing.JFrame {
                 VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
                 come.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + comei.paso + " a " + comei.dueño);
+                pay.setText(String.valueOf(comei.paso));
+                prop.setText(comei.dueño);
+                pagar();
             }
         } else if (jugador2 == 18) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl2.dinero -= 110;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 2) {
+                pl2.dinero -= 110;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 3) {
+                pl2.dinero -= 230;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 4) {
+                pl2.dinero -= 95;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 5) {
+                pl2.dinero -= 45;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 6) {
+                pl2.dinero -= 38;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            }
+
         } else if (jugador2 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
             if ("".equals(primai.dueño)) {
                 VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
                 prima.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + primai.paso + " a " + primai.dueño);
+                pay.setText(String.valueOf(primai.paso));
+                prop.setText(primai.dueño);
+                pagar();
             }
         } else if (jugador2 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
@@ -2182,7 +2832,11 @@ public class tablero extends javax.swing.JFrame {
                 VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
                 teatro.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + teatroi.paso + " a " + teatroi.dueño);
+                pay.setText(String.valueOf(teatroi.paso));
+                prop.setText(teatroi.dueño);
+                pagar();
             }
         } else if (jugador2 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
@@ -2192,17 +2846,46 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_CLUB club = new VCASA_CLUB();
                 club.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + clubi.paso + " a " + clubi.dueño);
+                pay.setText(String.valueOf(clubi.paso));
+                prop.setText(clubi.dueño);
+                pagar();
             }
         } else if (jugador2 == 23) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl2.dinero += 125;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 2) {
+                pl2.dinero += 50;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 3) {
+                pl2.dinero += 200;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 4) {
+                pl2.dinero += 100;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 5) {
+                pl2.dinero += 30;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 6) {
+                pl2.dinero += 55;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            }
         } else if (jugador2 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
             if ("".equals(jadei.dueño)) {
                 VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
                 jade.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jadei.paso + " a " + jadei.dueño);
+                pay.setText(String.valueOf(jadei.paso));
+                prop.setText(jadei.dueño);
+                pagar();
             }
         } else if (jugador2 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
@@ -2210,7 +2893,11 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
                 hues.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + huesi.paso + " a " + huesi.dueño);
+                pay.setText(String.valueOf(huesi.paso));
+                prop.setText(huesi.dueño);
+                pagar();
             }
         } else if (jugador2 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
@@ -2218,7 +2905,11 @@ public class tablero extends javax.swing.JFrame {
                 VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
                 secu.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + secui.paso + " a " + secui.dueño);
+                pay.setText(String.valueOf(secui.paso));
+                prop.setText(secui.dueño);
+                pagar();
             }
         } else if (jugador2 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
@@ -2226,7 +2917,11 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
                 memo.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + memoi.paso + " a " + memoi.dueño);
+                pay.setText(String.valueOf(memoi.paso));
+                prop.setText(memoi.dueño);
+                pagar();
             }
         } else if (jugador2 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
@@ -2234,7 +2929,11 @@ public class tablero extends javax.swing.JFrame {
                 VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
                 farm.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + farmi.paso + " a " + farmi.dueño);
+                pay.setText(String.valueOf(farmi.paso));
+                prop.setText(farmi.dueño);
+                pagar();
             }
         } else if (jugador2 == 29) {
             REPRESA repri = new REPRESA();
@@ -2242,7 +2941,11 @@ public class tablero extends javax.swing.JFrame {
                 VREPRESA repre = new VREPRESA();
                 repre.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + repri.paso + " a " + repri.dueño);
+                pay.setText(String.valueOf(repri.paso));
+                prop.setText(repri.dueño);
+                pagar();
             }
         } else if (jugador2 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
@@ -2250,17 +2953,28 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
                 risa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + risai.paso + " a " + risai.dueño);
+                pay.setText(String.valueOf(risai.paso));
+                prop.setText(risai.dueño);
+                pagar();
             }
         } else if (jugador2 == 31) {
-            JOptionPane.showMessageDialog(null, "vaya a la carcel");
+            pl2.dinero -= 50;
+            dinero2.setText(String.valueOf(pl2.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 50 por fianza");;
         } else if (jugador2 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
             if ("".equals(canterai.dueño)) {
                 VLA_CANTERA cantera = new VLA_CANTERA();
                 cantera.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + canterai.paso + " a " + canterai.dueño);
+                pay.setText(String.valueOf(canterai.paso));
+                prop.setText(canterai.dueño);
+                pagar();
             }
         } else if (jugador2 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
@@ -2268,17 +2982,46 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
                 wit.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + witi.paso + " a " + witi.dueño);
+                pay.setText(String.valueOf(witi.paso));
+                prop.setText(witi.dueño);
+                pagar();
             }
         } else if (jugador2 == 34) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl2.dinero -= 110;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 2) {
+                pl2.dinero -= 110;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 3) {
+                pl2.dinero -= 230;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 4) {
+                pl2.dinero -= 95;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 5) {
+                pl2.dinero -= 45;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (pes.rampes == 6) {
+                pl2.dinero -= 38;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            }
         } else if (jugador2 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
             if ("".equals(strawi.dueño)) {
                 VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
                 straw.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + strawi.paso + " a " + strawi.dueño);
+                pay.setText(String.valueOf(strawi.paso));
+                prop.setText(strawi.dueño);
+                pagar();
             }
         } else if (jugador2 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
@@ -2286,27 +3029,63 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
                 bas.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + basi.paso + " a " + basi.dueño);
+                pay.setText(String.valueOf(basi.paso));
+                prop.setText(basi.dueño);
+                pagar();
             }
         } else if (jugador2 == 37) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl2.dinero += 125;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 2) {
+                pl2.dinero += 50;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 3) {
+                pl2.dinero += 200;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 4) {
+                pl2.dinero += 100;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 5) {
+                pl2.dinero += 30;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            } else if (sus.ramsus == 6) {
+                pl2.dinero += 55;
+                dinero2.setText(String.valueOf(pl2.dinero));
+            }
         } else if (jugador2 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
             if ("".equals(capii.dueño)) {
                 VCINE_CAPITOL capi = new VCINE_CAPITOL();
                 capi.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + capii.paso + " a " + capii.dueño);
+                pay.setText(String.valueOf(capii.paso));
+                prop.setText(capii.dueño);
+                pagar();
             }
         } else if (jugador2 == 39) {
-            JOptionPane.showMessageDialog(null, "impuesto de lujo");
+            pl2.dinero -= 210;
+            dinero2.setText(String.valueOf(pl2.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 210 de impuestos de lujo");;
         } else if (jugador2 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
             if ("".equals(casai.dueño)) {
                 VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
                 casa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + casai.paso + " a " + casai.dueño);
+                pay.setText(String.valueOf(casai.paso));
+                prop.setText(casai.dueño);
+                pagar();
             }
         }
 
@@ -2319,7 +3098,8 @@ public class tablero extends javax.swing.JFrame {
             dinero3.setText(String.valueOf(pl3.dinero));
             reset = jugador3 - 40;
             jugador3 = reset;
-            JOptionPane.showMessageDialog(null, "Ganaste Q200");
+            jpanel.setVisible(true);
+            jpanel.mensaje("Ganaste 200");
 
         } else if (jugador3 == 2) {
 
@@ -2328,27 +3108,65 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_JACKSON jack = new VCALLE_JACKSON();
                 jack.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                pay.setText(String.valueOf(jacki.paso));
+                prop.setText(jacki.dueño);
+                pagar();
+
             }
         } else if (jugador3 == 3) {
-            JOptionPane.showMessageDialog(null, "Pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl3.dinero -= 110;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 2) {
+                pl3.dinero -= 110;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 3) {
+                pl3.dinero -= 230;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 4) {
+                pl3.dinero -= 95;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 5) {
+                pl3.dinero -= 45;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 6) {
+                pl3.dinero -= 38;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            }
+
         } else if (jugador3 == 4) {
             LOS_BALDIOS bali = new LOS_BALDIOS();
             if ("".equals(bali.dueño)) {
                 VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
                 bal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bali.paso + " a " + bali.dueño);
+                pay.setText(String.valueOf(bali.paso));
+                prop.setText(bali.dueño);
+                pagar();
             }
         } else if (jugador3 == 5) {
-            JOptionPane.showMessageDialog(null, "Impuestos");
+            pl3.dinero -= 45;
+            dinero3.setText(String.valueOf(pl3.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 45 de impuestos");;
         } else if (jugador3 == 6) {
             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
             if ("".equals(busi.dueño)) {
                 vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
                 bus.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + busi.paso + " a " + busi.dueño);
+                pay.setText(String.valueOf(busi.paso));
+                prop.setText(busi.dueño);
+                pagar();
             }
         } else if (jugador3 == 7) {
             BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
@@ -2356,17 +3174,46 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
                 bar.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bari.paso + " a " + bari.dueño);
+                pay.setText(String.valueOf(bari.paso));
+                prop.setText(bari.dueño);
+                pagar();
             }
         } else if (jugador3 == 8) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl3.dinero += 125;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 2) {
+                pl3.dinero += 50;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 3) {
+                pl3.dinero += 200;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 4) {
+                pl3.dinero += 100;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 5) {
+                pl3.dinero += 30;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 6) {
+                pl3.dinero += 55;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            }
         } else if (jugador3 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
             if ("".equals(neii.dueño)) {
                 VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
                 nei.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + neii.paso + " a " + neii.dueño);
+                pay.setText(String.valueOf(neii.paso));
+                prop.setText(neii.dueño);
+                pagar();
             }
         } else if (jugador3 == 10) {
             CALLE_TURNER turi = new CALLE_TURNER();
@@ -2374,7 +3221,11 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_TURNER tur = new VCALLE_TURNER();
                 tur.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + turi.paso + " a " + turi.dueño);
+                pay.setText(String.valueOf(turi.paso));
+                prop.setText(turi.dueño);
+                pagar();
             }
         } else if (jugador3 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
@@ -2384,7 +3235,11 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_FALCON fal = new VBAR_FALCON();
                 fal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + fali.paso + " a " + fali.dueño);
+                pay.setText(String.valueOf(fali.paso));
+                prop.setText(fali.dueño);
+                pagar();
             }
         } else if (jugador3 == 13) {
             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
@@ -2392,7 +3247,11 @@ public class tablero extends javax.swing.JFrame {
                 VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
                 bil.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bili.paso + " a " + bili.dueño);
+                pay.setText(String.valueOf(bili.paso));
+                prop.setText(bili.dueño);
+                pagar();
             }
         } else if (jugador3 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
@@ -2400,7 +3259,11 @@ public class tablero extends javax.swing.JFrame {
                 VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
                 igle.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + iglei.paso + " a " + iglei.dueño);
+                pay.setText(String.valueOf(iglei.paso));
+                prop.setText(iglei.dueño);
+                pagar();
             }
         } else if (jugador3 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
@@ -2408,7 +3271,11 @@ public class tablero extends javax.swing.JFrame {
                 VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
                 tie.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + tiei.paso + " a " + tiei.dueño);
+                pay.setText(String.valueOf(tiei.paso));
+                prop.setText(tiei.dueño);
+                pagar();
             }
         } else if (jugador3 == 16) {
             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
@@ -2416,7 +3283,11 @@ public class tablero extends javax.swing.JFrame {
                 VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
                 besos.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + besosi.paso + " a " + besosi.dueño);
+                pay.setText(String.valueOf(besosi.paso));
+                prop.setText(besosi.dueño);
+                pagar();
             }
         } else if (jugador3 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
@@ -2424,17 +3295,47 @@ public class tablero extends javax.swing.JFrame {
                 VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
                 come.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + comei.paso + " a " + comei.dueño);
+                pay.setText(String.valueOf(comei.paso));
+                prop.setText(comei.dueño);
+                pagar();
             }
         } else if (jugador3 == 18) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl3.dinero -= 110;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 2) {
+                pl3.dinero -= 110;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 3) {
+                pl3.dinero -= 230;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 4) {
+                pl3.dinero -= 95;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 5) {
+                pl3.dinero -= 45;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 6) {
+                pl3.dinero -= 38;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            }
+
         } else if (jugador3 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
             if ("".equals(primai.dueño)) {
                 VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
                 prima.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + primai.paso + " a " + primai.dueño);
+                pay.setText(String.valueOf(primai.paso));
+                prop.setText(primai.dueño);
+                pagar();
             }
         } else if (jugador3 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
@@ -2442,7 +3343,11 @@ public class tablero extends javax.swing.JFrame {
                 VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
                 teatro.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + teatroi.paso + " a " + teatroi.dueño);
+                pay.setText(String.valueOf(teatroi.paso));
+                prop.setText(teatroi.dueño);
+                pagar();
             }
         } else if (jugador3 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
@@ -2452,17 +3357,46 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_CLUB club = new VCASA_CLUB();
                 club.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + clubi.paso + " a " + clubi.dueño);
+                pay.setText(String.valueOf(clubi.paso));
+                prop.setText(clubi.dueño);
+                pagar();
             }
         } else if (jugador3 == 23) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl3.dinero += 125;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 2) {
+                pl3.dinero += 50;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 3) {
+                pl3.dinero += 200;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 4) {
+                pl3.dinero += 100;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 5) {
+                pl3.dinero += 30;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 6) {
+                pl3.dinero += 55;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            }
         } else if (jugador3 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
             if ("".equals(jadei.dueño)) {
                 VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
                 jade.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jadei.paso + " a " + jadei.dueño);
+                pay.setText(String.valueOf(jadei.paso));
+                prop.setText(jadei.dueño);
+                pagar();
             }
         } else if (jugador3 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
@@ -2470,7 +3404,11 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
                 hues.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + huesi.paso + " a " + huesi.dueño);
+                pay.setText(String.valueOf(huesi.paso));
+                prop.setText(huesi.dueño);
+                pagar();
             }
         } else if (jugador3 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
@@ -2478,7 +3416,11 @@ public class tablero extends javax.swing.JFrame {
                 VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
                 secu.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + secui.paso + " a " + secui.dueño);
+                pay.setText(String.valueOf(secui.paso));
+                prop.setText(secui.dueño);
+                pagar();
             }
         } else if (jugador3 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
@@ -2486,7 +3428,11 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
                 memo.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + memoi.paso + " a " + memoi.dueño);
+                pay.setText(String.valueOf(memoi.paso));
+                prop.setText(memoi.dueño);
+                pagar();
             }
         } else if (jugador3 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
@@ -2494,7 +3440,11 @@ public class tablero extends javax.swing.JFrame {
                 VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
                 farm.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + farmi.paso + " a " + farmi.dueño);
+                pay.setText(String.valueOf(farmi.paso));
+                prop.setText(farmi.dueño);
+                pagar();
             }
         } else if (jugador3 == 29) {
             REPRESA repri = new REPRESA();
@@ -2502,7 +3452,11 @@ public class tablero extends javax.swing.JFrame {
                 VREPRESA repre = new VREPRESA();
                 repre.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + repri.paso + " a " + repri.dueño);
+                pay.setText(String.valueOf(repri.paso));
+                prop.setText(repri.dueño);
+                pagar();
             }
         } else if (jugador3 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
@@ -2510,17 +3464,28 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
                 risa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + risai.paso + " a " + risai.dueño);
+                pay.setText(String.valueOf(risai.paso));
+                prop.setText(risai.dueño);
+                pagar();
             }
         } else if (jugador3 == 31) {
-            JOptionPane.showMessageDialog(null, "vaya a la carcel");
+            pl3.dinero -= 50;
+            dinero3.setText(String.valueOf(pl3.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 50 por fianza");;
         } else if (jugador3 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
             if ("".equals(canterai.dueño)) {
                 VLA_CANTERA cantera = new VLA_CANTERA();
                 cantera.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + canterai.paso + " a " + canterai.dueño);
+                pay.setText(String.valueOf(canterai.paso));
+                prop.setText(canterai.dueño);
+                pagar();
             }
         } else if (jugador3 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
@@ -2528,17 +3493,46 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
                 wit.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + witi.paso + " a " + witi.dueño);
+                pay.setText(String.valueOf(witi.paso));
+                prop.setText(witi.dueño);
+                pagar();
             }
         } else if (jugador3 == 34) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl3.dinero -= 110;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 2) {
+                pl3.dinero -= 110;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 3) {
+                pl3.dinero -= 230;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 4) {
+                pl3.dinero -= 95;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 5) {
+                pl3.dinero -= 45;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (pes.rampes == 6) {
+                pl3.dinero -= 38;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            }
         } else if (jugador3 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
             if ("".equals(strawi.dueño)) {
                 VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
                 straw.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + strawi.paso + " a " + strawi.dueño);
+                pay.setText(String.valueOf(strawi.paso));
+                prop.setText(strawi.dueño);
+                pagar();
             }
         } else if (jugador3 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
@@ -2546,27 +3540,63 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
                 bas.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + basi.paso + " a " + basi.dueño);
+                pay.setText(String.valueOf(basi.paso));
+                prop.setText(basi.dueño);
+                pagar();
             }
         } else if (jugador3 == 37) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl3.dinero += 125;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 2) {
+                pl3.dinero += 50;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 3) {
+                pl3.dinero += 200;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 4) {
+                pl3.dinero += 100;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 5) {
+                pl3.dinero += 30;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            } else if (sus.ramsus == 6) {
+                pl3.dinero += 55;
+                dinero3.setText(String.valueOf(pl3.dinero));
+            }
         } else if (jugador3 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
             if ("".equals(capii.dueño)) {
                 VCINE_CAPITOL capi = new VCINE_CAPITOL();
                 capi.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + capii.paso + " a " + capii.dueño);
+                pay.setText(String.valueOf(capii.paso));
+                prop.setText(capii.dueño);
+                pagar();
             }
         } else if (jugador3 == 39) {
-            JOptionPane.showMessageDialog(null, "impuesto de lujo");
+            pl3.dinero -= 210;
+            dinero3.setText(String.valueOf(pl3.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 210 de impuestos de lujo");;
         } else if (jugador3 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
             if ("".equals(casai.dueño)) {
                 VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
                 casa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + casai.paso + " a " + casai.dueño);
+                pay.setText(String.valueOf(casai.paso));
+                prop.setText(casai.dueño);
+                pagar();
             }
         }
 
@@ -2579,7 +3609,8 @@ public class tablero extends javax.swing.JFrame {
             dinero4.setText(String.valueOf(pl4.dinero));
             reset = jugador4 - 40;
             jugador4 = reset;
-            JOptionPane.showMessageDialog(null, "Ganaste Q200");
+            jpanel.setVisible(true);
+            jpanel.mensaje("Ganaste 200");
 
         } else if (jugador4 == 2) {
 
@@ -2588,27 +3619,65 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_JACKSON jack = new VCALLE_JACKSON();
                 jack.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                pay.setText(String.valueOf(jacki.paso));
+                prop.setText(jacki.dueño);
+                pagar();
+
             }
         } else if (jugador4 == 3) {
-            JOptionPane.showMessageDialog(null, "Pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl4.dinero -= 110;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 2) {
+                pl4.dinero -= 110;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 3) {
+                pl4.dinero -= 230;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 4) {
+                pl4.dinero -= 95;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 5) {
+                pl4.dinero -= 45;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 6) {
+                pl4.dinero -= 38;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            }
+
         } else if (jugador4 == 4) {
             LOS_BALDIOS bali = new LOS_BALDIOS();
             if ("".equals(bali.dueño)) {
                 VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
                 bal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bali.paso + " a " + bali.dueño);
+                pay.setText(String.valueOf(bali.paso));
+                prop.setText(bali.dueño);
+                pagar();
             }
         } else if (jugador4 == 5) {
-            JOptionPane.showMessageDialog(null, "Impuestos");
+            pl4.dinero -= 45;
+            dinero4.setText(String.valueOf(pl4.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 45 de impuestos");;
         } else if (jugador4 == 6) {
             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
             if ("".equals(busi.dueño)) {
                 vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
                 bus.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + busi.paso + " a " + busi.dueño);
+                pay.setText(String.valueOf(busi.paso));
+                prop.setText(busi.dueño);
+                pagar();
             }
         } else if (jugador4 == 7) {
             BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
@@ -2616,17 +3685,46 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
                 bar.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bari.paso + " a " + bari.dueño);
+                pay.setText(String.valueOf(bari.paso));
+                prop.setText(bari.dueño);
+                pagar();
             }
         } else if (jugador4 == 8) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl4.dinero += 125;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 2) {
+                pl4.dinero += 50;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 3) {
+                pl4.dinero += 200;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 4) {
+                pl4.dinero += 100;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 5) {
+                pl4.dinero += 30;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 6) {
+                pl4.dinero += 55;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            }
         } else if (jugador4 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
             if ("".equals(neii.dueño)) {
                 VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
                 nei.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + neii.paso + " a " + neii.dueño);
+                pay.setText(String.valueOf(neii.paso));
+                prop.setText(neii.dueño);
+                pagar();
             }
         } else if (jugador4 == 10) {
             CALLE_TURNER turi = new CALLE_TURNER();
@@ -2634,7 +3732,11 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_TURNER tur = new VCALLE_TURNER();
                 tur.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + turi.paso + " a " + turi.dueño);
+                pay.setText(String.valueOf(turi.paso));
+                prop.setText(turi.dueño);
+                pagar();
             }
         } else if (jugador4 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
@@ -2644,7 +3746,11 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_FALCON fal = new VBAR_FALCON();
                 fal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + fali.paso + " a " + fali.dueño);
+                pay.setText(String.valueOf(fali.paso));
+                prop.setText(fali.dueño);
+                pagar();
             }
         } else if (jugador4 == 13) {
             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
@@ -2652,7 +3758,11 @@ public class tablero extends javax.swing.JFrame {
                 VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
                 bil.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bili.paso + " a " + bili.dueño);
+                pay.setText(String.valueOf(bili.paso));
+                prop.setText(bili.dueño);
+                pagar();
             }
         } else if (jugador4 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
@@ -2660,7 +3770,11 @@ public class tablero extends javax.swing.JFrame {
                 VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
                 igle.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + iglei.paso + " a " + iglei.dueño);
+                pay.setText(String.valueOf(iglei.paso));
+                prop.setText(iglei.dueño);
+                pagar();
             }
         } else if (jugador4 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
@@ -2668,7 +3782,11 @@ public class tablero extends javax.swing.JFrame {
                 VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
                 tie.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + tiei.paso + " a " + tiei.dueño);
+                pay.setText(String.valueOf(tiei.paso));
+                prop.setText(tiei.dueño);
+                pagar();
             }
         } else if (jugador4 == 16) {
             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
@@ -2676,7 +3794,11 @@ public class tablero extends javax.swing.JFrame {
                 VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
                 besos.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + besosi.paso + " a " + besosi.dueño);
+                pay.setText(String.valueOf(besosi.paso));
+                prop.setText(besosi.dueño);
+                pagar();
             }
         } else if (jugador4 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
@@ -2684,17 +3806,47 @@ public class tablero extends javax.swing.JFrame {
                 VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
                 come.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + comei.paso + " a " + comei.dueño);
+                pay.setText(String.valueOf(comei.paso));
+                prop.setText(comei.dueño);
+                pagar();
             }
         } else if (jugador4 == 18) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl4.dinero -= 110;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 2) {
+                pl4.dinero -= 110;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 3) {
+                pl4.dinero -= 230;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 4) {
+                pl4.dinero -= 95;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 5) {
+                pl4.dinero -= 45;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 6) {
+                pl4.dinero -= 38;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            }
+
         } else if (jugador4 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
             if ("".equals(primai.dueño)) {
                 VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
                 prima.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + primai.paso + " a " + primai.dueño);
+                pay.setText(String.valueOf(primai.paso));
+                prop.setText(primai.dueño);
+                pagar();
             }
         } else if (jugador4 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
@@ -2702,7 +3854,11 @@ public class tablero extends javax.swing.JFrame {
                 VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
                 teatro.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + teatroi.paso + " a " + teatroi.dueño);
+                pay.setText(String.valueOf(teatroi.paso));
+                prop.setText(teatroi.dueño);
+                pagar();
             }
         } else if (jugador4 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
@@ -2712,17 +3868,46 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_CLUB club = new VCASA_CLUB();
                 club.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + clubi.paso + " a " + clubi.dueño);
+                pay.setText(String.valueOf(clubi.paso));
+                prop.setText(clubi.dueño);
+                pagar();
             }
         } else if (jugador4 == 23) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl4.dinero += 125;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 2) {
+                pl4.dinero += 50;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 3) {
+                pl4.dinero += 200;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 4) {
+                pl4.dinero += 100;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 5) {
+                pl4.dinero += 30;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 6) {
+                pl4.dinero += 55;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            }
         } else if (jugador4 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
             if ("".equals(jadei.dueño)) {
                 VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
                 jade.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jadei.paso + " a " + jadei.dueño);
+                pay.setText(String.valueOf(jadei.paso));
+                prop.setText(jadei.dueño);
+                pagar();
             }
         } else if (jugador4 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
@@ -2730,7 +3915,11 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
                 hues.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + huesi.paso + " a " + huesi.dueño);
+                pay.setText(String.valueOf(huesi.paso));
+                prop.setText(huesi.dueño);
+                pagar();
             }
         } else if (jugador4 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
@@ -2738,7 +3927,11 @@ public class tablero extends javax.swing.JFrame {
                 VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
                 secu.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + secui.paso + " a " + secui.dueño);
+                pay.setText(String.valueOf(secui.paso));
+                prop.setText(secui.dueño);
+                pagar();
             }
         } else if (jugador4 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
@@ -2746,7 +3939,11 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
                 memo.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + memoi.paso + " a " + memoi.dueño);
+                pay.setText(String.valueOf(memoi.paso));
+                prop.setText(memoi.dueño);
+                pagar();
             }
         } else if (jugador4 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
@@ -2754,7 +3951,11 @@ public class tablero extends javax.swing.JFrame {
                 VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
                 farm.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + farmi.paso + " a " + farmi.dueño);
+                pay.setText(String.valueOf(farmi.paso));
+                prop.setText(farmi.dueño);
+                pagar();
             }
         } else if (jugador4 == 29) {
             REPRESA repri = new REPRESA();
@@ -2762,7 +3963,11 @@ public class tablero extends javax.swing.JFrame {
                 VREPRESA repre = new VREPRESA();
                 repre.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + repri.paso + " a " + repri.dueño);
+                pay.setText(String.valueOf(repri.paso));
+                prop.setText(repri.dueño);
+                pagar();
             }
         } else if (jugador4 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
@@ -2770,17 +3975,28 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
                 risa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + risai.paso + " a " + risai.dueño);
+                pay.setText(String.valueOf(risai.paso));
+                prop.setText(risai.dueño);
+                pagar();
             }
         } else if (jugador4 == 31) {
-            JOptionPane.showMessageDialog(null, "vaya a la carcel");
+            pl4.dinero -= 50;
+            dinero4.setText(String.valueOf(pl4.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 50 por fianza");;
         } else if (jugador4 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
             if ("".equals(canterai.dueño)) {
                 VLA_CANTERA cantera = new VLA_CANTERA();
                 cantera.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + canterai.paso + " a " + canterai.dueño);
+                pay.setText(String.valueOf(canterai.paso));
+                prop.setText(canterai.dueño);
+                pagar();
             }
         } else if (jugador4 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
@@ -2788,17 +4004,46 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
                 wit.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + witi.paso + " a " + witi.dueño);
+                pay.setText(String.valueOf(witi.paso));
+                prop.setText(witi.dueño);
+                pagar();
             }
         } else if (jugador4 == 34) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl4.dinero -= 110;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 2) {
+                pl4.dinero -= 110;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 3) {
+                pl4.dinero -= 230;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 4) {
+                pl4.dinero -= 95;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 5) {
+                pl4.dinero -= 45;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (pes.rampes == 6) {
+                pl4.dinero -= 38;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            }
         } else if (jugador4 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
             if ("".equals(strawi.dueño)) {
                 VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
                 straw.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + strawi.paso + " a " + strawi.dueño);
+                pay.setText(String.valueOf(strawi.paso));
+                prop.setText(strawi.dueño);
+                pagar();
             }
         } else if (jugador4 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
@@ -2806,27 +4051,63 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
                 bas.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + basi.paso + " a " + basi.dueño);
+                pay.setText(String.valueOf(basi.paso));
+                prop.setText(basi.dueño);
+                pagar();
             }
         } else if (jugador4 == 37) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl4.dinero += 125;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 2) {
+                pl4.dinero += 50;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 3) {
+                pl4.dinero += 200;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 4) {
+                pl4.dinero += 100;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 5) {
+                pl4.dinero += 30;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            } else if (sus.ramsus == 6) {
+                pl4.dinero += 55;
+                dinero4.setText(String.valueOf(pl4.dinero));
+            }
         } else if (jugador4 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
             if ("".equals(capii.dueño)) {
                 VCINE_CAPITOL capi = new VCINE_CAPITOL();
                 capi.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + capii.paso + " a " + capii.dueño);
+                pay.setText(String.valueOf(capii.paso));
+                prop.setText(capii.dueño);
+                pagar();
             }
         } else if (jugador4 == 39) {
-            JOptionPane.showMessageDialog(null, "impuesto de lujo");
+            pl4.dinero -= 210;
+            dinero4.setText(String.valueOf(pl4.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 210 de impuestos de lujo");;
         } else if (jugador4 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
             if ("".equals(casai.dueño)) {
                 VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
                 casa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + casai.paso + " a " + casai.dueño);
+                pay.setText(String.valueOf(casai.paso));
+                prop.setText(casai.dueño);
+                pagar();
             }
         }
 
@@ -2839,7 +4120,8 @@ public class tablero extends javax.swing.JFrame {
             dinero5.setText(String.valueOf(pl5.dinero));
             reset = jugador5 - 40;
             jugador5 = reset;
-            JOptionPane.showMessageDialog(null, "Ganaste Q200");
+            jpanel.setVisible(true);
+            jpanel.mensaje("Ganaste 200");
 
         } else if (jugador5 == 2) {
 
@@ -2848,27 +4130,65 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_JACKSON jack = new VCALLE_JACKSON();
                 jack.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                pay.setText(String.valueOf(jacki.paso));
+                prop.setText(jacki.dueño);
+                pagar();
+
             }
         } else if (jugador5 == 3) {
-            JOptionPane.showMessageDialog(null, "Pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl5.dinero -= 110;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 2) {
+                pl5.dinero -= 110;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 3) {
+                pl5.dinero -= 230;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 4) {
+                pl5.dinero -= 95;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 5) {
+                pl5.dinero -= 45;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 6) {
+                pl5.dinero -= 38;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            }
+
         } else if (jugador5 == 4) {
             LOS_BALDIOS bali = new LOS_BALDIOS();
             if ("".equals(bali.dueño)) {
                 VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
                 bal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bali.paso + " a " + bali.dueño);
+                pay.setText(String.valueOf(bali.paso));
+                prop.setText(bali.dueño);
+                pagar();
             }
         } else if (jugador5 == 5) {
-            JOptionPane.showMessageDialog(null, "Impuestos");
+            pl5.dinero -= 45;
+            dinero5.setText(String.valueOf(pl5.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 45 de impuestos");;
         } else if (jugador5 == 6) {
             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
             if ("".equals(busi.dueño)) {
                 vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
                 bus.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + busi.paso + " a " + busi.dueño);
+                pay.setText(String.valueOf(busi.paso));
+                prop.setText(busi.dueño);
+                pagar();
             }
         } else if (jugador5 == 7) {
             BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
@@ -2876,17 +4196,46 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
                 bar.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bari.paso + " a " + bari.dueño);
+                pay.setText(String.valueOf(bari.paso));
+                prop.setText(bari.dueño);
+                pagar();
             }
         } else if (jugador5 == 8) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl5.dinero += 125;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 2) {
+                pl5.dinero += 50;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 3) {
+                pl5.dinero += 200;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 4) {
+                pl5.dinero += 100;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 5) {
+                pl5.dinero += 30;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 6) {
+                pl5.dinero += 55;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            }
         } else if (jugador5 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
             if ("".equals(neii.dueño)) {
                 VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
                 nei.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + neii.paso + " a " + neii.dueño);
+                pay.setText(String.valueOf(neii.paso));
+                prop.setText(neii.dueño);
+                pagar();
             }
         } else if (jugador5 == 10) {
             CALLE_TURNER turi = new CALLE_TURNER();
@@ -2894,7 +4243,11 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_TURNER tur = new VCALLE_TURNER();
                 tur.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + turi.paso + " a " + turi.dueño);
+                pay.setText(String.valueOf(turi.paso));
+                prop.setText(turi.dueño);
+                pagar();
             }
         } else if (jugador5 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
@@ -2904,7 +4257,11 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_FALCON fal = new VBAR_FALCON();
                 fal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + fali.paso + " a " + fali.dueño);
+                pay.setText(String.valueOf(fali.paso));
+                prop.setText(fali.dueño);
+                pagar();
             }
         } else if (jugador5 == 13) {
             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
@@ -2912,7 +4269,11 @@ public class tablero extends javax.swing.JFrame {
                 VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
                 bil.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bili.paso + " a " + bili.dueño);
+                pay.setText(String.valueOf(bili.paso));
+                prop.setText(bili.dueño);
+                pagar();
             }
         } else if (jugador5 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
@@ -2920,7 +4281,11 @@ public class tablero extends javax.swing.JFrame {
                 VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
                 igle.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + iglei.paso + " a " + iglei.dueño);
+                pay.setText(String.valueOf(iglei.paso));
+                prop.setText(iglei.dueño);
+                pagar();
             }
         } else if (jugador5 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
@@ -2928,7 +4293,11 @@ public class tablero extends javax.swing.JFrame {
                 VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
                 tie.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + tiei.paso + " a " + tiei.dueño);
+                pay.setText(String.valueOf(tiei.paso));
+                prop.setText(tiei.dueño);
+                pagar();
             }
         } else if (jugador5 == 16) {
             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
@@ -2936,7 +4305,11 @@ public class tablero extends javax.swing.JFrame {
                 VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
                 besos.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + besosi.paso + " a " + besosi.dueño);
+                pay.setText(String.valueOf(besosi.paso));
+                prop.setText(besosi.dueño);
+                pagar();
             }
         } else if (jugador5 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
@@ -2944,17 +4317,47 @@ public class tablero extends javax.swing.JFrame {
                 VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
                 come.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + comei.paso + " a " + comei.dueño);
+                pay.setText(String.valueOf(comei.paso));
+                prop.setText(comei.dueño);
+                pagar();
             }
         } else if (jugador5 == 18) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl5.dinero -= 110;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 2) {
+                pl5.dinero -= 110;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 3) {
+                pl5.dinero -= 230;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 4) {
+                pl5.dinero -= 95;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 5) {
+                pl5.dinero -= 45;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 6) {
+                pl5.dinero -= 38;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            }
+
         } else if (jugador5 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
             if ("".equals(primai.dueño)) {
                 VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
                 prima.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + primai.paso + " a " + primai.dueño);
+                pay.setText(String.valueOf(primai.paso));
+                prop.setText(primai.dueño);
+                pagar();
             }
         } else if (jugador5 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
@@ -2962,7 +4365,11 @@ public class tablero extends javax.swing.JFrame {
                 VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
                 teatro.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + teatroi.paso + " a " + teatroi.dueño);
+                pay.setText(String.valueOf(teatroi.paso));
+                prop.setText(teatroi.dueño);
+                pagar();
             }
         } else if (jugador5 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
@@ -2972,17 +4379,46 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_CLUB club = new VCASA_CLUB();
                 club.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + clubi.paso + " a " + clubi.dueño);
+                pay.setText(String.valueOf(clubi.paso));
+                prop.setText(clubi.dueño);
+                pagar();
             }
         } else if (jugador5 == 23) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl5.dinero += 125;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 2) {
+                pl5.dinero += 50;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 3) {
+                pl5.dinero += 200;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 4) {
+                pl5.dinero += 100;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 5) {
+                pl5.dinero += 30;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 6) {
+                pl5.dinero += 55;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            }
         } else if (jugador5 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
             if ("".equals(jadei.dueño)) {
                 VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
                 jade.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jadei.paso + " a " + jadei.dueño);
+                pay.setText(String.valueOf(jadei.paso));
+                prop.setText(jadei.dueño);
+                pagar();
             }
         } else if (jugador5 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
@@ -2990,7 +4426,11 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
                 hues.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + huesi.paso + " a " + huesi.dueño);
+                pay.setText(String.valueOf(huesi.paso));
+                prop.setText(huesi.dueño);
+                pagar();
             }
         } else if (jugador5 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
@@ -2998,7 +4438,11 @@ public class tablero extends javax.swing.JFrame {
                 VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
                 secu.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + secui.paso + " a " + secui.dueño);
+                pay.setText(String.valueOf(secui.paso));
+                prop.setText(secui.dueño);
+                pagar();
             }
         } else if (jugador5 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
@@ -3006,7 +4450,11 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
                 memo.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + memoi.paso + " a " + memoi.dueño);
+                pay.setText(String.valueOf(memoi.paso));
+                prop.setText(memoi.dueño);
+                pagar();
             }
         } else if (jugador5 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
@@ -3014,7 +4462,11 @@ public class tablero extends javax.swing.JFrame {
                 VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
                 farm.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + farmi.paso + " a " + farmi.dueño);
+                pay.setText(String.valueOf(farmi.paso));
+                prop.setText(farmi.dueño);
+                pagar();
             }
         } else if (jugador5 == 29) {
             REPRESA repri = new REPRESA();
@@ -3022,7 +4474,11 @@ public class tablero extends javax.swing.JFrame {
                 VREPRESA repre = new VREPRESA();
                 repre.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + repri.paso + " a " + repri.dueño);
+                pay.setText(String.valueOf(repri.paso));
+                prop.setText(repri.dueño);
+                pagar();
             }
         } else if (jugador5 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
@@ -3030,17 +4486,28 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
                 risa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + risai.paso + " a " + risai.dueño);
+                pay.setText(String.valueOf(risai.paso));
+                prop.setText(risai.dueño);
+                pagar();
             }
         } else if (jugador5 == 31) {
-            JOptionPane.showMessageDialog(null, "vaya a la carcel");
+            pl5.dinero -= 50;
+            dinero5.setText(String.valueOf(pl5.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 50 por fianza");;
         } else if (jugador5 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
             if ("".equals(canterai.dueño)) {
                 VLA_CANTERA cantera = new VLA_CANTERA();
                 cantera.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + canterai.paso + " a " + canterai.dueño);
+                pay.setText(String.valueOf(canterai.paso));
+                prop.setText(canterai.dueño);
+                pagar();
             }
         } else if (jugador5 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
@@ -3048,17 +4515,46 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
                 wit.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + witi.paso + " a " + witi.dueño);
+                pay.setText(String.valueOf(witi.paso));
+                prop.setText(witi.dueño);
+                pagar();
             }
         } else if (jugador5 == 34) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl5.dinero -= 110;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 2) {
+                pl5.dinero -= 110;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 3) {
+                pl5.dinero -= 230;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 4) {
+                pl5.dinero -= 95;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 5) {
+                pl5.dinero -= 45;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (pes.rampes == 6) {
+                pl5.dinero -= 38;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            }
         } else if (jugador5 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
             if ("".equals(strawi.dueño)) {
                 VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
                 straw.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + strawi.paso + " a " + strawi.dueño);
+                pay.setText(String.valueOf(strawi.paso));
+                prop.setText(strawi.dueño);
+                pagar();
             }
         } else if (jugador5 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
@@ -3066,27 +4562,63 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
                 bas.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + basi.paso + " a " + basi.dueño);
+                pay.setText(String.valueOf(basi.paso));
+                prop.setText(basi.dueño);
+                pagar();
             }
         } else if (jugador5 == 37) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl5.dinero += 125;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 2) {
+                pl5.dinero += 50;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 3) {
+                pl5.dinero += 200;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 4) {
+                pl5.dinero += 100;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 5) {
+                pl5.dinero += 30;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            } else if (sus.ramsus == 6) {
+                pl5.dinero += 55;
+                dinero5.setText(String.valueOf(pl5.dinero));
+            }
         } else if (jugador5 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
             if ("".equals(capii.dueño)) {
                 VCINE_CAPITOL capi = new VCINE_CAPITOL();
                 capi.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + capii.paso + " a " + capii.dueño);
+                pay.setText(String.valueOf(capii.paso));
+                prop.setText(capii.dueño);
+                pagar();
             }
         } else if (jugador5 == 39) {
-            JOptionPane.showMessageDialog(null, "impuesto de lujo");
+            pl5.dinero -= 210;
+            dinero5.setText(String.valueOf(pl5.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 210 de impuestos de lujo");;
         } else if (jugador5 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
             if ("".equals(casai.dueño)) {
                 VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
                 casa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + casai.paso + " a " + casai.dueño);
+                pay.setText(String.valueOf(casai.paso));
+                prop.setText(casai.dueño);
+                pagar();
             }
         }
 
@@ -3099,7 +4631,8 @@ public class tablero extends javax.swing.JFrame {
             dinero6.setText(String.valueOf(pl6.dinero));
             reset = jugador6 - 40;
             jugador6 = reset;
-            JOptionPane.showMessageDialog(null, "Ganaste Q200");
+            jpanel.setVisible(true);
+            jpanel.mensaje("Ganaste 200");
 
         } else if (jugador6 == 2) {
 
@@ -3108,27 +4641,65 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_JACKSON jack = new VCALLE_JACKSON();
                 jack.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jacki.paso + " a " + jacki.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jacki.paso + " a " + jacki.dueño);
+                pay.setText(String.valueOf(jacki.paso));
+                prop.setText(jacki.dueño);
+                pagar();
+
             }
         } else if (jugador6 == 3) {
-            JOptionPane.showMessageDialog(null, "Pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl6.dinero -= 110;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 2) {
+                pl6.dinero -= 110;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 3) {
+                pl6.dinero -= 230;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 4) {
+                pl6.dinero -= 95;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 5) {
+                pl6.dinero -= 45;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 6) {
+                pl6.dinero -= 38;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            }
+
         } else if (jugador6 == 4) {
             LOS_BALDIOS bali = new LOS_BALDIOS();
             if ("".equals(bali.dueño)) {
                 VLOS_BALDÍOS bal = new VLOS_BALDÍOS();
                 bal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bali.paso + " a " + bali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bali.paso + " a " + bali.dueño);
+                pay.setText(String.valueOf(bali.paso));
+                prop.setText(bali.dueño);
+                pagar();
             }
         } else if (jugador6 == 5) {
-            JOptionPane.showMessageDialog(null, "Impuestos");
+            pl6.dinero -= 45;
+            dinero6.setText(String.valueOf(pl6.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 45 de impuestos");;
         } else if (jugador6 == 6) {
             TERMINAL_DE_BUSES busi = new TERMINAL_DE_BUSES();
             if ("".equals(busi.dueño)) {
                 vTERMINAL_DE_BUSES bus = new vTERMINAL_DE_BUSES();
                 bus.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + busi.paso + " a " + busi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + busi.paso + " a " + busi.dueño);
+                pay.setText(String.valueOf(busi.paso));
+                prop.setText(busi.dueño);
+                pagar();
             }
         } else if (jugador6 == 7) {
             BAR_BLACK_SPOT bari = new BAR_BLACK_SPOT();
@@ -3136,17 +4707,46 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_BLACK_SPOT bar = new VBAR_BLACK_SPOT();
                 bar.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bari.paso + " a " + bari.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bari.paso + " a " + bari.dueño);
+                pay.setText(String.valueOf(bari.paso));
+                prop.setText(bari.dueño);
+                pagar();
             }
         } else if (jugador6 == 8) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl6.dinero += 125;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 2) {
+                pl6.dinero += 50;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 3) {
+                pl6.dinero += 200;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 4) {
+                pl6.dinero += 100;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 5) {
+                pl6.dinero += 30;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 6) {
+                pl6.dinero += 55;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            }
         } else if (jugador6 == 9) {
             CASA_NEIBOLT neii = new CASA_NEIBOLT();
             if ("".equals(neii.dueño)) {
                 VCASA_NEIBOLT nei = new VCASA_NEIBOLT();
                 nei.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + neii.paso + " a " + neii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + neii.paso + " a " + neii.dueño);
+                pay.setText(String.valueOf(neii.paso));
+                prop.setText(neii.dueño);
+                pagar();
             }
         } else if (jugador6 == 10) {
             CALLE_TURNER turi = new CALLE_TURNER();
@@ -3154,7 +4754,11 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_TURNER tur = new VCALLE_TURNER();
                 tur.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + turi.paso + " a " + turi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + turi.paso + " a " + turi.dueño);
+                pay.setText(String.valueOf(turi.paso));
+                prop.setText(turi.dueño);
+                pagar();
             }
         } else if (jugador6 == 11) {
             JOptionPane.showMessageDialog(null, "pasadita de carcel");
@@ -3164,7 +4768,11 @@ public class tablero extends javax.swing.JFrame {
                 VBAR_FALCON fal = new VBAR_FALCON();
                 fal.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + fali.paso + " a " + fali.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + fali.paso + " a " + fali.dueño);
+                pay.setText(String.valueOf(fali.paso));
+                prop.setText(fali.dueño);
+                pagar();
             }
         } else if (jugador6 == 13) {
             BIBLIOTECA_PUBLICA bili = new BIBLIOTECA_PUBLICA();
@@ -3172,7 +4780,11 @@ public class tablero extends javax.swing.JFrame {
                 VBIBLIOTECA_PUBLICA bil = new VBIBLIOTECA_PUBLICA();
                 bil.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + bili.paso + " a " + bili.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + bili.paso + " a " + bili.dueño);
+                pay.setText(String.valueOf(bili.paso));
+                prop.setText(bili.dueño);
+                pagar();
             }
         } else if (jugador6 == 14) {
             IGLESIA_BAUTISTA iglei = new IGLESIA_BAUTISTA();
@@ -3180,7 +4792,11 @@ public class tablero extends javax.swing.JFrame {
                 VIGLESIA_BAUTISTA igle = new VIGLESIA_BAUTISTA();
                 igle.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + iglei.paso + " a " + iglei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + iglei.paso + " a " + iglei.dueño);
+                pay.setText(String.valueOf(iglei.paso));
+                prop.setText(iglei.dueño);
+                pagar();
             }
         } else if (jugador6 == 15) {
             TIENDA_COSTELLO tiei = new TIENDA_COSTELLO();
@@ -3188,7 +4804,11 @@ public class tablero extends javax.swing.JFrame {
                 VTIENDA_COSTELLO tie = new VTIENDA_COSTELLO();
                 tie.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + tiei.paso + " a " + tiei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + tiei.paso + " a " + tiei.dueño);
+                pay.setText(String.valueOf(tiei.paso));
+                prop.setText(tiei.dueño);
+                pagar();
             }
         } else if (jugador6 == 16) {
             PUENTE_DE_LOS_BESOS besosi = new PUENTE_DE_LOS_BESOS();
@@ -3196,7 +4816,11 @@ public class tablero extends javax.swing.JFrame {
                 VPUENTE_DE_LOS_BESOS besos = new VPUENTE_DE_LOS_BESOS();
                 besos.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + besosi.paso + " a " + besosi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + besosi.paso + " a " + besosi.dueño);
+                pay.setText(String.valueOf(besosi.paso));
+                prop.setText(besosi.dueño);
+                pagar();
             }
         } else if (jugador6 == 17) {
             CENTRO_COMERCIAL comei = new CENTRO_COMERCIAL();
@@ -3204,17 +4828,47 @@ public class tablero extends javax.swing.JFrame {
                 VCENTRO_COMERCIAL come = new VCENTRO_COMERCIAL();
                 come.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + comei.paso + " a " + comei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + comei.paso + " a " + comei.dueño);
+                pay.setText(String.valueOf(comei.paso));
+                prop.setText(comei.dueño);
+                pagar();
             }
         } else if (jugador6 == 18) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl6.dinero -= 110;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 2) {
+                pl6.dinero -= 110;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 3) {
+                pl6.dinero -= 230;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 4) {
+                pl6.dinero -= 95;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 5) {
+                pl6.dinero -= 45;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 6) {
+                pl6.dinero -= 38;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            }
+
         } else if (jugador6 == 19) {
             ESCUELA_PRIMARIA primai = new ESCUELA_PRIMARIA();
             if ("".equals(primai.dueño)) {
                 VESCUELA_PRIMARIA prima = new VESCUELA_PRIMARIA();
                 prima.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + primai.paso + " a " + primai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + primai.paso + " a " + primai.dueño);
+                pay.setText(String.valueOf(primai.paso));
+                prop.setText(primai.dueño);
+                pagar();
             }
         } else if (jugador6 == 20) {
             TEATRO_ALADDIN teatroi = new TEATRO_ALADDIN();
@@ -3222,7 +4876,11 @@ public class tablero extends javax.swing.JFrame {
                 VTEATRO_ALADDIN teatro = new VTEATRO_ALADDIN();
                 teatro.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + teatroi.paso + " a " + teatroi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + teatroi.paso + " a " + teatroi.dueño);
+                pay.setText(String.valueOf(teatroi.paso));
+                prop.setText(teatroi.dueño);
+                pagar();
             }
         } else if (jugador6 == 21) {
             JOptionPane.showMessageDialog(null, "descanso gratis");
@@ -3232,17 +4890,46 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_CLUB club = new VCASA_CLUB();
                 club.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + clubi.paso + " a " + clubi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + clubi.paso + " a " + clubi.dueño);
+                pay.setText(String.valueOf(clubi.paso));
+                prop.setText(clubi.dueño);
+                pagar();
             }
         } else if (jugador6 == 23) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl6.dinero += 125;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 2) {
+                pl6.dinero += 50;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 3) {
+                pl6.dinero += 200;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 4) {
+                pl6.dinero += 100;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 5) {
+                pl6.dinero += 30;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 6) {
+                pl6.dinero += 55;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            }
         } else if (jugador6 == 24) {
             RESTAURANTE_JADE jadei = new RESTAURANTE_JADE();
             if ("".equals(jadei.dueño)) {
                 VRESTAURANTE_JADE jade = new VRESTAURANTE_JADE();
                 jade.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + jadei.paso + " a " + jadei.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + jadei.paso + " a " + jadei.dueño);
+                pay.setText(String.valueOf(jadei.paso));
+                prop.setText(jadei.dueño);
+                pagar();
             }
         } else if (jugador6 == 25) {
             CASA_DE_HUESPEDES huesi = new CASA_DE_HUESPEDES();
@@ -3250,7 +4937,11 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_HUESPEDES hues = new VCASA_DE_HUESPEDES();
                 hues.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + huesi.paso + " a " + huesi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + huesi.paso + " a " + huesi.dueño);
+                pay.setText(String.valueOf(huesi.paso));
+                prop.setText(huesi.dueño);
+                pagar();
             }
         } else if (jugador6 == 26) {
             ESCUELA_SECUNDARIA secui = new ESCUELA_SECUNDARIA();
@@ -3258,7 +4949,11 @@ public class tablero extends javax.swing.JFrame {
                 VESCUELA_SECUNDARIA secu = new VESCUELA_SECUNDARIA();
                 secu.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + secui.paso + " a " + secui.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + secui.paso + " a " + secui.dueño);
+                pay.setText(String.valueOf(secui.paso));
+                prop.setText(secui.dueño);
+                pagar();
             }
         } else if (jugador6 == 27) {
             PARQUE_MEMORIAL memoi = new PARQUE_MEMORIAL();
@@ -3266,7 +4961,11 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_MEMORIAL memo = new VPARQUE_MEMORIAL();
                 memo.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + memoi.paso + " a " + memoi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + memoi.paso + " a " + memoi.dueño);
+                pay.setText(String.valueOf(memoi.paso));
+                prop.setText(memoi.dueño);
+                pagar();
             }
         } else if (jugador6 == 28) {
             FARMACIA_KEENE farmi = new FARMACIA_KEENE();
@@ -3274,7 +4973,11 @@ public class tablero extends javax.swing.JFrame {
                 VFARMACIA_KEENE farm = new VFARMACIA_KEENE();
                 farm.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + farmi.paso + " a " + farmi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + farmi.paso + " a " + farmi.dueño);
+                pay.setText(String.valueOf(farmi.paso));
+                prop.setText(farmi.dueño);
+                pagar();
             }
         } else if (jugador6 == 29) {
             REPRESA repri = new REPRESA();
@@ -3282,7 +4985,11 @@ public class tablero extends javax.swing.JFrame {
                 VREPRESA repre = new VREPRESA();
                 repre.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + repri.paso + " a " + repri.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + repri.paso + " a " + repri.dueño);
+                pay.setText(String.valueOf(repri.paso));
+                prop.setText(repri.dueño);
+                pagar();
             }
         } else if (jugador6 == 30) {
             CASA_DE_LA_RISA risai = new CASA_DE_LA_RISA();
@@ -3290,17 +4997,28 @@ public class tablero extends javax.swing.JFrame {
                 VCASA_DE_LA_RISA risa = new VCASA_DE_LA_RISA();
                 risa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + risai.paso + " a " + risai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + risai.paso + " a " + risai.dueño);
+                pay.setText(String.valueOf(risai.paso));
+                prop.setText(risai.dueño);
+                pagar();
             }
         } else if (jugador6 == 31) {
-            JOptionPane.showMessageDialog(null, "vaya a la carcel");
+            pl6.dinero -= 50;
+            dinero6.setText(String.valueOf(pl6.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 50 por fianza");;
         } else if (jugador6 == 32) {
             LA_CANTERA canterai = new LA_CANTERA();
             if ("".equals(canterai.dueño)) {
                 VLA_CANTERA cantera = new VLA_CANTERA();
                 cantera.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + canterai.paso + " a " + canterai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + canterai.paso + " a " + canterai.dueño);
+                pay.setText(String.valueOf(canterai.paso));
+                prop.setText(canterai.dueño);
+                pagar();
             }
         } else if (jugador6 == 33) {
             CALLE_WITCHMAN witi = new CALLE_WITCHMAN();
@@ -3308,17 +5026,46 @@ public class tablero extends javax.swing.JFrame {
                 VCALLE_WITCHMAN wit = new VCALLE_WITCHMAN();
                 wit.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + witi.paso + " a " + witi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + witi.paso + " a " + witi.dueño);
+                pay.setText(String.valueOf(witi.paso));
+                prop.setText(witi.dueño);
+                pagar();
             }
         } else if (jugador6 == 34) {
-            JOptionPane.showMessageDialog(null, "pesadilla");
+            //pesadilla
+            pesadilla pes = new pesadilla();
+            pes.setVisible(true);
+            if (pes.rampes == 1) {
+                pl6.dinero -= 110;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 2) {
+                pl6.dinero -= 110;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 3) {
+                pl6.dinero -= 230;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 4) {
+                pl6.dinero -= 95;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 5) {
+                pl6.dinero -= 45;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (pes.rampes == 6) {
+                pl6.dinero -= 38;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            }
         } else if (jugador6 == 35) {
             PARQUE_STRAWFORD strawi = new PARQUE_STRAWFORD();
             if ("".equals(strawi.dueño)) {
                 VPARQUE_STRAWFORD straw = new VPARQUE_STRAWFORD();
                 straw.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + strawi.paso + " a " + strawi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + strawi.paso + " a " + strawi.dueño);
+                pay.setText(String.valueOf(strawi.paso));
+                prop.setText(strawi.dueño);
+                pagar();
             }
         } else if (jugador6 == 36) {
             PARQUE_BASSEY basi = new PARQUE_BASSEY();
@@ -3326,34 +5073,71 @@ public class tablero extends javax.swing.JFrame {
                 VPARQUE_BASSEY bas = new VPARQUE_BASSEY();
                 bas.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + basi.paso + " a " + basi.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + basi.paso + " a " + basi.dueño);
+                pay.setText(String.valueOf(basi.paso));
+                prop.setText(basi.dueño);
+                pagar();
             }
         } else if (jugador6 == 37) {
-            JOptionPane.showMessageDialog(null, "suspiro");
+            //suspiro
+            suspiro sus = new suspiro();
+            sus.setVisible(true);
+            if (sus.ramsus == 1) {
+                pl6.dinero += 125;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 2) {
+                pl6.dinero += 50;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 3) {
+                pl6.dinero += 200;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 4) {
+                pl6.dinero += 100;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 5) {
+                pl6.dinero += 30;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            } else if (sus.ramsus == 6) {
+                pl6.dinero += 55;
+                dinero6.setText(String.valueOf(pl6.dinero));
+            }
         } else if (jugador6 == 38) {
             CINE_CAPITOL capii = new CINE_CAPITOL();
             if ("".equals(capii.dueño)) {
                 VCINE_CAPITOL capi = new VCINE_CAPITOL();
                 capi.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + capii.paso + " a " + capii.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + capii.paso + " a " + capii.dueño);
+                pay.setText(String.valueOf(capii.paso));
+                prop.setText(capii.dueño);
+                pagar();
             }
         } else if (jugador6 == 39) {
-            JOptionPane.showMessageDialog(null, "impuesto de lujo");
+            pl6.dinero -= 210;
+            dinero6.setText(String.valueOf(pl6.dinero));
+            jpanel.setVisible(true);
+            jpanel.mensaje("Pagaste 210 de impuestos de lujo");;
         } else if (jugador6 == 40) {
             CASA_ANTIGUA casai = new CASA_ANTIGUA();
             if ("".equals(casai.dueño)) {
                 VLA_CASA_ANTIGUA casa = new VLA_CASA_ANTIGUA();
                 casa.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "Le debes pagar " + casai.paso + " a " + casai.dueño);
+                jpanel.setVisible(true);
+                jpanel.mensaje("Le pagaste " + casai.paso + " a " + casai.dueño);
+                pay.setText(String.valueOf(casai.paso));
+                prop.setText(casai.dueño);
+                pagar();
             }
         }
 
     }
 
     void pagar() {
-        if (cont == 2 && prop.getText().equals(pl1.nombre) ) {
+
+        if (cont == 2 && prop.getText().equals(pl1.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl2.dinero -= par;
             pl1.dinero += par;
@@ -3373,7 +5157,7 @@ public class tablero extends javax.swing.JFrame {
             int par = Integer.parseInt(pay.getText());
             pl6.dinero -= par;
             pl1.dinero += par;
-        }else  if (cont == 1 && prop.getText().equals(pl2.nombre)) {
+        } else if (cont == 1 && prop.getText().equals(pl2.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl1.dinero -= par;
             pl2.dinero += par;
@@ -3393,7 +5177,7 @@ public class tablero extends javax.swing.JFrame {
             int par = Integer.parseInt(pay.getText());
             pl6.dinero -= par;
             pl2.dinero += par;
-        }else  if (cont == 1 && prop.getText().equals(pl3.nombre)) {
+        } else if (cont == 1 && prop.getText().equals(pl3.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl1.dinero -= par;
             pl3.dinero += par;
@@ -3413,7 +5197,7 @@ public class tablero extends javax.swing.JFrame {
             int par = Integer.parseInt(pay.getText());
             pl6.dinero -= par;
             pl3.dinero += par;
-        }else if (cont == 1 && prop.getText().equals(pl4.nombre)) {
+        } else if (cont == 1 && prop.getText().equals(pl4.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl1.dinero -= par;
             pl4.dinero += par;
@@ -3425,15 +5209,15 @@ public class tablero extends javax.swing.JFrame {
             int par = Integer.parseInt(pay.getText());
             pl3.dinero -= par;
             pl4.dinero += par;
-        } else if (cont == 5 && prop.getText().equals(pl4.nombre) ) {
+        } else if (cont == 5 && prop.getText().equals(pl4.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl5.dinero -= par;
             pl4.dinero += par;
-        } else if (cont == 6&& prop.getText().equals(pl4.nombre)) {
+        } else if (cont == 6 && prop.getText().equals(pl4.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl6.dinero -= par;
             pl4.dinero += par;
-        }else  if (cont == 1 && prop.getText().equals(pl5.nombre)) {
+        } else if (cont == 1 && prop.getText().equals(pl5.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl1.dinero -= par;
             pl5.dinero += par;
@@ -3453,7 +5237,7 @@ public class tablero extends javax.swing.JFrame {
             int par = Integer.parseInt(pay.getText());
             pl6.dinero -= par;
             pl5.dinero += par;
-        }else if (cont == 1 && prop.getText().equals(pl6.nombre)) {
+        } else if (cont == 1 && prop.getText().equals(pl6.nombre)) {
             int par = Integer.parseInt(pay.getText());
             pl1.dinero -= par;
             pl6.dinero += par;
@@ -3483,19 +5267,14 @@ public class tablero extends javax.swing.JFrame {
 
     }
 
-   
-
-   
-
-  
-
-   
-
-    void pagarj6() {
-        
-       
+    void actdi() {
+        dinero.setText(String.valueOf(pl1.dinero));
+        dinero2.setText(String.valueOf(pl2.dinero));
+        dinero3.setText(String.valueOf(pl3.dinero));
+        dinero4.setText(String.valueOf(pl4.dinero));
+        dinero5.setText(String.valueOf(pl5.dinero));
+        dinero6.setText(String.valueOf(pl6.dinero));
 
     }
 
-  
 }
